@@ -16,7 +16,12 @@
     }
   },
   "linter": {
-    "enabled": true
+    "enabled": true,
+    "rules": {
+      "suspicious": {
+        "noAssignInExpressions": "off"
+      }
+    }
   },
   "organizeImports": {
     "enabled": true
