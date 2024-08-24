@@ -16,17 +16,7 @@
     }
   },
   "linter": {
-    "enabled": true,
-    "rules": {
-      "all": true,
-      "style": {
-        "useFilenamingConvention": "off",
-        "useNamingConvention": "off"
-      },
-      "suspicious": {
-        "noAssignInExpressions": "off"
-      }
-    }
+    "enabled": true
   },
   "organizeImports": {
     "enabled": true
