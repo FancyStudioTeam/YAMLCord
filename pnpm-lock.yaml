@@ -67,8 +67,8 @@ importers:
         specifier: 9.0.0
         version: 9.0.0
       tsx:
-        specifier: 4.17.0
-        version: 4.17.0
+        specifier: 4.18.0
+        version: 4.18.0
 
 packages:
 
@@ -280,6 +280,7 @@ packages:
 
   oceanic-builders@1.0.1:
     resolution: {integrity: sha512-yQ/a5LJvsKmxQhTChpICN9M7ylUp25n20yNfO1reC/0LFQJKDKZxu3fF/Q0Wyj3HDyDKqT7j9gK1wpzc9v1x9w==}
+    deprecated: 'Changelog: https://github.com/FancyStudioTeam/OceanicBuilders/releases'
 
   oceanic.js@1.11.1:
     resolution: {integrity: sha512-Eegt1woRVxsx0UnFcBMfjSoUa0wAfaqhzABHhN/Vm9xfUzRvZiAveDR1v0FAUPyIE2NTby4/QpICjqrkoF44mA==}
@@ -317,8 +318,8 @@ packages:
   tslib@2.6.3:
     resolution: {integrity: sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==}
 
-  tsx@4.17.0:
-    resolution: {integrity: sha512-eN4mnDA5UMKDt4YZixo9tBioibaMBpoxBkD+rIPAjVmYERSG0/dWEY1CEFuV89CgASlKL499q8AhmkMnnjtOJg==}
+  tsx@4.18.0:
+    resolution: {integrity: sha512-a1jaKBSVQkd6yEc1/NI7G6yHFfefIcuf3QJST7ZEyn4oQnxLYrZR5uZAM8UrwUa3Ge8suiZHcNS1gNrEvmobqg==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -546,7 +547,7 @@ snapshots:
 
   tslib@2.6.3: {}
 
-  tsx@4.17.0:
+  tsx@4.18.0:
     dependencies:
       esbuild: 0.23.0
       get-tsconfig: 4.7.6
