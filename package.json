@@ -16,6 +16,7 @@
   },
   "description": "",
   "devDependencies": {
+    "@biomejs/biome": "1.8.3",
     "@types/byte-size": "8.1.2",
     "@types/js-yaml": "4.0.9",
     "@types/json-logic-js": "2.0.7",
@@ -23,15 +24,23 @@
     "@types/pako": "2.0.3",
     "@types/validator": "13.12.0",
     "byte-size": "9.0.0",
-    "tsx": "4.18.0"
+    "husky": "9.1.5",
+    "lint-staged": "15.2.9",
+    "tsx": "4.18.0",
+    "typescript": "5.5.4"
   },
   "keywords": [],
-  "license": "ISC",
-  "main": "index.js",
+  "license": "BSD-3-Clause",
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["pnpm biome"]
+  },
   "name": "fancyscript",
+  "packageManager": "pnpm@9.8.0+sha256.56a9e76b51796ca7f73b85e44cf83712862091f4d498c0ce4d5b7ecdc6ba18f7",
   "scripts": {
+    "biome": "biome check --write --config-path=\"./biome.json\" .",
     "build": "tsc",
-    "dev": "tsx --env-file=\".env\" --watch src/index.ts"
+    "dev": "tsx --env-file=\".env\" --watch src/index.ts",
+    "prepare": "husky"
   },
   "version": "0.0.1"
 }
