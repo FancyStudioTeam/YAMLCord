@@ -18,6 +18,7 @@
     "vitest": "2.0.5"
   },
   "imports": {
+    "#types": "./src/types.js",
     "#util/*": "./src/util/*"
   },
   "keywords": [],

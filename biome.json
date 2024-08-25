@@ -18,6 +18,9 @@
   "linter": {
     "enabled": true,
     "rules": {
+      "style": {
+        "useEnumInitializers": "off"
+      },
       "suspicious": {
         "noAssignInExpressions": "off",
         "noThenProperty": "off"

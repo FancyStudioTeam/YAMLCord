@@ -7,7 +7,7 @@ import { loadYAMLData } from "#util/functions/loadYAMLData";
 
 const loader = (path: string) => readFileSync(join(__dirname, "files", `${path}.yml`), "utf8");
 
-describe("loadYAMLData", () => {
+describe("Function: loadYAMLData", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001] Loads valid data", async () =>
       await expect(loadYAMLData(loader("1xxx/Test_1001"))).resolves.toStrictEqual({
@@ -43,10 +43,11 @@ describe("loadYAMLData", () => {
               {
                 create_message: {
                   content: "Hello, world!",
+                  reply: "no_ping",
                 },
               },
               {
-                reply: true,
+                create_reaction: "👋",
               },
             ],
           },
