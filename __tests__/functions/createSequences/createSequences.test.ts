@@ -16,7 +16,7 @@ describe("Function: createSequences", () => {
               type: SequenceType.CONDITIONAL,
               data: {
                 if: {
-                  operator: "eq",
+                  operator: "===",
                   value: "!hello",
                   variable: "[message.content]",
                 },
