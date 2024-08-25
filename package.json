@@ -17,6 +17,9 @@
     "typescript": "5.5.4",
     "vitest": "2.0.5"
   },
+  "imports": {
+    "#util/*": "./src/util/*"
+  },
   "keywords": [],
   "license": "BSD-3-Clause",
   "lint-staged": {

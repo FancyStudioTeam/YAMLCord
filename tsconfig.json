@@ -23,6 +23,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist",
+    "paths": {
+      "#util/*": ["./src/util/*"]
+    },
     "preserveConstEnums": true,
     "pretty": true,
     "removeComments": false,

@@ -1,9 +1,9 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
-import { ErrorCodes } from "../../src/util/errors/ErrorCodes";
-import { ErrorMessages } from "../../src/util/errors/ErrorMessages";
-import { loadYAMLData } from "../../src/util/functions/loadYAMLData";
+import { ErrorCodes } from "#util/errors/ErrorCodes";
+import { ErrorMessages } from "#util/errors/ErrorMessages";
+import { loadYAMLData } from "#util/functions/loadYAMLData";
 
 const loader = (path: string) => readFileSync(join(__dirname, "files", `${path}.yml`), "utf8");
 
@@ -39,7 +39,6 @@ describe("loadYAMLData", () => {
         sequences: [
           {
             if: "[message.content] eq '!hello'",
-            // biome-ignore lint/suspicious/noThenProperty:
             then: [
               {
                 create_message: {
