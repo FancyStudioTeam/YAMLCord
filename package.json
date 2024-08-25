@@ -2,6 +2,7 @@
   "author": "FancyStudio",
   "dependencies": {
     "@sapphire/result": "2.6.6",
+    "es-toolkit": "1.16.0",
     "js-yaml": "4.1.0"
   },
   "description": "",

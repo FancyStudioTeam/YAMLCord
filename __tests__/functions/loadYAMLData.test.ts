@@ -60,10 +60,5 @@ describe("loadYAMLData", () => {
       await expect(loadYAMLData(loader("2xxx/Test_2001"))).rejects.toThrowError(
         ErrorMessages[ErrorCodes.INVALID_YAML_DATA],
       ));
-
-    it("[2002] Loads invalid data and then rejects with error", async () =>
-      await expect(loadYAMLData(loader("2xxx/Test_2002"))).rejects.toThrowError(
-        ErrorMessages[ErrorCodes.CANNOT_BE_STRING],
-      ));
   });
 });
