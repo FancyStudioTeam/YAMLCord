@@ -1,0 +1,6 @@
+sequences:
+  - if: "[message.content] eq '!hello'"
+    then:
+      - create_message:
+          content: "Hello, world!"
+      - reply: true
