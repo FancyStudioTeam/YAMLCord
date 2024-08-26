@@ -20,8 +20,16 @@ export const verifySequences = (sequence: unknown) => {
         {
           code: "too_small",
         },
-        () => {
-          throw new FancyScriptError(ErrorCodes.GENERAL_ERROR);
+        (issue) => {
+          throw new FancyScriptError(ErrorCodes.INVALID_ARRAY_LENGTH, "min", issue.minimum);
+        },
+      )
+      .with(
+        {
+          code: "too_big",
+        },
+        (issue) => {
+          throw new FancyScriptError(ErrorCodes.INVALID_ARRAY_LENGTH, "max", issue.maximum);
         },
       )
       .otherwise(() => {

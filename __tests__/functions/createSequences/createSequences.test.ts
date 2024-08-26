@@ -55,7 +55,7 @@ describe("Function: createSequences", () => {
 
     it("[2003] Creates invalid sequences and then rejects with error", async () =>
       await expect(createSequences(loader("2xxx/Test_2003"))).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.GENERAL_ERROR),
+        getErrorMessage(ErrorCodes.INVALID_ARRAY_LENGTH, "min", 1),
       ));
   });
 });
