@@ -9,6 +9,8 @@
 </div>
 <!-- markdownlint-restore -->
 
+---
+
 ## 📋 To-Do List (`0.0.1_alpha`)
 
 - [ ] Support for Conditionals Structures
