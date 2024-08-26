@@ -11,6 +11,15 @@ export const en = defineConfig({
               link: "/",
               text: "About FancyScript",
             },
+            {
+              items: [
+                {
+                  link: "/basic-elements/data-types",
+                  text: "Data Types",
+                },
+              ],
+              text: "Basic Elements",
+            },
           ],
           text: "Introduction",
         },
