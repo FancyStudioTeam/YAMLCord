@@ -1,5 +1,5 @@
 {
-  "author": "",
+  "author": "FancyStudio",
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "5.0.22",
     "@fontsource-variable/plus-jakarta-sans": "5.0.22",
@@ -8,8 +8,11 @@
     "vue": "3.4.38"
   },
   "description": "",
+  "devDependencies": {
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.41"
+  },
   "keywords": [],
-  "license": "ISC",
   "name": "docs",
   "scripts": {
     "docs:build": "vitepress build",

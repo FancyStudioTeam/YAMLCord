@@ -5,25 +5,25 @@
 
 ---
 
-FancyScript is an easy-to-use syntax for creating custom actions for Discord bots using YAML.
+FancyScript es una sintaxis fácil de usar para crear acciones personalizadas para bots de Discord utilizando YAML.
 
-:::warning Before You Begin
-If you are new to YAML, we recommend that you watch a tutorial to learn the basics of YAML before using FancyScript.
+:::warning Antes de Empezar
+Si eres nuevo en YAML, te recomendamos que veas un tutorial para aprender lo básico de YAML antes de usar FancyScript.
 
 <!-- markdownlint-disable -->
 <iframe allowfullscreen class="w-full aspect-video rounded-md" src="https://www.youtube.com/embed/0fbnyS_lHW4?si=MwdX3onyJgq-E03K" />
 <!-- markdownlint-restore -->
 :::
 
-## Example
+## Ejemplo
 
 ```yml
-# List of conditions.
+# Lista de condiciones.
 conditions:
-  # Checks if the content of the message is equal to “!hi”.
+  # Comprueba si el contenido del mensaje es igual a "!hi".
   - if: "[message.content] eq '!hi'"
     then:
-      # The bot creates a message.
+      # El bot crea un mensaje.
       - create_message:
-          content: "Hello! 👋"
+          content: "¡Hola! 👋"
 ```
