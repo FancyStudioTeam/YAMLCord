@@ -16,4 +16,4 @@
   - [ ] `create_message`
   - [ ] `create_reaction`
   - [ ] `delete_message`
-  - [ ] `delay`
+  - [ ] `wait`
