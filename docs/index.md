@@ -1,6 +1,8 @@
 <!-- markdownlint-disable -->
-<img src="/banners/Dark.png" class="light:hidden">
-<img src="/banners/Light.png" class="dark:hidden">
+
+![Light](/banners/Light.png#light)
+![Dark](/banners/Dark.png#dark)
+
 <!-- markdownlint-restore -->
 
 ---
@@ -11,7 +13,7 @@ FancyScript is an easy-to-use syntax for creating custom actions for Discord bot
 If you are new to YAML, we recommend that you watch a tutorial to learn the basics of YAML before using FancyScript.
 
 <!-- markdownlint-disable -->
-<iframe allowfullscreen class="w-full aspect-video rounded-md" src="https://www.youtube.com/embed/0fbnyS_lHW4?si=MwdX3onyJgq-E03K" />
+<iframe allowfullscreen src="https://www.youtube.com/embed/0fbnyS_lHW4?si=MwdX3onyJgq-E03K" />
 <!-- markdownlint-restore -->
 :::
 

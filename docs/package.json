@@ -8,10 +8,6 @@
     "vue": "3.4.38"
   },
   "description": "",
-  "devDependencies": {
-    "autoprefixer": "10.4.20",
-    "postcss": "8.4.41"
-  },
   "keywords": [],
   "name": "docs",
   "scripts": {

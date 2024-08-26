@@ -4,7 +4,7 @@
 Si eres nuevo en YAML, te recomendamos que veas un tutorial para aprender lo básico de YAML antes de usar FancyScript.
 
 <!-- markdownlint-disable -->
-<iframe src="https://www.youtube.com/embed/0fbnyS_lHW4?si=MwdX3onyJgq-E03K" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="w-full aspect-video rounded-md" />
+<iframe allowfullscreen src="https://www.youtube.com/embed/0fbnyS_lHW4?si=MwdX3onyJgq-E03K" />
 <!-- markdownlint-restore -->
 :::
 

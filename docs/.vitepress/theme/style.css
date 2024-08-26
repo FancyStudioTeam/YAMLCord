@@ -1,8 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --vp-font-family-base: "Plus Jakarta Sans Variable", sans-serif;
   --vp-font-family-mono: "JetBrains Mono Variable", monospace;
+}
+
+img[src*="#dark"] {
+  display: none;
+}
+
+.dark img[src*="#dark"] {
+  display: block;
+}
+
+.dark img[src*="#light"] {
+  display: none;
+}
+
+iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 8px;
 }
