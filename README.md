@@ -9,7 +9,7 @@
 </div>
 <!-- markdownlint-restore -->
 
-## 📋 To-Do List
+## 📋 To-Do List (`0.0.1_alpha`)
 
 - [ ] Support for Conditionals Structures
 - [ ] Support for Built-in Functions
