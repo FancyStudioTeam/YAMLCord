@@ -1,13 +1,15 @@
 import type { ErrorCodes } from "./ErrorCodes";
 import { ErrorMessages } from "./ErrorMessages";
 
-export const getErrorMessage = (code: ErrorCodes, ...args: string[]): string =>
+// biome-ignore lint/suspicious/noExplicitAny:
+export const getErrorMessage = (code: ErrorCodes, ...args: any[]): string =>
   typeof ErrorMessages[code] === "function" ? ErrorMessages[code](...args) : ErrorMessages[code];
 
 export class FancyScriptError extends Error {
   code: ErrorCodes;
 
-  constructor(code: ErrorCodes, ...args: string[]) {
+  // biome-ignore lint/suspicious/noExplicitAny:
+  constructor(code: ErrorCodes, ...args: any[]) {
     super(getErrorMessage(code, ...args));
     this.name = `${this.constructor.name} [${code}]`;
     this.code = code;
