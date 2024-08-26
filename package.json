@@ -34,6 +34,9 @@
     "biome": "biome check --write --config-path=\"./biome.json\" .",
     "build": "tsc",
     "dev": "tsx --env-file=\".env\" --watch src/index.ts",
+    "docs:build": "pnpm --filter=docs docs:build",
+    "docs:dev": "pnpm --filter=docs docs:dev",
+    "docs:preview": "pnpm --filter=docs docs:preview",
     "prepare": "husky",
     "test": "vitest"
   },
