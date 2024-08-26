@@ -45,12 +45,17 @@ describe("Function: createSequences", () => {
   describe("Failure cases (2xxx)", () => {
     it("[2001] Creates invalid sequences and then rejects with error", async () =>
       await expect(createSequences(loader("2xxx/Test_2001"))).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_YAML_DATA),
+        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "array", "null"),
       ));
 
     it("[2002] Creates invalid sequences and then rejects with error", async () =>
       await expect(createSequences(loader("2xxx/Test_2002"))).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_PROPERTY, "conditions"),
+        getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_PROPERTY, "unknown_global_property"),
+      ));
+
+    it("[2003] Creates invalid sequences and then rejects with error", async () =>
+      await expect(createSequences(loader("2xxx/Test_2003"))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.GENERAL_ERROR),
       ));
   });
 });
