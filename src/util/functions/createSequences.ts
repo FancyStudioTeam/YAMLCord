@@ -14,8 +14,8 @@ export const createSequences = async (
   const sequences: Sequence[] = [];
 
   for (const [property, data] of Object.entries(loadedData)) {
-    match(property)
-      .with("sequences", () => verifySequences(data))
+    await match(property)
+      .with("sequences", async () => await verifySequences(data))
       .otherwise((property) => {
         throw new FancyScriptError(ErrorCodes.UNKNOWN_GLOBAL_PROPERTY, property);
       });

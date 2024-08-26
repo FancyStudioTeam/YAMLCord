@@ -3,7 +3,7 @@ import { ErrorCodes } from "#util/errors/ErrorCodes";
 import { FancyScriptError } from "#util/errors/Errors";
 import { CreateSequencesSchemas } from "./schemas/CreateSequencesSchemas";
 
-export const verifySequences = (sequence: unknown) => {
+export const verifySequences = async (sequence: unknown) => {
   const { error } = CreateSequencesSchemas.sequences.safeParse(sequence);
 
   if (error) {
