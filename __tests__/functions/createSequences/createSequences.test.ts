@@ -2,6 +2,8 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { SequenceType } from "#types";
+import { ErrorCodes } from "#util/errors/ErrorCodes";
+import { getErrorMessage } from "#util/errors/Errors";
 import { createSequences } from "#util/functions/createSequences";
 
 const loader = (path: string) => readFileSync(join(__dirname, "files", `${path}.yml`), "utf8");
@@ -40,5 +42,12 @@ describe("Function: createSequences", () => {
           ],
         },
       ]));
+  });
+
+  describe("Failure cases (2xxx)", () => {
+    it("[2001] Creates invalid sequences and then rejects with error", async () =>
+      await expect(createSequences(loader("2xxx/Test_2001"))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.INVALID_YAML_DATA),
+      ));
   });
 });

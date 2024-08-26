@@ -1,7 +1,7 @@
 import type { ErrorCodes } from "./ErrorCodes";
 import { ErrorMessages } from "./ErrorMessages";
 
-const getErrorMessage = (code: ErrorCodes) => ErrorMessages[code];
+export const getErrorMessage = (code: ErrorCodes) => ErrorMessages[code];
 
 export class FancyScriptError extends Error {
   code: ErrorCodes;

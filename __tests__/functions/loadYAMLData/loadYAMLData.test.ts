@@ -2,7 +2,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { ErrorCodes } from "#util/errors/ErrorCodes";
-import { ErrorMessages } from "#util/errors/ErrorMessages";
+import { getErrorMessage } from "#util/errors/Errors";
 import { loadYAMLData } from "#util/functions/loadYAMLData";
 
 const loader = (path: string) => readFileSync(join(__dirname, "files", `${path}.yml`), "utf8");
@@ -58,7 +58,7 @@ describe("Function: loadYAMLData", () => {
   describe("Failure cases (2xxx)", () => {
     it("[2001] Loads invalid data and then rejects with error", async () =>
       await expect(loadYAMLData(loader("2xxx/Test_2001"))).rejects.toThrowError(
-        ErrorMessages[ErrorCodes.INVALID_YAML_DATA],
+        getErrorMessage(ErrorCodes.INVALID_YAML_DATA),
       ));
   });
 });
