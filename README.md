@@ -8,3 +8,12 @@
   <p>FancyScript is an easy-to-use syntax for creating custom actions for Discord bots using YAML.</p>
 </div>
 <!-- markdownlint-restore -->
+
+## 📋 To-Do List
+
+- [ ] Support for Conditionals Structures
+- [ ] Support for Built-in Functions
+  - [ ] `create_message`
+  - [ ] `create_reaction`
+  - [ ] `delete_message`
+  - [ ] `delay`
