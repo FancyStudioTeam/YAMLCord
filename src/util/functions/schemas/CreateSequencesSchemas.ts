@@ -1,5 +1,5 @@
 import { z } from "zod";
 
 export const CreateSequencesSchemas = {
-  sequences: z.array().min(1),
+  sequences: z.array(z.unknown()).min(1),
 };
