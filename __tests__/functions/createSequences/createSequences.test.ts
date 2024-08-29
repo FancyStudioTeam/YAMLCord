@@ -57,6 +57,7 @@ describe("Function: createSequences", () => {
                     if: {
                       operator: "===",
                       value: "945029082314338407",
+                      variable: "[message.user_id]",
                     },
                     then: [
                       {
