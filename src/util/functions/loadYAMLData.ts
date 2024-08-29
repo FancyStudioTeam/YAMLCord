@@ -1,10 +1,11 @@
 import { Result } from "@sapphire/result";
 import { load } from "js-yaml";
-import { ErrorCodes } from "../errors/ErrorCodes";
-import { FancyScriptError } from "../errors/Errors";
+import type { ResultErrorType } from "#types";
+import { ErrorCodes } from "#util/errors/ErrorCodes";
+import { throwError } from "#util/throwError";
 
 export const loadYAMLData = async (data: string) => {
-  const result = await Result.fromAsync(
+  const result = await Result.fromAsync<unknown, ResultErrorType>(
     async () =>
       await load(data, {
         json: true,
@@ -12,7 +13,7 @@ export const loadYAMLData = async (data: string) => {
   );
 
   if (result.isErr()) {
-    throw new FancyScriptError(ErrorCodes.INVALID_YAML_DATA);
+    throwError([ErrorCodes.INVALID_YAML_DATA]);
   }
 
   return result.unwrap();
