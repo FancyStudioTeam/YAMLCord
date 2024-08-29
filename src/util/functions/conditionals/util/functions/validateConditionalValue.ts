@@ -1,3 +1,3 @@
-export const validateConditionalValue = (value: string) => {
+export const validateConditionalValue = (value: unknown) => {
   return value;
 };
