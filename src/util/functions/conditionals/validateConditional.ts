@@ -19,9 +19,9 @@ export const validateConditional = async (conditional: unknown): Promise<Conditi
 
   const data = result.unwrap();
   const [rawVariable, rawOperator, ...rawValue] = data.if.split(" ");
-  const operator = validateConditionalOperator(rawVariable);
-  const value = validateConditionalValue(rawOperator);
-  const variable = validateConditionalVariable(rawValue.join(" "));
+  const variable = validateConditionalVariable(rawVariable);
+  const operator = await validateConditionalOperator(rawOperator);
+  const value = validateConditionalValue(rawValue.join(" "));
   const thenSequences: unknown[] = [];
   const elseSequences: unknown[] = [];
 
