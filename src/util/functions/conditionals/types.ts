@@ -1,4 +1,4 @@
-import type { SequenceType } from "#types";
+import type { Sequence, SequenceType } from "#types";
 
 export type ConditionalIfOperator = "===";
 
@@ -10,7 +10,7 @@ export interface Conditional {
       value: string;
       variable: string;
     };
-    then: unknown[];
-    else?: unknown[];
+    then: Sequence[];
+    else?: Sequence[];
   };
 }

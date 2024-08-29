@@ -1,6 +1,6 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
-import { type Conditional, type ResultErrorType, SequenceType } from "#types";
+import { type Conditional, type ResultErrorType, type Sequence, SequenceType } from "#types";
 import { throwError } from "#util/throwError";
 import { zodValidationMatch } from "../zodValidationMatch";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas";
@@ -24,8 +24,8 @@ export const validateConditional = async (conditional: unknown): Promise<Conditi
     validateConditionalOperator(rawOperator),
     validateConditionalValue(rawValue.join(" ")),
   ]);
-  const thenSequences: unknown[] = [];
-  const elseSequences: unknown[] = [];
+  const thenSequences: Sequence[] = [];
+  const elseSequences: Sequence[] = [];
 
   return {
     type: SequenceType.CONDITIONAL,
