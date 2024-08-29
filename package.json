@@ -7,7 +7,7 @@
     "ts-pattern": "5.3.1",
     "zod": "3.23.8"
   },
-  "description": "",
+  "description": "FancyScript is an easy-to-use syntax for creating custom actions for Discord bots using YAML",
   "devDependencies": {
     "@biomejs/biome": "1.8.3",
     "@types/js-yaml": "4.0.9",
