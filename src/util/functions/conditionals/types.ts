@@ -10,5 +10,7 @@ export interface Conditional {
       value: string;
       variable: string;
     };
+    then: unknown[];
+    else?: unknown[];
   };
 }
