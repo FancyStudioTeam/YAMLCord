@@ -1,3 +1,3 @@
-export const validateConditionalVariable = (variable: unknown) => {
+export const validateConditionalVariable = async (variable: unknown) => {
   return variable;
 };
