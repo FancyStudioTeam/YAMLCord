@@ -1,1 +1,3 @@
-export const validateConditionalVariable = (variable: string) => {};
+export const validateConditionalVariable = (variable: string) => {
+  return variable;
+};

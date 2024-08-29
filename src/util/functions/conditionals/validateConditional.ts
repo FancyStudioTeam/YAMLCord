@@ -19,9 +19,11 @@ export const validateConditional = async (conditional: unknown): Promise<Conditi
 
   const data = result.unwrap();
   const [rawVariable, rawOperator, ...rawValue] = data.if.split(" ");
-  const variable = validateConditionalOperator(rawVariable);
-  const operator = validateConditionalValue(rawOperator);
-  const value = validateConditionalVariable(rawValue.join(" "));
+  const operator = validateConditionalOperator(rawVariable);
+  const value = validateConditionalValue(rawOperator);
+  const variable = validateConditionalVariable(rawValue.join(" "));
+  const thenSequences: unknown[] = [];
+  const elseSequences: unknown[] = [];
 
   return {
     type: SequenceType.CONDITIONAL,
@@ -31,6 +33,8 @@ export const validateConditional = async (conditional: unknown): Promise<Conditi
         value,
         variable,
       },
+      then: thenSequences,
+      else: elseSequences,
     },
   };
 };

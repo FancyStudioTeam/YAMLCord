@@ -1,6 +1,6 @@
 import type { SequenceType } from "#types";
 
-type ConditionalIfOperator = "===";
+export type ConditionalIfOperator = "===";
 
 export interface Conditional {
   type: SequenceType.CONDITIONAL;
