@@ -14,7 +14,6 @@ describe("Function: createSequences", () => {
       await expect(createSequences(loader("1xxx/Test_1001"))).resolves.toStrictEqual({
         sequences: [
           {
-            type: SequenceType.CONDITIONAL,
             data: {
               if: {
                 operator: "===",
@@ -37,6 +36,62 @@ describe("Function: createSequences", () => {
                 },
               ],
             },
+            type: SequenceType.CONDITIONAL,
+          },
+        ],
+      }));
+
+    it("[1002] Creates valid sequences", async () =>
+      await expect(createSequences(loader("1xxx/Test_1002"))).resolves.toStrictEqual({
+        sequences: [
+          {
+            data: {
+              if: {
+                operator: "===",
+                value: "!admin",
+                variable: "[message.content]",
+              },
+              then: [
+                {
+                  data: {
+                    if: {
+                      operator: "===",
+                      value: "945029082314338407",
+                    },
+                    then: [
+                      {
+                        data: {
+                          content: "You are an admin!",
+                        },
+                        name: "create_message",
+                        type: SequenceType.FUNCTION,
+                      },
+                      {
+                        data: "🎉",
+                        name: "create_reaction",
+                        type: SequenceType.FUNCTION,
+                      },
+                    ],
+                    else: [
+                      {
+                        data: {
+                          content: "You are not an admin!",
+                        },
+                        name: "create_message",
+                        type: SequenceType.FUNCTION,
+                      },
+                      {
+                        data: "😢",
+                        name: "create_reaction",
+                        type: SequenceType.FUNCTION,
+                      },
+                    ],
+                  },
+                  type: SequenceType.CONDITIONAL,
+                },
+              ],
+            },
+            type: SequenceType.CONDITIONAL,
           },
         ],
       }));
