@@ -15,7 +15,7 @@ export const createSequences = async (
 
   for (const [property, data] of Object.entries(loadedData)) {
     await match(property)
-      .with("sequences", async () => await validateSequences(data))
+      .with("sequences", async () => sequences.push(...(await validateSequences(data))))
       .otherwise((property) => throwError([ErrorCodes.UNKNOWN_GLOBAL_PROPERTY, property]));
   }
 
