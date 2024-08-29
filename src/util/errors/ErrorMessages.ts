@@ -9,6 +9,8 @@ export const ErrorMessages: Record<ErrorCodes, string | ((...args: any[]) => str
     `Invalid value type. Expected "${expected}", received "${received}"`,
   [ErrorCodes.INVALID_ARRAY_LENGTH]: (type: "min" | "max", length: number) =>
     `Invalid array length. Expected ${type === "max" ? "at most" : "at least"} ${length} item(s)`,
+  [ErrorCodes.INVALID_ENUM_VALUE]: (expected: string, received: string) =>
+    `Invalid enum value. Expected "${expected}", received "${received}"`,
 
   [ErrorCodes.UNKNOWN_GLOBAL_PROPERTY]: (property: string) => `Unknown global property "${property}"`,
 };

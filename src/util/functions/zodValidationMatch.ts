@@ -29,6 +29,12 @@ export const zodValidationMatch = async <T extends ZodSchema>(
           },
           (issue) => reject([ErrorCodes.INVALID_ARRAY_LENGTH, "max", issue.maximum]),
         )
+        .with(
+          {
+            code: "invalid_enum_value",
+          },
+          (issue) => reject([ErrorCodes.INVALID_ENUM_VALUE, issue.options.join(", "), issue.received]),
+        )
         .otherwise(() => reject([ErrorCodes.GENERAL_ERROR]));
     }
 
