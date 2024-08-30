@@ -11,6 +11,7 @@ export const ErrorMessages: Record<ErrorCodes, string | ((...args: any[]) => str
     `Invalid array length. Expected ${type === "max" ? "at most" : "at least"} ${length} item(s)`,
   [ErrorCodes.INVALID_ENUM_VALUE]: (expected: string, received: string) =>
     `Invalid enum value. Expected "${expected}", received "${received}"`,
+  [ErrorCodes.INVALUD_REGEX_VALUE]: "Invalid regex value",
 
   [ErrorCodes.UNKNOWN_GLOBAL_PROPERTY]: (property: string) => `Unknown global property "${property}"`,
 };

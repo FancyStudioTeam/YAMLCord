@@ -5,7 +5,7 @@ import { zodValidationMatch } from "#util/functions/zodValidationMatch";
 import { throwError } from "#util/throwError";
 import { ConditionalIfOperatorSchema } from "../../schemas/ConditionalSchemas";
 
-export const validateConditionalOperator = async (operator: unknown): Promise<ConditionalIfOperator> => {
+export const validateConditionalOperator = async (operator: unknown) => {
   const result = await Result.fromAsync<z.infer<ConditionalIfOperatorSchemaType>, ResultErrorType>(
     async () => await zodValidationMatch<ConditionalIfOperatorSchemaType>(ConditionalIfOperatorSchema, operator),
   );
