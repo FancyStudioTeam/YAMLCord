@@ -3,11 +3,9 @@ import type { z } from "zod";
 import type { ResultErrorType, Sequence } from "#types";
 import { throwError } from "#util/throwError";
 import { validateConditional } from "./conditionals/validateConditional";
+import { isRawConditionalObject } from "./isRawConditionalObject";
 import { CreateSequencesSchemas } from "./schemas/CreateSequencesSchemas";
 import { zodValidationMatch } from "./zodValidationMatch";
-
-const isRawConditionalObject = (sequence: unknown) =>
-  typeof sequence === "object" && sequence !== null && "if" in sequence && "then" in sequence;
 
 export const validateSequences = async (sequence: unknown): Promise<Sequence[]> => {
   const result = await Result.fromAsync<z.infer<CreateSequenceSchemaType>, ResultErrorType>(

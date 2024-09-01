@@ -1,7 +1,9 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
 import { type Conditional, type ResultErrorType, type Sequence, SequenceType } from "#types";
+import { isRawConditionalObject } from "#util/functions/isRawConditionalObject";
 import { throwError } from "#util/throwError";
+import { validateFunction } from "../functions/validateFunction";
 import { zodValidationMatch } from "../zodValidationMatch";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas";
 import { validateConditionalOperator } from "./util/functions/validateConditionalOperator";
@@ -26,6 +28,20 @@ export const validateConditional = async (conditional: unknown): Promise<Conditi
   ]);
   const thenSequences: Sequence[] = [];
   const elseSequences: Sequence[] = [];
+
+  for (const sequence of data.then) {
+    thenSequences.push(
+      isRawConditionalObject(sequence) ? await validateConditional(sequence) : await validateFunction(sequence),
+    );
+  }
+
+  if (data.else?.length) {
+    for (const sequence of data.then) {
+      elseSequences.push(
+        isRawConditionalObject(sequence) ? await validateConditional(sequence) : await validateFunction(sequence),
+      );
+    }
+  }
 
   return {
     type: SequenceType.CONDITIONAL,
