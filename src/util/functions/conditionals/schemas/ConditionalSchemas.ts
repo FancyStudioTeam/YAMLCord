@@ -6,6 +6,6 @@ export const ConditionalSchema = z.object({
   else: z.array(z.unknown()).optional(),
 });
 
-export const ConditionalIfVariableSchema = z.string();
+export const ConditionalIfVariableSchema = z.string().regex(/^\[[^[\]]+\]$/);
 export const ConditionalIfOperatorSchema = z.enum(["eq"]);
 export const ConditionalIfValueSchema = z.string().regex(/^'.+'$/);
