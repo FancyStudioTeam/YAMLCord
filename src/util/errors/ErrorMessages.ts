@@ -14,4 +14,5 @@ export const ErrorMessages: Record<ErrorCodes, string | ((...args: any[]) => str
   [ErrorCodes.INVALUD_REGEX_VALUE]: "Invalid regex value",
 
   [ErrorCodes.UNKNOWN_GLOBAL_PROPERTY]: (property: string) => `Unknown global property "${property}"`,
+  [ErrorCodes.UNKNOWN_GLOBAL_FUNCTION]: (functionName: string) => `Unknown global function "${functionName}"`,
 };
