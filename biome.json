@@ -23,6 +23,7 @@
       },
       "suspicious": {
         "noAssignInExpressions": "off",
+        "noShadowRestrictedNames": "off",
         "noThenProperty": "off"
       }
     }

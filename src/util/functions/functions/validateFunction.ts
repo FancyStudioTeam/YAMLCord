@@ -1,5 +1,4 @@
 import { SequenceType } from "#types";
-// biome-ignore lint/suspicious/noShadowRestrictedNames:
 import type { Function } from "./types";
 
 export const validateFunction = async (sequence: unknown): Promise<Function> => {
