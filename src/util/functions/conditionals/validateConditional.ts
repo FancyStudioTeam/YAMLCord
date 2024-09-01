@@ -36,7 +36,7 @@ export const validateConditional = async (conditional: unknown): Promise<Conditi
   }
 
   if (data.else?.length) {
-    for (const sequence of data.then) {
+    for (const sequence of data.else) {
       elseSequences.push(
         isRawConditionalObject(sequence) ? await validateConditional(sequence) : await validateFunction(sequence),
       );
