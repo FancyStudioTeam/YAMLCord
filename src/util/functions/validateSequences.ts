@@ -9,7 +9,7 @@ import { zodValidationMatch } from "./zodValidationMatch";
 
 export const validateSequences = async (sequence: unknown): Promise<Sequence[]> => {
   const result = await Result.fromAsync<z.infer<CreateSequenceSchemaType>, ResultErrorType>(
-    async () => await zodValidationMatch<CreateSequenceSchemaType>(CreateSequencesSchemas.sequences, sequence),
+    async () => await zodValidationMatch<CreateSequenceSchemaType>(CreateSequencesSchemas, sequence),
   );
 
   if (result.isErr()) {
@@ -28,4 +28,4 @@ export const validateSequences = async (sequence: unknown): Promise<Sequence[]> 
   return sequences;
 };
 
-type CreateSequenceSchemaType = typeof CreateSequencesSchemas.sequences;
+type CreateSequenceSchemaType = typeof CreateSequencesSchemas;
