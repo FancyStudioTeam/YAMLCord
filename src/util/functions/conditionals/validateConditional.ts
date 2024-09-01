@@ -11,8 +11,8 @@ import { validateConditionalValue } from "./util/functions/validateConditionalVa
 import { validateConditionalVariable } from "./util/functions/validateConditionalVariable";
 
 export const validateConditional = async (conditional: unknown): Promise<Conditional> => {
-  const result = await Result.fromAsync<z.infer<ConditionalSchemaType>, ResultErrorType>(() =>
-    zodValidationMatch<ConditionalSchemaType>(ConditionalSchema, conditional),
+  const result = await Result.fromAsync<z.infer<ConditionalSchemaType>, ResultErrorType>(
+    async () => await zodValidationMatch<ConditionalSchemaType>(ConditionalSchema, conditional),
   );
 
   if (result.isErr()) {
