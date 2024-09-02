@@ -26,8 +26,8 @@
     }
   },
   "imports": {
-    "#types": "./src/types.js",
-    "#util/*": "./src/util/*"
+    "#types": "./dist/src/types.js",
+    "#util/*": "./dist/src/util/*"
   },
   "keywords": [],
   "license": "BSD-3-Clause",
