@@ -3,6 +3,12 @@ import { defineConfig } from "vitepress";
 export const es = defineConfig({
   lang: "es",
   themeConfig: {
+    nav: [
+      {
+        link: "/es/team",
+        text: "Equipo",
+      },
+    ],
     sidebar: {
       "/es/": [
         {
@@ -12,13 +18,14 @@ export const es = defineConfig({
               text: "Sobre FancyScript",
             },
             {
+              base: "/es/learning/",
               items: [
                 {
-                  link: "/es/basic-elements/data-types",
+                  link: "data-types",
                   text: "Tipos de Datos",
                 },
               ],
-              text: "Elementos Básicos",
+              text: "Aprendiendo",
             },
           ],
           text: "Introducción",

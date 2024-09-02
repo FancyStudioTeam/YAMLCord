@@ -54,7 +54,11 @@ export const shared = defineConfig({
       },
     ],
   ],
+  lastUpdated: true,
   themeConfig: {
+    editLink: {
+      pattern: "https://github.com/FancyStudioTeam/FancyScript/tree/main/docs/:path",
+    },
     logo: "/Logo.png",
     search: {
       provider: "local",
