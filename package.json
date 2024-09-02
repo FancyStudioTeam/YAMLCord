@@ -22,7 +22,7 @@
   "exports": {
     ".": {
       "require": "./dist/src/index.js",
-      "types": "./dist/src/index.d.ts"
+      "types": "./dist/src/types.d.ts"
     }
   },
   "imports": {
@@ -47,6 +47,6 @@
     "prepare": "husky",
     "test": "vitest"
   },
-  "types": "dist/src/index.d.ts",
+  "types": "dist/src/types.d.ts",
   "version": "0.0.1"
 }
