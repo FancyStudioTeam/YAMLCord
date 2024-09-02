@@ -1,6 +1,5 @@
 ---
 editLink: false
-title: Our Team
 ---
 
 <!-- markdownlint-disable -->
@@ -25,11 +24,7 @@ const members = {
 </script>
 <!-- markdownlint-restore -->
 
-<!-- markdownlint-disable MD025 -->
-
-# {{ $frontmatter.title }}
-
-<!-- markdownlint-enable MD025 -->
+# Our Team
 
 Thanks to all these people who have made FancyScript possible!
 
