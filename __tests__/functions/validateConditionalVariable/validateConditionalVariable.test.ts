@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { ErrorCodes } from "#util/errors/ErrorCodes";
-import { validateConditionalVariable } from "#util/functions/conditionals/util/functions/validateConditionalVariable";
-import { throwError } from "#util/throwError";
+import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
+import { validateConditionalVariable } from "../../../src/util/functions/conditionals/util/functions/validateConditionalVariable";
+import { throwError } from "../../../src/util/throwError";
 
 describe("Function: validateConditionalVariable", () => {
   describe("Success cases (1xxx)", () => {

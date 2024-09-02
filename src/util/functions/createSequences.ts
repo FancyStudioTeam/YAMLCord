@@ -1,7 +1,7 @@
 import { match } from "ts-pattern";
 import type { Sequence } from "#types";
-import { ErrorCodes } from "#util/errors/ErrorCodes";
-import { throwError } from "#util/throwError";
+import { ErrorCodes } from "#util/errors/ErrorCodes.js";
+import { throwError } from "#util/throwError.js";
 import { loadYAMLData } from "./util/loadYAMLData";
 import { validateSequences } from "./util/validateSequences";
 

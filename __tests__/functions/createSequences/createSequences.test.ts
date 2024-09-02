@@ -2,9 +2,9 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { SequenceType } from "#types";
-import { ErrorCodes } from "#util/errors/ErrorCodes";
-import { getErrorMessage } from "#util/errors/Errors";
-import { createSequences } from "#util/functions/createSequences";
+import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
+import { getErrorMessage } from "../../../src/util/errors/Errors";
+import { createSequences } from "../../../src/util/functions/createSequences";
 
 const loader = (path: string) => readFileSync(join(__dirname, "files", `${path}.yml`), "utf8");
 

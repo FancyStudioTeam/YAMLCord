@@ -1,7 +1,7 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
 import type { ResultErrorType, Sequence } from "#types";
-import { throwError } from "#util/throwError";
+import { throwError } from "#util/throwError.js";
 import { validateConditional } from "../conditionals/validateConditional";
 import { CreateSequencesSchemas } from "../schemas/CreateSequencesSchemas";
 import { isRawConditionalObject } from "./isRawConditionalObject";
