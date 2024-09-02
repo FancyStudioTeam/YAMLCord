@@ -6,51 +6,58 @@
 #editor {
   height: 500px;
   width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
 }
 </style>
 
 <script setup lang="ts">
 import * as monaco from "monaco-editor";
+// @ts-expect-error
 import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
-import { configureMonacoYaml } from "monaco-yaml";
+// @ts-expect-error
 import YAMLWorker from "monaco-yaml/yaml.worker?worker";
 import { onMounted } from "vue";
 
-onMounted(() => {
+onMounted(async () => {
   self.MonacoEnvironment = {
     getWorker(_, label) {
       switch (label) {
-        case "editorWorkerService": {
-          return new EditorWorker();
-        }
         case "yaml": {
           return new YAMLWorker();
         }
         default: {
-          throw new Error(`Unknown worker: ${label}`);
+          return new EditorWorker();
         }
       }
     },
   };
 
-  configureMonacoYaml(monaco);
-
   const editorContainer = document.getElementById("editor");
 
   if (editorContainer) {
-    monaco.editor.create(editorContainer, {
+    const playground = monaco.editor.create(editorContainer, {
+      fontFamily: "JetBrains Mono",
+      fontLigatures: false,
+      fontSize: 18,
       language: "yaml",
-      theme: "vs-dark",
-      fontSize: 16,
-      // fontFamily: "JetBrains Mono Variable",
-      padding: {
-        top: 25,
-        bottom: 25,
-      },
+      lineNumbers: "off",
       minimap: {
         enabled: false,
       },
+      padding: {
+        bottom: 25,
+        top: 25,
+      },
+      scrollbar: {
+        vertical: "auto",
+      },
       tabSize: 2,
+      theme: "vs-dark",
+    });
+
+    playground.onDidChangeModelContent(() => {
+      monaco.editor.remeasureFonts();
     });
   }
 });

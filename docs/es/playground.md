@@ -4,15 +4,15 @@ import { defineAsyncComponent } from 'vue';
 import { inBrowser } from 'vitepress';
 
 const Playground = inBrowser
-  ? defineAsyncComponent(() => import('./.vitepress/components/Playground.vue'))
+  ? defineAsyncComponent(() => import('../.vitepress/components/Playground.vue'))
   : () => null;
 </script>
 <!-- markdownlint-restore -->
 
 # Playground
 
-:::info Interactive Editor
-This is an interactive editor where you can write FancyScript syntax and export it as a file to load into a bot.
+:::info Editor interactivo
+Este es un editor interactivo donde puedes escribir la sintaxis de FancyScript y exportarlo como un archivo para cargarlo en un bot.
 :::
 
 <!-- markdownlint-disable -->

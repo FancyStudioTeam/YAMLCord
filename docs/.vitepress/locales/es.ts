@@ -8,6 +8,10 @@ export const es = defineConfig({
         link: "/es/team",
         text: "Equipo",
       },
+      {
+        link: "/es/playground",
+        text: "Playground",
+      },
     ],
     sidebar: {
       "/es/": [

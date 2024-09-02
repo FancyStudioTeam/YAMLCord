@@ -1,6 +1,6 @@
 :root {
   --vp-font-family-base: "Plus Jakarta Sans Variable", sans-serif;
-  --vp-font-family-mono: "JetBrains Mono Variable", monospace;
+  --vp-font-family-mono: "JetBrains Mono", monospace;
 }
 
 img[src*="#dark"] {
