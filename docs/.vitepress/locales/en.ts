@@ -25,7 +25,7 @@ export const en = defineConfig({
                   text: "Data Types",
                 },
               ],
-              text: "Aprendiendo",
+              text: "Learning",
             },
           ],
           text: "Introduction",
