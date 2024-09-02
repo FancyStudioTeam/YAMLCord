@@ -17,7 +17,7 @@ import YAMLWorker from "monaco-yaml/yaml.worker?worker";
 import { onMounted } from "vue";
 
 onMounted(() => {
-  window.MonacoEnvironment = {
+  self.MonacoEnvironment = {
     getWorker(_, label) {
       switch (label) {
         case "editorWorkerService": {

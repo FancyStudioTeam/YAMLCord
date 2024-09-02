@@ -1,5 +1,10 @@
 <script setup>
-import Playground from './.vitepress/components/Playground.vue'
+import { defineAsyncComponent } from 'vue';
+import { inBrowser } from 'vitepress';
+
+const Playground = inBrowser
+  ? defineAsyncComponent(() => import('./.vitepress/components/Playground.vue'))
+  : () => null;
 </script>
 
 # Playground

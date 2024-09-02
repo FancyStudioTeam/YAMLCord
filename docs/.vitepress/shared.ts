@@ -73,4 +73,9 @@ export const shared = defineConfig({
     ],
   },
   title: "FancyScript",
+  vite: {
+    ssr: {
+      noExternal: ["monaco-editor"],
+    },
+  },
 });
