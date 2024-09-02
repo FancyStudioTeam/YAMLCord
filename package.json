@@ -14,7 +14,7 @@
     "@types/node": "22.5.1",
     "husky": "9.1.5",
     "js-yaml": "4.1.0",
-    "lint-staged": "15.2.9",
+    "lint-staged": "15.2.10",
     "tsx": "4.19.0",
     "typescript": "5.5.4",
     "vitest": "2.0.5"
