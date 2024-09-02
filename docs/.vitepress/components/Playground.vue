@@ -1,4 +1,8 @@
 <template>
+  <div v-if="errorReference" class="danger custom-block">
+    <p class="custom-block-title">Error</p>
+    <p>{{ errorReference }}</p>
+  </div>
   <div id="editor" />
 </template>
 
@@ -9,6 +13,13 @@
   border-radius: 8px;
   overflow: hidden;
 }
+
+#error {
+  padding: 8px;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+}
 </style>
 
 <script setup lang="ts">
@@ -17,8 +28,10 @@ import * as monaco from "monaco-editor";
 import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 // @ts-expect-error
 import YAMLWorker from "monaco-yaml/yaml.worker?worker";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
 import { createSequences } from "../../../src/util/functions/createSequences";
+
+const errorReference = ref<string | null>(null);
 
 onMounted(async () => {
   self.MonacoEnvironment = {
@@ -60,10 +73,13 @@ onMounted(async () => {
     playground.onDidChangeModelContent(async () => {
       monaco.editor.remeasureFonts();
 
-      const sequences = await createSequences(playground.getValue());
-
-      console.log(playground.getValue());
-      console.log(sequences);
+      await createSequences(playground.getValue())
+        .then(async () => (errorReference.value = null))
+        .catch(async (error) => {
+          if ("code" in error) {
+            errorReference.value = error.message;
+          }
+        });
     });
   }
 });
