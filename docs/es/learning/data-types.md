@@ -1,4 +1,12 @@
-# Tipos de Datos
+---
+title: Tipos de Datos
+---
+
+<!-- markdownlint-disable MD025 -->
+
+# {{ $frontmatter.title }}
+
+<!-- markdownlint-enable MD025 -->
 
 :::warning Antes de Empezar
 Si eres nuevo en YAML, te recomendamos que veas un tutorial para aprender lo básico de YAML antes de usar FancyScript.
