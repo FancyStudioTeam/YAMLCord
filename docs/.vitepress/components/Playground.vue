@@ -13,6 +13,7 @@
 import * as monaco from "monaco-editor";
 import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 import { configureMonacoYaml } from "monaco-yaml";
+import YAMLWorker from "monaco-yaml/yaml.worker?worker";
 import { onMounted } from "vue";
 
 onMounted(() => {
@@ -23,7 +24,7 @@ onMounted(() => {
           return new EditorWorker();
         }
         case "yaml": {
-          return new Worker(new URL("monaco-yaml/yaml.worker", import.meta.url));
+          return new YAMLWorker();
         }
         default: {
           throw new Error(`Unknown worker: ${label}`);
