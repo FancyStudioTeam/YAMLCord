@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { ErrorCodes } from "#util/errors/ErrorCodes";
 import { getErrorMessage } from "#util/errors/Errors";
-import { loadYAMLData } from "#util/functions/loadYAMLData";
+import { loadYAMLData } from "#util/functions/util/loadYAMLData";
 
 const loader = (path: string) => readFileSync(join(__dirname, "files", `${path}.yml`), "utf8");
 

@@ -2,8 +2,8 @@ import { match } from "ts-pattern";
 import type { Sequence } from "#types";
 import { ErrorCodes } from "#util/errors/ErrorCodes";
 import { throwError } from "#util/throwError";
-import { loadYAMLData } from "./loadYAMLData";
-import { validateSequences } from "./validateSequences";
+import { loadYAMLData } from "./util/loadYAMLData";
+import { validateSequences } from "./util/validateSequences";
 
 export const createSequences = async (
   data: string,

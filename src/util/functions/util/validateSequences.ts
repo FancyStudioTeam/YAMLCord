@@ -2,9 +2,9 @@ import { Result } from "@sapphire/result";
 import type { z } from "zod";
 import type { ResultErrorType, Sequence } from "#types";
 import { throwError } from "#util/throwError";
-import { validateConditional } from "./conditionals/validateConditional";
+import { validateConditional } from "../conditionals/validateConditional";
+import { CreateSequencesSchemas } from "../schemas/CreateSequencesSchemas";
 import { isRawConditionalObject } from "./isRawConditionalObject";
-import { CreateSequencesSchemas } from "./schemas/CreateSequencesSchemas";
 import { zodValidationMatch } from "./zodValidationMatch";
 
 export const validateSequences = async (sequence: unknown): Promise<Sequence[]> => {

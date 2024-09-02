@@ -1,6 +1,6 @@
 import { match } from "ts-pattern";
 import type { ZodSchema, z } from "zod";
-import { ErrorCodes } from "../errors/ErrorCodes";
+import { ErrorCodes } from "../../errors/ErrorCodes";
 
 export const zodValidationMatch = async <T extends ZodSchema>(
   zodSchema: ZodSchema,
@@ -10,6 +10,7 @@ export const zodValidationMatch = async <T extends ZodSchema>(
     const { error, data } = zodSchema.safeParse(dataToValidate);
 
     if (error) {
+      console.log(error.issues[0]);
       match(error.issues[0])
         .with(
           {

@@ -1,10 +1,10 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
 import { type Conditional, type ResultErrorType, type Sequence, SequenceType } from "#types";
-import { isRawConditionalObject } from "#util/functions/isRawConditionalObject";
+import { isRawConditionalObject } from "#util/functions/util/isRawConditionalObject";
 import { throwError } from "#util/throwError";
 import { validateFunction } from "../functions/validateFunction";
-import { zodValidationMatch } from "../zodValidationMatch";
+import { zodValidationMatch } from "../util/zodValidationMatch";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas";
 import { validateConditionalOperator } from "./util/functions/validateConditionalOperator";
 import { validateConditionalValue } from "./util/functions/validateConditionalValue";
