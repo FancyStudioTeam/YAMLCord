@@ -18,6 +18,7 @@ import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 // @ts-expect-error
 import YAMLWorker from "monaco-yaml/yaml.worker?worker";
 import { onMounted } from "vue";
+import { createSequences } from "../../../src/util/functions/createSequences";
 
 onMounted(async () => {
   self.MonacoEnvironment = {
@@ -56,8 +57,13 @@ onMounted(async () => {
       theme: "vs-dark",
     });
 
-    playground.onDidChangeModelContent(() => {
+    playground.onDidChangeModelContent(async () => {
       monaco.editor.remeasureFonts();
+
+      const sequences = await createSequences(playground.getValue());
+
+      console.log(playground.getValue());
+      console.log(sequences);
     });
   }
 });
