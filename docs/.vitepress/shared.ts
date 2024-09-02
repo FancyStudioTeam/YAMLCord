@@ -1,6 +1,7 @@
 import { defineConfig } from "vitepress";
 
 export const shared = defineConfig({
+  cleanUrls: true,
   description: "An easy-to-use syntax for Discord bots using YAML",
   head: [
     [
