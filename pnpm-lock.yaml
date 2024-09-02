@@ -12,8 +12,8 @@ importers:
         specifier: 2.6.6
         version: 2.6.6
       es-toolkit:
-        specifier: 1.16.0
-        version: 1.16.0
+        specifier: 1.17.0
+        version: 1.17.0
       js-yaml:
         specifier: 4.1.0
         version: 4.1.0
@@ -983,8 +983,8 @@ packages:
     resolution: {integrity: sha512-xUtoPkMggbz0MPyPiIWr1Kp4aeWJjDZ6SMvURhimjdZgsRuDplF5/s9hcgGhyXMhs+6vpnuoiZ2kFiu3FMnS8Q==}
     engines: {node: '>=18'}
 
-  es-toolkit@1.16.0:
-    resolution: {integrity: sha512-eNJh3zF1KmAHRYd1D8rFi1cMFMCjrC6tumBfwuuZdSur97mED/ifyeBoGzxS11L4owCMx3XSmWTo6oxJQkdGng==}
+  es-toolkit@1.17.0:
+    resolution: {integrity: sha512-aJvpNxK7d+I+Rt9tmdwzelxTe4EwtxX1Kv0xv6ZTRWJBpMCxe0vxTLLW4STz6pHYjtyTTrEkonNXLaBsYHg2Yw==}
 
   esbuild@0.21.5:
     resolution: {integrity: sha512-mg3OPMV4hXywwpoDxu3Qda5xCKQi+vCTZq8S9J/EpkhB2HzKXq4SNFZE3+NK93JYxc8VMSep+lOUSC/RVKaBqw==}
@@ -2440,7 +2440,7 @@ snapshots:
 
   environment@1.1.0: {}
 
-  es-toolkit@1.16.0: {}
+  es-toolkit@1.17.0: {}
 
   esbuild@0.21.5:
     optionalDependencies:
