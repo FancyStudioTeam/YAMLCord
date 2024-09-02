@@ -11,6 +11,7 @@
 
 <script setup lang="ts">
 import * as monaco from "monaco-editor";
+import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 import { configureMonacoYaml } from "monaco-yaml";
 import { onMounted } from "vue";
 
@@ -19,7 +20,7 @@ onMounted(() => {
     getWorker(_, label) {
       switch (label) {
         case "editorWorkerService": {
-          return new Worker(new URL("monaco-editor/esm/vs/editor/editor.worker", import.meta.url));
+          return new EditorWorker();
         }
         case "yaml": {
           return new Worker(new URL("monaco-yaml/yaml.worker", import.meta.url));
