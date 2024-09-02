@@ -13,13 +13,6 @@
   border-radius: 8px;
   overflow: hidden;
 }
-
-#error {
-  padding: 8px;
-  border-radius: 8px;
-  width: 100%;
-  height: 100%;
-}
 </style>
 
 <script setup lang="ts">
