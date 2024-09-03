@@ -1,9 +1,9 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
 import type { ResultErrorType } from "#types";
-import { ErrorCodes } from "#util/errors/ErrorCodes.js";
-import { zodValidationMatch } from "#util/functions/util/zodValidationMatch.js";
-import { throwError } from "#util/throwError.js";
+import { ErrorCodes } from "#util/errors/ErrorCodes";
+import { zodValidationMatch } from "#util/functions/util/zodValidationMatch";
+import { throwError } from "#util/throwError";
 import { ConditionalIfValueSchema } from "../../schemas/ConditionalSchemas";
 
 export const validateConditionalValue = async (value: unknown) => {
