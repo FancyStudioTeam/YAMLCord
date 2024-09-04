@@ -29,3 +29,12 @@ sequences:
       - create_message:
           content: "¡Hola! 👋"
 ```
+
+## Contribuidores
+
+¡Gracias a todas estas personas que han hecho posible FancyScript!
+
+[![All Contributors][ContributorsImageURL]][ContributorsURL]
+
+[ContributorsImageURL]: https://contrib.rocks/image?repo=FancyStudioTeam/FancyScript&max=500&columns=20
+[ContributorsURL]: https://github.com/FancyStudioTeam/FancyScript/graphs/contributors
