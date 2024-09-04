@@ -56,6 +56,9 @@ export const shared = defineConfig({
     ],
   ],
   lastUpdated: true,
+  markdown: {
+    theme: "vesper",
+  },
   themeConfig: {
     editLink: {
       pattern: "https://github.com/FancyStudioTeam/FancyScript/tree/main/docs/:path",
