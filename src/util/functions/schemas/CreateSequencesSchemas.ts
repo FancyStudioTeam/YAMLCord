@@ -1,3 +1,3 @@
 import { z } from "zod";
 
-export const CreateSequencesSchemas = z.array(z.object({})).min(1);
+export const CreateSequencesSchemas = z.array(z.unknown()).min(1);
