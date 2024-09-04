@@ -1,5 +1,6 @@
 ---
 editLink: false
+layout: home
 ---
 
 <!-- markdownlint-disable -->
@@ -12,8 +13,6 @@ const Playground = inBrowser
   : () => null;
 </script>
 <!-- markdownlint-restore -->
-
-# Playground
 
 :::info Editor interactivo
 Este es un editor interactivo donde puedes escribir la sintaxis de FancyScript y exportarlo como un archivo para cargarlo en un bot.

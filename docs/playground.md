@@ -1,5 +1,6 @@
 ---
 editLink: false
+layout: home
 ---
 
 <!-- markdownlint-disable -->
@@ -12,8 +13,6 @@ const Playground = inBrowser
   : () => null;
 </script>
 <!-- markdownlint-restore -->
-
-# Playground
 
 :::info Interactive Editor
 This is an interactive editor where you can write FancyScript syntax and export it as a file to load into a bot.
