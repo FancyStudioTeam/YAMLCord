@@ -16,11 +16,13 @@
 </style>
 
 <script setup lang="ts">
+import { shikiToMonaco } from "@shikijs/monaco";
 import * as monaco from "monaco-editor";
 // @ts-expect-error
 import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 // @ts-expect-error
 import YAMLWorker from "monaco-yaml/yaml.worker?worker";
+import { createHighlighter } from "shiki";
 import { onMounted, ref } from "vue";
 import { createSequences } from "../../../src/util/functions/createSequences";
 
@@ -43,24 +45,35 @@ onMounted(async () => {
   const editorContainer = document.getElementById("editor");
 
   if (editorContainer) {
+    const highlighter = await createHighlighter({
+      themes: ["vitesse-dark"],
+      langs: ["yaml"],
+    });
+
+    monaco.languages.register({
+      id: "yaml",
+    });
+
+    shikiToMonaco(highlighter, monaco);
+
     const playground = monaco.editor.create(editorContainer, {
       fontFamily: "JetBrains Mono",
       fontLigatures: false,
-      fontSize: 18,
+      fontSize: 16,
       language: "yaml",
       lineNumbers: "off",
       minimap: {
         enabled: false,
       },
       padding: {
-        bottom: 25,
-        top: 25,
+        bottom: 20,
+        top: 20,
       },
       scrollbar: {
         vertical: "auto",
       },
       tabSize: 2,
-      theme: "vs-dark",
+      theme: "vitesse-dark",
     });
 
     playground.onDidChangeModelContent(async () => {

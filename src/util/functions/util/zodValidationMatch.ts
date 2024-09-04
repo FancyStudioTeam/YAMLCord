@@ -10,7 +10,6 @@ export const zodValidationMatch = async <T extends ZodSchema>(
     const { error, data } = zodSchema.safeParse(dataToValidate);
 
     if (error) {
-      console.log(error.issues[0]);
       match(error.issues[0])
         .with(
           {

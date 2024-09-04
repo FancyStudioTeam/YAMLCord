@@ -57,7 +57,7 @@ export const shared = defineConfig({
   ],
   lastUpdated: true,
   markdown: {
-    theme: "vesper",
+    theme: "vitesse-dark",
   },
   themeConfig: {
     editLink: {
