@@ -31,7 +31,7 @@ describe("Function: createSequences", () => {
                 },
                 {
                   data: "👋",
-                  name: "create_reaction",
+                  name: "add_reaction",
                   type: SequenceType.FUNCTION,
                 },
               ],
@@ -70,7 +70,7 @@ describe("Function: createSequences", () => {
                       },
                       {
                         data: "🎉",
-                        name: "create_reaction",
+                        name: "add_reaction",
                         type: SequenceType.FUNCTION,
                       },
                     ],
@@ -84,7 +84,7 @@ describe("Function: createSequences", () => {
                       },
                       {
                         data: "😢",
-                        name: "create_reaction",
+                        name: "add_reaction",
                         type: SequenceType.FUNCTION,
                       },
                     ],

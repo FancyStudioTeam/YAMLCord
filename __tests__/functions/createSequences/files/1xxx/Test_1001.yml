@@ -4,4 +4,4 @@ sequences:
       - create_message:
           content: "Hello, world!"
           reply: "no_ping"
-      - create_reaction: "👋"
+      - add_reaction: "👋"

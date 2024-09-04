@@ -5,8 +5,8 @@ sequences:
         then:
           - create_message:
               content: "You are an admin!"
-          - create_reaction: "🎉"
+          - add_reaction: "🎉"
         else:
           - create_message:
               content: "You are not an admin!"
-          - create_reaction: "😢"
+          - add_reaction: "😢"
