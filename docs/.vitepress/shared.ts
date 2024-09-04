@@ -67,6 +67,10 @@ export const shared = defineConfig({
     siteTitle: false,
     socialLinks: [
       {
+        icon: "discord",
+        link: "https://discord.gg/gud55BjNFC",
+      },
+      {
         icon: "github",
         link: "https://github.com/FancyStudioTeam/FancyScript",
       },

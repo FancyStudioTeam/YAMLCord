@@ -6,7 +6,7 @@ export const es = defineConfig({
     nav: [
       {
         link: "/es/team",
-        text: "Equipo",
+        text: "Nuestro Equipo",
       },
       {
         link: "/es/playground",
@@ -23,6 +23,7 @@ export const es = defineConfig({
             },
             {
               base: "/es/learning/",
+              collapsed: false,
               items: [
                 {
                   link: "data-types",
@@ -33,6 +34,25 @@ export const es = defineConfig({
             },
           ],
           text: "Introducción",
+        },
+        {
+          items: [],
+          text: "Ejemplos",
+        },
+        {
+          items: [
+            {
+              link: "https://discord.gg/gud55BjNFC",
+              target: "_blank",
+              text: "Servidor de Discord",
+            },
+            {
+              link: "https://github.com/FancyStudioTeam/FancyScript",
+              target: "_blank",
+              text: "Repositorio de GitHub",
+            },
+          ],
+          text: "Enlaces Útiles",
         },
       ],
     },
