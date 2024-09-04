@@ -1,7 +1,3 @@
----
-outline: deep
----
-
 # Tipos de Datos
 
 :::warning Antes de Empezar

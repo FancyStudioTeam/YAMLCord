@@ -1,7 +1,3 @@
----
-outline: deep
----
-
 <!-- markdownlint-disable -->
 
 ![Light](/banners/Light.png#light)
