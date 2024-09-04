@@ -20,12 +20,12 @@ Si eres nuevo en YAML, te recomendamos que veas un tutorial para aprender lo bá
 ## Ejemplo
 
 ```yml
-# Lista de condiciones.
-conditions:
-  # Comprueba si el contenido del mensaje es igual a "!hi".
+# Array de Secuencias
+sequences:
+  # Comprueba si el contenido del mensaje es igual a "!hi"
   - if: "[message.content] eq '!hi'"
     then:
-      # El bot crea un mensaje.
+      # El bot crea un mensaje
       - create_message:
           content: "¡Hola! 👋"
 ```

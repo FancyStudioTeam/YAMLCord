@@ -16,51 +16,114 @@ En esta página se hará un resumen rápido sobre los tipos de datos que se usan
 
 ### Cadenas de Texto (`String`)
 
-Un string es un tipo de dato que representa una secuencia de caracteres como letras, números y símbolos. Se usa para almacenar y manipular textos.
+El tipo `string` es un tipo de dato que representa una secuencia de caracteres como letras, números y símbolos.
 
-:::info Representación de Cadenas de Texto en YAML
+:::info Representación de Strings en YAML
 
-```yml
-content: "¡Hola, mundo! Esto es un string de una línea."
+::: code-group
+
+```yml [Una línea]
+content: "Esto es una string de una línea"
 ```
 
-Para hacer textos con saltos de líneas, puedes usar `|-`
+```yml [Múltiples líneas]
+# Para hacer textos con salto de línea, puedes usar "|-"
+# Cuando haces saltos de línea, no necesitas usar comillas dobles
+# Si incluyes las comillas dobles, estas formarán parte del texto
 
-```yml
-content: |- # No necesitas usar comillas dobles
-  ¡Hola,
-  mundo!
-  Esto es un string de varias líneas.
+content: |-
+  Esto es un string
+  con saltos de línea
 ```
 
 :::
 
+---
+
 ### Números (`Number`)
 
-Un número es un tipo de dato que representa a cualquier valor numérico. Los números pueden ser enteros o decimales.
+El tipo `number` es un tipo de dato que representa a cualquier valor numérico. Los números pueden ser enteros o decimales.
 
 :::info Representación de Números en YAML
 
 ```yml
-quantity: 10 # Enteros
-price: 3.99 # Decimales (Con punto decimal)
+stock: 10 # Números Enteros
+price: 3.99 # Números Decimales (Con punto decimal)
 ```
 
 :::
 
+---
+
+### Booleanos (`Boolean`)
+
+El tipo `boolean` es un tipo de dato que representa si un valor es verdadero o falso. Los valores de los booleanos son `true` o `false`.
+
+:::info Representación de Booleanos en YAML
+
+```yml
+is_enabled: true
+use_index: false
+```
+
+:::
+
+---
+
+### Listas (`Array`)
+
+El tipo `array` es un tipo de dato que representa una lista de valores. En YAML, existen dos formas para representar una lista.
+
+:::info Representación de Listas en YAML
+
+:::code-group
+
+```yml [Elementos de una línea]
+# Este tipo de array puede ser útil para almacenar elementos de una línea
+# Los elementos se separan mediante una coma
+# Puede ser útil para almacenar elementos simples
+
+numbers: [1, 2, 3, 4, 5]
+```
+
+```yml [Elementos de múltiples líneas]
+# Este tipo de array puede ser útil para almacenar elementos de múltiples líneas
+# Los elementos se definen con un "-" al inicio y se separan con una nueva línea
+# Puede ser útil para almacenar elementos complejos
+
+workers:
+  - person:
+      name: "John Doe"
+      age: 30
+  - person:
+      name: "Jane Doe"
+      age: 25
+```
+
+:::tip Tipos de Datos
+Los elementos pueden ser de cualquier tipo de dato.
+:::
+
+---
+
 ### Objetos (`Object`)
 
-Un objeto es un tipo de dato que representa un conjunto de pares `clave-valor`.
+El tipo `object` es un tipo de dato que representa un conjunto de pares `clave-valor`.
 
 :::info Conjunto de pares `clave-valor`
 
 ```yml
-key: value # El nombre de la clave es "key" y el valor es "value"
+# El nombre de la clave es "key" (string)
+# El valor de la clave es "value" (string)
+
+key: value
 ```
 
+:::tip Tipos de Datos
+El nombre de las claves suelen ser de tipo `string`, mientras que los valores pueden ser de cualquier tipo de dato.
 :::
 
-Las claves son únicas y no pueden ser duplicadas dentro del mismo objeto. Los pares se definen usando `:` para separar las claves de los valores, y cada par se separa con una nueva línea.
+Los pares se definen usando `:` para separar las claves de los valores, y cada par se separa con una nueva línea.
 
 :::info Representación de Objetos en YAML
 
@@ -72,40 +135,26 @@ person:
 
 :::
 
-:::warning Tipos de Datos en los pares
-Las claves suelen ser de tipo `String`, mientras que los valores pueden ser de cualquier tipo de dato.
-:::
+Las claves deben ser únicas y no pueden ser duplicadas dentro del mismo padre.
 
-### Booleanos (`Boolean`)
+:::info Jerarquía de Padres e Hijos
 
-Un booleano es un tipo de dato que representa si un valor es verdadero o falso. Los valores de los booleanos son `true` o `false`.
+:::code-group
 
-:::info Representación de Booleanos en YAML
-
-```yml
-is_enabled: true
-use_index: false
+```yml [Objeto Inválido]
+parent_object:
+  content: "Contenido 1" # Hijo de "parent_object"
+  content: "Contenido 2" // [!code error] # Hijo de "parent_object" [Clave Duplicada en el mismo Padre]
 ```
 
-:::
+```yml [Objeto Válido]
+parent_object:
+  content: "Contenido 1" # Hijo de "parent_object"
 
-### Listas (`Array`)
-
-Un array es un tipo de dato que representa una lista de valores. Los elementos dentro del array se definen usando `-` antes del elemento.
-
-:::info Representación de Listas en YAML
-
-```yml
-numbers:
-  - 1
-  - 2
-  - 3
+  sub_parent_object: # Hijo de "parent_object"
+    content: "Contenido 2" # Hijo de "sub_parent_object"
 ```
 
-:::
-
-:::warning Tipos de Datos en los elementos
-Los elementos pueden ser de cualquier tipo de dato.
 :::
 
 ## Anidaciones
@@ -123,10 +172,7 @@ person:
   name: "John Doe"
   age: 30
   is_underage: false
-  hobbies:
-    - "Leer"
-    - "Programar"
-    - "Atletismo"
+  hobbies: ["Leer", "Programar", "Atletismo"]
   active_worker: true
   company:
     name: "FancyStudio"
@@ -140,7 +186,5 @@ person:
       age: 19
       is_underage: false
 ```
-
-### Explicación
 
 :::
