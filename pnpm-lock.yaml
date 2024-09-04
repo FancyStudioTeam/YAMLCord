@@ -61,8 +61,8 @@ importers:
         specifier: 5.0.21
         version: 5.0.21
       '@shikijs/monaco':
-        specifier: 1.16.1
-        version: 1.16.1
+        specifier: 1.16.2
+        version: 1.16.2
       monaco-editor:
         specifier: 0.51.0
         version: 0.51.0
@@ -669,14 +669,11 @@ packages:
   '@shikijs/core@1.14.1':
     resolution: {integrity: sha512-KyHIIpKNaT20FtFPFjCQB5WVSTpLR/n+jQXhWHWVUMm9MaOaG9BGOG0MSyt7yA4+Lm+4c9rTc03tt3nYzeYSfw==}
 
-  '@shikijs/core@1.16.1':
-    resolution: {integrity: sha512-aI0hBtw+a6KsJp2jcD4YuQqKpeCbURMZbhHVozDknJpm+KJqeMRkEnfBC8BaKE/5XC+uofPgCLsa/TkTk0Ba0w==}
-
   '@shikijs/core@1.16.2':
     resolution: {integrity: sha512-XSVH5OZCvE4WLMgdoBqfPMYmGHGmCC3OgZhw0S7KcSi2XKZ+5oHGe71GFnTljgdOxvxx5WrRks6QoTLKrl1eAA==}
 
-  '@shikijs/monaco@1.16.1':
-    resolution: {integrity: sha512-gxrHLCMId0Wdhku68Zok2VGmpb2bVJqsIY33YNzlLf52xHAhhPtZx+/dFq85lw2jmaUQTop2u3EDOeRJeLRVig==}
+  '@shikijs/monaco@1.16.2':
+    resolution: {integrity: sha512-aNiZF+6z/g92pMz1YVH38LbMO3L1BDyVHzoBpsyX/eBcVKBt0xc7a6yjqxvqa8dJt0eU11GosuWB5AuxAqs8kQ==}
 
   '@shikijs/transformers@1.14.1':
     resolution: {integrity: sha512-JJqL8QBVCJh3L61jqqEXgFq1cTycwjcGj7aSmqOEsbxnETM9hRlaB74QuXvY/fVJNjbNt8nvWo0VwAXKvMSLRg==}
@@ -2159,19 +2156,14 @@ snapshots:
     dependencies:
       '@types/hast': 3.0.4
 
-  '@shikijs/core@1.16.1':
-    dependencies:
-      '@shikijs/vscode-textmate': 9.2.0
-      '@types/hast': 3.0.4
-
   '@shikijs/core@1.16.2':
     dependencies:
       '@shikijs/vscode-textmate': 9.2.0
       '@types/hast': 3.0.4
 
-  '@shikijs/monaco@1.16.1':
+  '@shikijs/monaco@1.16.2':
     dependencies:
-      '@shikijs/core': 1.16.1
+      '@shikijs/core': 1.16.2
       '@shikijs/vscode-textmate': 9.2.0
 
   '@shikijs/transformers@1.14.1':
