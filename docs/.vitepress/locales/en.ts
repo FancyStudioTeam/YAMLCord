@@ -13,9 +13,6 @@ export const en = defineConfig({
         text: "Playground",
       },
     ],
-    outline: {
-      label: "On this page",
-    },
     sidebar: {
       "/": [
         {

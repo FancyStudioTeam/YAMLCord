@@ -64,7 +64,6 @@ export const shared = defineConfig({
       pattern: "https://github.com/FancyStudioTeam/FancyScript/tree/main/docs/:path",
     },
     logo: "/Logo.png",
-    outline: "deep",
     search: {
       provider: "local",
     },
