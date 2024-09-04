@@ -10,7 +10,7 @@ wait: # Number [seconds]
 
 ## Argumentos
 
-| Name    | Type               | Description                      |
+| Nombre  | Tipo               | Descripción                      |
 | ------- | ------------------ | -------------------------------- |
 | seconds | [`number`][Number] | El número de segundos a esperar. |
 

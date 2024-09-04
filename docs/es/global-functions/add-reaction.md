@@ -10,7 +10,7 @@ add_reaction: # String [reaction]
 
 ## Argumentos
 
-| Name     | Type               | Description           |
+| Nombre   | Tipo               | Descripción           |
 | -------- | ------------------ | --------------------- |
 | reaction | [`string`][String] | La reacción a añadir. |
 
