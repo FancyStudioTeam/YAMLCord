@@ -3,8 +3,8 @@ import { SequenceType } from "#types";
 import type { Function } from "#types";
 import { ErrorCodes } from "#util/errors/ErrorCodes";
 import { throwError } from "#util/throwError";
-import { validateCreateMessageFunction } from "./functions/createMessage/validateCreateReactionFunction";
-import { validateCreateReactionFunction } from "./functions/createReaction/validateCreateReactionFunction";
+import { validateAddReactionFunction } from "./functions/addReaction/validateAddReactionFunction";
+import { validateCreateMessageFunction } from "./functions/createMessage/validateCreateMessageFunction";
 import { validateWaitFunction } from "./functions/wait/validateWaitFunction";
 
 const isValid = (sequence: unknown): sequence is Function => {
@@ -23,8 +23,8 @@ export const validateFunction = async (sequence: unknown): Promise<Function> => 
 
   for (const [key, value] of Object.entries(Object(sequence))) {
     await match(key)
+      .with("add_reaction", async () => (validFunction = await validateAddReactionFunction(value)))
       .with("create_message", async () => (validFunction = await validateCreateMessageFunction(value)))
-      .with("create_reaction", async () => (validFunction = await validateCreateReactionFunction(value)))
       .with("wait", async () => (validFunction = await validateWaitFunction(value)))
       .otherwise((key) => throwError([ErrorCodes.UNKNOWN_GLOBAL_FUNCTION, key]));
   }
