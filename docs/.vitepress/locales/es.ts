@@ -26,12 +26,20 @@ export const es = defineConfig({
               text: "Sobre FancyScript",
             },
             {
+              link: "/es/reference",
+              text: "Referencia",
+            },
+            {
               base: "/es/learning/",
               collapsed: false,
               items: [
                 {
                   link: "data-types",
                   text: "Tipos de Datos",
+                },
+                {
+                  link: "conditionals",
+                  text: "Condicionales",
                 },
               ],
               text: "Aprendiendo",
@@ -40,8 +48,23 @@ export const es = defineConfig({
           text: "Introducción",
         },
         {
-          items: [],
-          text: "Ejemplos",
+          base: "/es/global-functions/",
+          collapsed: false,
+          items: [
+            {
+              link: "add-reaction",
+              text: "add_reaction",
+            },
+            {
+              link: "create-message",
+              text: "create_message",
+            },
+            {
+              link: "wait",
+              text: "wait",
+            },
+          ],
+          text: "Funciones Globales",
         },
         {
           items: [
