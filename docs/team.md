@@ -1,5 +1,6 @@
 ---
 editLink: false
+outline: deep
 ---
 
 <!-- markdownlint-disable -->

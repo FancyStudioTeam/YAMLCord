@@ -1,3 +1,7 @@
+---
+outline: deep
+---
+
 # Data Types
 
 :::warning Before You Begin

@@ -1,3 +1,8 @@
+---
+editLink: false
+outline: deep
+---
+
 <!-- markdownlint-disable -->
 <script setup>
 import { defineAsyncComponent } from 'vue';
