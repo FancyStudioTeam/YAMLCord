@@ -21,6 +21,7 @@
   font-size: 14px;
   margin-bottom: 16px;
   text-decoration: none;
+  cursor: pointer;
 }
 
 #editor {
