@@ -14,16 +14,3 @@ Si eres nuevo en YAML, te recomendamos que veas un tutorial para aprender lo bá
 
 Te recomendamos ver este tutorial: <https://www.youtube.com/watch?v=0fbnyS_lHW4>
 :::
-
-## Ejemplo
-
-```yml
-# Array de Secuencias
-sequences:
-  # Comprueba si el contenido del mensaje es igual a "!hi"
-  - if: "[message.content] eq '!hi'"
-    then:
-      # El bot crea un mensaje
-      - create_message:
-          content: "¡Hola! 👋"
-```
