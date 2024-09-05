@@ -1,5 +1,5 @@
 import type { z } from "zod";
-import type { SequenceType } from "#types";
+import type { SequenceType } from "../../../types";
 import type { WaitFunctionSchema } from "./schema";
 
 export type WaitFunction = {

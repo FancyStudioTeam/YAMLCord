@@ -1,8 +1,8 @@
 import { Result } from "@sapphire/result";
 import { load } from "js-yaml";
-import type { ResultErrorType } from "#types";
-import { ErrorCodes } from "#util/errors/ErrorCodes";
-import { throwError } from "#util/throwError";
+import { ErrorCodes } from "../../errors/ErrorCodes";
+import { throwError } from "../../errors/throwError";
+import type { ResultErrorType } from "../types";
 
 export const loadYAMLData = async (data: string) => {
   const result = await Result.fromAsync<unknown, ResultErrorType>(

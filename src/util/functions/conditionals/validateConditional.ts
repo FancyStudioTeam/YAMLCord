@@ -1,9 +1,9 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
-import { type Conditional, type ResultErrorType, type Sequence, SequenceType } from "#types";
-import { isRawConditionalObject } from "#util/functions/util/isRawConditionalObject";
-import { throwError } from "#util/throwError";
+import { type Conditional, type ResultErrorType, type Sequence, SequenceType } from "../../../types";
+import { throwError } from "../../errors/throwError";
 import { validateFunction } from "../functions/validateFunction";
+import { isRawConditionalObject } from "../util/isRawConditionalObject";
 import { zodValidationMatch } from "../util/zodValidationMatch";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas";
 import { validateConditionalOperator } from "./util/functions/validateConditionalOperator";

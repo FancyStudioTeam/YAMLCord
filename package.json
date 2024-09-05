@@ -26,10 +26,6 @@
     }
   },
   "files": ["dist"],
-  "imports": {
-    "#types": "./types.js",
-    "#util/*": "./util/*"
-  },
   "keywords": [],
   "license": "BSD-3-Clause",
   "lint-staged": {

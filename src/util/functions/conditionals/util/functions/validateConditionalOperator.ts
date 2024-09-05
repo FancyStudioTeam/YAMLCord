@@ -1,8 +1,8 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
-import type { ConditionalIfOperator, ResultErrorType } from "#types";
-import { zodValidationMatch } from "#util/functions/util/zodValidationMatch";
-import { throwError } from "#util/throwError";
+import type { ConditionalIfOperator, ResultErrorType } from "../../../../../types";
+import { throwError } from "../../../../errors/throwError";
+import { zodValidationMatch } from "../../../util/zodValidationMatch";
 import { ConditionalIfOperatorSchema } from "../../schemas/ConditionalSchemas";
 
 export const validateConditionalOperator = async (operator: unknown) => {

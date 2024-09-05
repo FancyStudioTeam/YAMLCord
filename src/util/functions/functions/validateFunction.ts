@@ -1,8 +1,7 @@
 import { match } from "ts-pattern";
-import { SequenceType } from "#types";
-import type { Function } from "#types";
-import { ErrorCodes } from "#util/errors/ErrorCodes";
-import { throwError } from "#util/throwError";
+import { type Function, SequenceType } from "../../../types";
+import { ErrorCodes } from "../../errors/ErrorCodes";
+import { throwError } from "../../errors/throwError";
 import { validateAddReactionFunction } from "./functions/addReaction/validateAddReactionFunction";
 import { validateCreateMessageFunction } from "./functions/createMessage/validateCreateMessageFunction";
 import { validateWaitFunction } from "./functions/wait/validateWaitFunction";

@@ -1,8 +1,8 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
-import { type ResultErrorType, SequenceType } from "#types";
-import { zodValidationMatch } from "#util/functions/util/zodValidationMatch";
-import { throwError } from "#util/throwError";
+import { throwError } from "../../../../errors/throwError";
+import { type ResultErrorType, SequenceType } from "../../../types";
+import { zodValidationMatch } from "../../../util/zodValidationMatch";
 import { CreateMessageFunctionSchema } from "./schema";
 import type { CreateMessageFunction } from "./types";
 
