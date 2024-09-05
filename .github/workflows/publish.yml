@@ -20,6 +20,19 @@ jobs:
       - name: Install Dependencies
         run: pnpm install
 
+      - name: Get Commit Hash
+        id: vars
+        run: echo "HASH=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Update Version
+        run: |
+          HASH=$(git rev-parse --short HEAD)
+          CURRENT_VERSION=$(jq -r '.version' package.json)
+          BASE_VERSION=$(echo $CURRENT_VERSION | awk -F'-' '{print $1}')
+          NEW_VERSION=$(npm version --no-git-tag-version $BASE_VERSION | sed 's/v//')-dev.$HASH
+          jq ".version=\"$NEW_VERSION\"" package.json > temp.json && mv temp.json package.json
+        shell: bash
+
       - name: Build
         run: pnpm build
 
