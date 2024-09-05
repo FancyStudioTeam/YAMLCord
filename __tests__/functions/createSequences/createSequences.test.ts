@@ -98,6 +98,62 @@ describe("Function: createSequences", () => {
           },
         ],
       }));
+
+    it("[1003] Creates valid sequences", async () =>
+      await expect(createSequences(loader("1xxx/Test_1003"))).resolves.toStrictEqual({
+        sequences: [
+          {
+            data: {
+              if: {
+                operator: "===",
+                value: "!admin",
+                variable: "[message.content]",
+              },
+              then: [
+                {
+                  data: {
+                    if: {
+                      operator: "===",
+                      value: "945029082314338407",
+                      variable: "[message.user_id]",
+                    },
+                    then: [
+                      {
+                        data: {
+                          content: "You are an admin!",
+                          reply: "no_ping",
+                        },
+                        name: "create_message",
+                        type: SequenceType.FUNCTION,
+                      },
+                      {
+                        data: "🎉",
+                        name: "add_reaction",
+                        type: SequenceType.FUNCTION,
+                      },
+                    ],
+                    else: [
+                      {
+                        data: "You are not an admin!",
+                        name: "create_message",
+                        type: SequenceType.FUNCTION,
+                      },
+                      {
+                        data: "😢",
+                        name: "add_reaction",
+                        type: SequenceType.FUNCTION,
+                      },
+                    ],
+                  },
+                  type: SequenceType.CONDITIONAL,
+                },
+              ],
+              else: [],
+            },
+            type: SequenceType.CONDITIONAL,
+          },
+        ],
+      }));
   });
 
   describe("Failure cases (2xxx)", () => {

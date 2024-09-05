@@ -1,0 +1,12 @@
+sequences:
+  - if: "[message.content] eq '!admin'"
+    then:
+      - if: "[message.user_id] eq '945029082314338407'"
+        then:
+          - create_message:
+              content: "You are an admin!"
+              reply: "no_ping"
+          - add_reaction: "🎉"
+        else:
+          - create_message: "You are not an admin!"
+          - add_reaction: "😢"
