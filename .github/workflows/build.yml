@@ -1,4 +1,4 @@
-name: Build
+name: Build, Lint and Format
 
 on: [push, pull_request]
 
@@ -22,3 +22,6 @@ jobs:
 
       - name: Build
         run: pnpm build
+
+      - name: Lint and Format
+        run: pnpm biome
