@@ -127,7 +127,7 @@ describe("Function: createSequences", () => {
                         type: SequenceType.FUNCTION,
                       },
                       {
-                        data: "🎉",
+                        data: ["🎉", "🔥", "👑", "✨"],
                         name: "add_reaction",
                         type: SequenceType.FUNCTION,
                       },

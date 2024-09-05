@@ -6,7 +6,7 @@ sequences:
           - create_message:
               content: "You are an admin!"
               reply: "no_ping"
-          - add_reaction: "🎉"
+          - add_reaction: ["🎉", "🔥", "👑", "✨"]
         else:
           - create_message: "You are not an admin!"
           - add_reaction: "😢"

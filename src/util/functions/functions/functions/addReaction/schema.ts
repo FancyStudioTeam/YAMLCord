@@ -1,3 +1,6 @@
 import { z } from "zod";
 
-export const AddReactionFunctionSchema = z.string();
+const AddReactionStringSchema = z.string();
+const AddReactionArraySchema = z.array(AddReactionStringSchema);
+
+export const AddReactionFunctionSchema = z.union([AddReactionStringSchema, AddReactionArraySchema]);
