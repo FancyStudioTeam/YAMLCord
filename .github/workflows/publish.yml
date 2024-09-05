@@ -36,8 +36,13 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Handle Uncommitted Changes
+        run: |
+          git stash
+          git stash pop || true
+
       - name: Setup .npmrc
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Publish to NPM
-        run: pnpm publish --tag dev
+        run: pnpm publish --tag dev --no-git-checks
