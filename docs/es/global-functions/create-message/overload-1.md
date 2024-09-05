@@ -18,6 +18,7 @@ create_message: # Object
 
 :::details Notas Importantes
 
+- El rango de caracteres del contenido es de `1` carácter como mínimo a `2000` caracteres como máximo.
 - Si la propiedad `reply` está establecida como `no_ping`, el bot no hará una mención al autor original. De lo contrario, el bot si hará una mención al autor original.
 
 :::
@@ -29,6 +30,13 @@ create_message: # Object
 ```yml [Mensaje Básico]
 create_message:
   content: "Esto es un mensaje básico"
+```
+
+```yml [Saltos de Línea]
+create_message:
+  content: |-
+    Esto es un mensaje
+    con múltiples líneas
 ```
 
 ```yml [Como una Respuesta]

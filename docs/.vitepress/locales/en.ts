@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { GLOBAL_FUNCTIONS } from "../functions";
 
 export const en = defineConfig({
   lang: "en",
@@ -50,20 +51,7 @@ export const en = defineConfig({
         {
           base: "/global-functions/",
           collapsed: false,
-          items: [
-            {
-              link: "add-reaction",
-              text: "add_reaction",
-            },
-            {
-              link: "create-message",
-              text: "create_message",
-            },
-            {
-              link: "wait",
-              text: "wait",
-            },
-          ],
+          items: GLOBAL_FUNCTIONS("en"),
           text: "Global Functions",
         },
         {
