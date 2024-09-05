@@ -25,6 +25,7 @@
       "types": "./dist/types.d.ts"
     }
   },
+  "files": ["dist"],
   "imports": {
     "#types": "./src/types.js",
     "#util/*": "./src/util/*"
@@ -35,7 +36,7 @@
     "**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["pnpm biome"]
   },
   "main": "dist/index.js",
-  "name": "fancyscript",
+  "name": "fancyscript-yaml",
   "packageManager": "pnpm@9.8.0+sha256.56a9e76b51796ca7f73b85e44cf83712862091f4d498c0ce4d5b7ecdc6ba18f7",
   "scripts": {
     "biome": "biome check --write --config-path=\"./biome.json\" .",
