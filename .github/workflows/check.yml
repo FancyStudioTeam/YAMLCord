@@ -1,4 +1,4 @@
-name: Build
+name: Check
 
 on: [push, pull_request]
 
@@ -22,8 +22,3 @@ jobs:
 
       - name: Build
         run: pnpm build
-
-      - name: Publish to NPM
-        run: pnpm publish --tag dev
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
