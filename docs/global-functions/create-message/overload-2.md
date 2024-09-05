@@ -14,7 +14,7 @@ create_message: # String [content]
 | ------- | ------------------ | --------------------------- |
 | content | [`string`][String] | The content of the message. |
 
-:::details Important Notes
+:::info Important Notes
 
 - The content character range is from `1` character minimum to `2000` characters maximum.
 

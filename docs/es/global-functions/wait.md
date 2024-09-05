@@ -14,7 +14,7 @@ wait: # Number [seconds]
 | ------- | ------------------ | -------------------------------- |
 | seconds | [`number`][Number] | El número de segundos a esperar. |
 
-:::details Notas Importantes
+:::info Notas Importantes
 
 - El número de segundos debe ser un número entero.
 - El rango de segundos es de `1` segundo como mínimo a `500` segundos como máximo.
