@@ -12,9 +12,7 @@ FancyScript es una sintaxis fácil de usar para crear acciones personalizadas pa
 :::warning Antes de Empezar
 Si eres nuevo en YAML, te recomendamos que veas un tutorial para aprender lo básico de YAML antes de usar FancyScript.
 
-<!-- markdownlint-disable -->
-<iframe allowfullscreen src="https://www.youtube.com/embed/0fbnyS_lHW4?si=MwdX3onyJgq-E03K" />
-<!-- markdownlint-restore -->
+Te recomendamos ver este tutorial: <https://www.youtube.com/watch?v=0fbnyS_lHW4>
 :::
 
 ## Ejemplo

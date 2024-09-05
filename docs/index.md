@@ -12,9 +12,7 @@ FancyScript is an easy-to-use syntax for creating custom actions for Discord bot
 :::warning Before You Begin
 If you are new to YAML, we recommend that you watch a tutorial to learn the basics of YAML before using FancyScript.
 
-<!-- markdownlint-disable -->
-<iframe allowfullscreen src="https://www.youtube.com/embed/0fbnyS_lHW4?si=MwdX3onyJgq-E03K" />
-<!-- markdownlint-restore -->
+We recommend you to watch this tutorial: <https://www.youtube.com/watch?v=0fbnyS_lHW4>
 :::
 
 ## Example
