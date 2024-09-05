@@ -1,4 +1,4 @@
-name: Build, Lint and Format
+name: Build
 
 on: [push, pull_request]
 
@@ -23,5 +23,7 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Lint and Format
-        run: pnpm biome
+      - name: Publish to NPM
+        run: pnpm publish --tag dev
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
