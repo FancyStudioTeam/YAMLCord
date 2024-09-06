@@ -25,14 +25,14 @@
       "types": "./dist/types.d.ts"
     }
   },
-  "files": ["dist"],
+  "files": [],
   "keywords": [],
   "license": "BSD-3-Clause",
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["pnpm biome"]
   },
   "main": "dist/index.js",
-  "name": "fancyscript-yaml",
+  "name": "yamlcord",
   "packageManager": "pnpm@9.8.0+sha256.56a9e76b51796ca7f73b85e44cf83712862091f4d498c0ce4d5b7ecdc6ba18f7",
   "scripts": {
     "biome": "biome check --write --config-path=\"./biome.json\" .",
@@ -45,5 +45,5 @@
     "test": "vitest"
   },
   "types": "dist/types.d.ts",
-  "version": "0.0.1"
+  "version": "0.0.1_alpha"
 }

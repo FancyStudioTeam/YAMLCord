@@ -9,7 +9,9 @@
 
 ---
 
-FancyScript is an easy-to-use syntax for creating custom actions for Discord bots using YAML.
+# YAMLCord
+
+YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML.
 
 > [!WARNING]
 > This project is still in **alpha version**. There may be bugs and Breaking Changes.
