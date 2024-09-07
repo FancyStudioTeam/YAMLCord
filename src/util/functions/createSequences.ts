@@ -8,6 +8,7 @@ import { validateSequences } from "./util/validateSequences";
 export const createSequences = async (
   data: string,
 ): Promise<{
+  custom_variables: unknown;
   sequences: Sequence[];
 }> => {
   const loadedData = await Object(loadYAMLData(data));
@@ -20,6 +21,7 @@ export const createSequences = async (
   }
 
   return {
+    custom_variables: null,
     sequences,
   };
 };
