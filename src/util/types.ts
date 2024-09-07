@@ -1,6 +1,6 @@
+import type { ErrorCodes } from "#errors/ErrorCodes.js";
 import type { Conditional } from "../conditionals/types";
 import type { Function } from "../functions/types";
-import type { ErrorCodes } from "./errors/ErrorCodes";
 
 export enum SequenceType {
   CONDITIONAL,
