@@ -16,7 +16,7 @@ export const validateAddReactionFunction = async (sequence: unknown): Promise<Ad
   }
 
   return {
-    data: result.unwrap(),
+    data: Array.isArray(result.unwrap()) ? Array.from(new Set(result.unwrap())) : result.unwrap(),
     name: "add_reaction",
     type: SequenceType.FUNCTION,
   };
