@@ -8,9 +8,15 @@ importers:
 
   .:
     dependencies:
+      '@sapphire/discord-utilities':
+        specifier: 3.4.1
+        version: 3.4.1
       '@sapphire/result':
         specifier: 2.6.6
         version: 2.6.6
+      emoji-regex:
+        specifier: 10.4.0
+        version: 10.4.0
       es-toolkit:
         specifier: 1.17.0
         version: 1.17.0
@@ -758,6 +764,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@sapphire/discord-utilities@3.4.1':
+    resolution: {integrity: sha512-DmBrle7uorAJUoh1mJo6aZ5pVjVnAOt9n5DXcZRN3ZWlu28cz0g3X6JYdwjAFdvBHlJIt9nobVPDMNDLUg6O4Q==}
+    engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
+
   '@sapphire/result@2.6.6':
     resolution: {integrity: sha512-QCjj7X/QlY0QUCeAaZQmnrsMH/b2BMQYee3F1Y5iF17JagUQqO3KZlG7vfXWQU3SRAJX5OgZZynBjixUH+nNGg==}
     engines: {node: '>=v14.0.0', npm: '>=7.0.0'}
@@ -1058,6 +1068,9 @@ packages:
 
   didyoumean@1.2.2:
     resolution: {integrity: sha512-gxtyfqMg7GKyhQmb056K7M3xszy/myH8w+B4RT+QXBQsvAOdc3XymqDDPHx1BgPgsdAA5SIifona89YtRATDzw==}
+
+  discord-api-types@0.37.100:
+    resolution: {integrity: sha512-a8zvUI0GYYwDtScfRd/TtaNBDTXwP5DiDVX7K5OmE+DRT57gBqKnwtOC5Ol8z0mRW8KQfETIgiB8U0YZ9NXiCA==}
 
   dlv@1.1.3:
     resolution: {integrity: sha512-+HlytyjlPKnIG8XuRG8WvmBP8xs8P71y+SKKS6ZXWoEgLuePxtDoUEiH7WkdePWrQ5JBpE6aoVqfZfJUQkjXwA==}
@@ -2324,6 +2337,10 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.21.2':
     optional: true
 
+  '@sapphire/discord-utilities@3.4.1':
+    dependencies:
+      discord-api-types: 0.37.100
+
   '@sapphire/result@2.6.6': {}
 
   '@shikijs/core@1.14.1':
@@ -2642,6 +2659,8 @@ snapshots:
   deep-eql@5.0.2: {}
 
   didyoumean@1.2.2: {}
+
+  discord-api-types@0.37.100: {}
 
   dlv@1.1.3: {}
 
