@@ -2,7 +2,7 @@ import { Result } from "@sapphire/result";
 import type { z } from "zod";
 import { type ResultErrorType, SequenceType } from "../../../types";
 import { throwError } from "../../../util/errors/throwError";
-import { zodValidationMatch } from "../../../util/functions/zodValidationMatch";
+import { zodValidationMatch } from "../../../util/util/zodValidationMatch";
 import { CreateMessageSchema } from "./schemas/CreateMessageSchema";
 import type { CreateMessageFunction } from "./types";
 
