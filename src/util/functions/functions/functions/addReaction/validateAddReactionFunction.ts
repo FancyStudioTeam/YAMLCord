@@ -3,12 +3,12 @@ import type { z } from "zod";
 import { throwError } from "../../../../errors/throwError";
 import { type ResultErrorType, SequenceType } from "../../../types";
 import { zodValidationMatch } from "../../../util/zodValidationMatch";
-import { AddReactionFunctionSchema } from "./schema";
+import { AddReactionSchema } from "./schema";
 import type { AddReactionFunction } from "./types";
 
 export const validateAddReactionFunction = async (sequence: unknown): Promise<AddReactionFunction> => {
-  const result = await Result.fromAsync<z.infer<AddReactionFunctionSchemaType>, ResultErrorType>(
-    async () => await zodValidationMatch<AddReactionFunctionSchemaType>(AddReactionFunctionSchema, sequence),
+  const result = await Result.fromAsync<z.infer<AddReactionSchemaType>, ResultErrorType>(
+    async () => await zodValidationMatch<AddReactionSchemaType>(AddReactionSchema, sequence),
   );
 
   if (result.isErr()) {
@@ -22,4 +22,4 @@ export const validateAddReactionFunction = async (sequence: unknown): Promise<Ad
   };
 };
 
-type AddReactionFunctionSchemaType = typeof AddReactionFunctionSchema;
+type AddReactionSchemaType = typeof AddReactionSchema;
