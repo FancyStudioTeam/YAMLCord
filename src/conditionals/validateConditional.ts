@@ -6,9 +6,9 @@ import { throwError } from "../util/errors/throwError";
 import { isRawConditionalObject } from "../util/util/isRawConditionalObject";
 import { zodValidationMatch } from "../util/util/zodValidationMatch";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas";
-import { validateConditionalOperator } from "./util/functions/validateConditionalOperator";
-import { validateConditionalValue } from "./util/functions/validateConditionalValue";
-import { validateConditionalVariable } from "./util/functions/validateConditionalVariable";
+import { validateConditionalOperator } from "./util/validateConditionalOperator";
+import { validateConditionalValue } from "./util/validateConditionalValue";
+import { validateConditionalVariable } from "./util/validateConditionalVariable";
 
 export const validateConditional = async (conditional: unknown): Promise<Conditional> => {
   const result = await Result.fromAsync<z.infer<ConditionalSchemaType>, ResultErrorType>(
