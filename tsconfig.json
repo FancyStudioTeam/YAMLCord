@@ -40,5 +40,5 @@
     "target": "ESNext",
     "useDefineForClassFields": true
   },
-  "exclude": ["dist", "node_modules", "__tests__"]
+  "exclude": ["dist", "node_modules", "__tests__", "vitest.config.mts"]
 }

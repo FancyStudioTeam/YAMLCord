@@ -27,7 +27,7 @@
       "types": "./dist/types.d.ts"
     }
   },
-  "files": [],
+  "files": ["dist"],
   "imports": {
     "#conditionals/*": "./dist/conditionals/*",
     "#errors/*": "./dist/util/errors/*",

@@ -13,8 +13,15 @@
 
 YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML.
 
-> [!WARNING]
-> This project is still in **alpha version**. There may be bugs and Breaking Changes.
+## 🚀 Example
+
+```yml
+sequences:
+  - if: "[message.content] eq '!hi'"
+    then:
+      - create_message: "Hello!"
+      - add_reaction: "👋"
+```
 
 ## 📄 License
 
