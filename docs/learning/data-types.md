@@ -25,7 +25,7 @@ content: "This is a one-line string"
 ```
 
 ```yml [Multiple lines]
-# To make texts with line breaks, you can use “|-”
+# To make texts with line breaks, you can use "|-"
 # When you make line breaks, you do not need to use double quotes
 # If you include double quotes, they will be part of the text
 
@@ -86,7 +86,7 @@ numbers: [1, 2, 3, 4, 5]
 
 ```yml [Multiple line elements]
 # This type of array can be useful for storing multiple line elements
-# Elements are defined with a “-” at the beginning and separated by a new line
+# Elements are defined with a "-" at the beginning and separated by a new line
 # Can be useful for storing complex elements
 
 workers:
@@ -111,8 +111,8 @@ The `object` type is a data type that represents a set of `key-value` pairs.
 :::info Set of `key-value` pairs
 
 ```yml
-# Key name is “key” (string)
-# Key value is “value” (string)
+# Key name is "key" (string)
+# Key value is "value" (string)
 
 key: value
 ```
@@ -141,16 +141,16 @@ Keys must be unique and cannot be duplicated within the same parent.
 
 ```yml [Invalid Object]
 parent_object:
-  content: "Content 1" # Child of “parent_object”
-  content: "Content 2" // [!code error] # Child of “parent_object” [Duplicate Key in the same Parent]
+  content: "Content 1" # Child of "parent_object"
+  content: "Content 2" // [!code error] # Child of "parent_object" [Duplicate Key in the same Parent]
 ```
 
 ```yml [Valid Object]
 parent_object:
-  content: "Content 1" # Child of “parent_object”
+  content: "Content 1" # Child of "parent_object"
 
-  sub_parent_object: # Child of “parent_object”
-    content: "Contenido 2" # Child of “sub_parent_object”
+  sub_parent_object: # Child of "parent_object"
+    content: "Contenido 2" # Child of "sub_parent_object"
 ```
 
 :::
