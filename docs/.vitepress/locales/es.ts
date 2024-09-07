@@ -23,7 +23,18 @@ export const es = defineConfig({
               text: "Sobre YAMLCord",
             },
             {
-              link: "/es/reference",
+              base: "/es/reference/",
+              collapsed: false,
+              items: [
+                {
+                  link: "optional-fields",
+                  text: "Campos Opcionales",
+                },
+                {
+                  link: "overloaded-functions",
+                  text: "Funciones Sobrecargadas",
+                },
+              ],
               text: "Referencia",
             },
             {
