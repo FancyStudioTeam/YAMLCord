@@ -12,6 +12,7 @@ describe("Function: createSequences", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001] Creates valid sequences", async () =>
       await expect(createSequences(loader("1xxx/Test_1001"))).resolves.toStrictEqual({
+        custom_variables: null,
         sequences: [
           {
             data: {
@@ -44,6 +45,7 @@ describe("Function: createSequences", () => {
 
     it("[1002] Creates valid sequences", async () =>
       await expect(createSequences(loader("1xxx/Test_1002"))).resolves.toStrictEqual({
+        custom_variables: null,
         sequences: [
           {
             data: {
@@ -101,6 +103,7 @@ describe("Function: createSequences", () => {
 
     it("[1003] Creates valid sequences", async () =>
       await expect(createSequences(loader("1xxx/Test_1003"))).resolves.toStrictEqual({
+        custom_variables: null,
         sequences: [
           {
             data: {
