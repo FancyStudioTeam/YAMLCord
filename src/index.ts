@@ -1,1 +1,1 @@
-export { createSequences } from "./util/createSequences";
+export { createSequences } from "#util/createSequences.js";

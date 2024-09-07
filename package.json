@@ -28,7 +28,10 @@
   },
   "files": [],
   "imports": {
-    "#types": "./dist/types.js"
+    "#conditionals/*": "./dist/conditionals/*",
+    "#functions/*": "./dist/functions/*",
+    "#types": "./dist/types.js",
+    "#util/*": "./dist/util/*"
   },
   "keywords": [],
   "license": "BSD-3-Clause",

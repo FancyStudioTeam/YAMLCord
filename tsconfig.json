@@ -25,7 +25,10 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "paths": {
-      "#types": ["./src/types.ts"]
+      "#conditionals/*": ["./src/conditionals/*"],
+      "#functions/*": ["./src/functions/*"],
+      "#types": ["./src/types.ts"],
+      "#util/*": ["./src/util/*"]
     },
     "preserveConstEnums": true,
     "pretty": true,
