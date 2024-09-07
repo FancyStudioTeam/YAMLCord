@@ -15,7 +15,7 @@ const Playground = inBrowser
 <!-- markdownlint-restore -->
 
 :::info Editor interactivo
-Este es un editor interactivo donde puedes escribir la sintaxis de FancyScript y exportarlo como un archivo para cargarlo en un bot.
+Este es un editor interactivo donde puedes escribir la sintaxis de YAMLCord y exportarlo como un archivo para cargarlo en un bot.
 :::
 
 <!-- markdownlint-disable -->

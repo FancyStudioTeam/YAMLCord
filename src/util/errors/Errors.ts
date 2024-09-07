@@ -5,7 +5,7 @@ import { ErrorMessages } from "./ErrorMessages";
 export const getErrorMessage = (code: ErrorCodes, ...args: any[]): string =>
   typeof ErrorMessages[code] === "function" ? ErrorMessages[code](...args) : ErrorMessages[code];
 
-export class FancyScriptError extends Error {
+export class YAMLCordError extends Error {
   code: ErrorCodes;
 
   // biome-ignore lint/suspicious/noExplicitAny:
@@ -14,6 +14,6 @@ export class FancyScriptError extends Error {
     this.name = `${this.constructor.name} [${code}]`;
     this.code = code;
 
-    Error.captureStackTrace(this, FancyScriptError);
+    Error.captureStackTrace(this, YAMLCordError);
   }
 }

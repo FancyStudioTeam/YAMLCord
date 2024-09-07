@@ -26,7 +26,7 @@ const members = {
 
 # Our Team
 
-Thanks to all these people who have made FancyScript possible!
+Thanks to all these people who have made YAMLCord possible!
 
 ## Developers
 

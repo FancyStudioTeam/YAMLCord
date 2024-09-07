@@ -37,21 +37,21 @@ export const shared = defineConfig({
       "meta",
       {
         property: "og:title",
-        content: "FancyScript | An easy-to-use syntax for Discord bots using YAML",
+        content: "YAMLCord | An easy-to-use syntax for Discord bots using YAML",
       },
     ],
     [
       "meta",
       {
         property: "og:site_name",
-        content: "FancyScript",
+        content: "YAMLCord",
       },
     ],
     [
       "meta",
       {
         property: "og:url",
-        content: "https://fancyscript.pages.dev/",
+        content: "https://yamlcord.pages.dev/",
       },
     ],
   ],
@@ -61,7 +61,7 @@ export const shared = defineConfig({
   },
   themeConfig: {
     editLink: {
-      pattern: "https://github.com/FancyStudioTeam/FancyScript/tree/main/docs/:path",
+      pattern: "https://github.com/FancyStudioTeam/YAMLCord/tree/main/docs/:path",
     },
     logo: "/Logo.png",
     search: {
@@ -71,15 +71,15 @@ export const shared = defineConfig({
     socialLinks: [
       {
         icon: "discord",
-        link: "https://discord.gg/gud55BjNFC",
+        link: "https://discord.gg/yWjeDA6ewJ",
       },
       {
         icon: "github",
-        link: "https://github.com/FancyStudioTeam/FancyScript",
+        link: "https://github.com/FancyStudioTeam/YAMLCord",
       },
     ],
   },
-  title: "FancyScript",
+  title: "YAMLCord",
   vite: {
     ssr: {
       noExternal: ["monaco-editor"],

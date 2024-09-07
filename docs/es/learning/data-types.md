@@ -1,14 +1,14 @@
 # Tipos de Datos
 
 :::warning Antes de Empezar
-Si eres nuevo en YAML, te recomendamos que veas un tutorial para aprender lo básico de YAML antes de usar FancyScript.
+Si eres nuevo en YAML, te recomendamos que veas un tutorial para aprender lo básico de YAML antes de usar YAMLCord.
 
 Te recomendamos ver este tutorial: <https://www.youtube.com/watch?v=0fbnyS_lHW4>
 :::
 
 Los tipos de datos son una forma de diferenciar los datos que tenemos por su tipo.
 
-En esta página se hará un resumen rápido sobre los tipos de datos que se usan en FancyScript.
+En esta página se hará un resumen rápido sobre los tipos de datos que se usan en YAMLCord.
 
 ## Tipos de Datos Básicos
 

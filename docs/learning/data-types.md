@@ -1,14 +1,14 @@
 # Data Types
 
 :::warning Before You Begin
-If you are new to YAML, we recommend that you watch a tutorial to learn the basics of YAML before using FancyScript.
+If you are new to YAML, we recommend that you watch a tutorial to learn the basics of YAML before using YAMLCord.
 
 We recommend you to watch this tutorial: <https://www.youtube.com/watch?v=0fbnyS_lHW4>
 :::
 
 Data types are a way to differentiate the data we have by its type.
 
-In this page will give a quick overview of the data types used in FancyScript.
+In this page will give a quick overview of the data types used in YAMLCord.
 
 ## Basic Data Types
 

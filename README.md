@@ -26,11 +26,11 @@ If you believe you have found a security vulnerability, please **DO NOT make a p
 
 ## 💖 Contributors
 
-Thanks to all these people who have made FancyScript possible!
+Thanks to all these people who have made YAMLCord possible!
 
 [![All Contributors][ContributorsImageURL]][ContributorsURL]
 
 [BSD3ClauseURL]: https://opensource.org/license/bsd-3-clause/
-[ContributorsImageURL]: https://contrib.rocks/image?repo=FancyStudioTeam/FancyScript&max=500&columns=20
-[ContributorsURL]: https://github.com/FancyStudioTeam/FancyScript/graphs/contributors
-[SupportServerURL]: https://discord.gg/gud55BjNFC
+[ContributorsImageURL]: https://contrib.rocks/image?repo=FancyStudioTeam/YAMLCord&max=500&columns=20
+[ContributorsURL]: https://github.com/FancyStudioTeam/YAMLCord/graphs/contributors
+[SupportServerURL]: https://discord.gg/yWjeDA6ewJ

@@ -24,7 +24,7 @@ export const en = defineConfig({
           items: [
             {
               link: "/",
-              text: "About FancyScript",
+              text: "About YAMLCord",
             },
             {
               link: "/reference",
@@ -57,12 +57,12 @@ export const en = defineConfig({
         {
           items: [
             {
-              link: "https://discord.gg/gud55BjNFC",
+              link: "https://discord.gg/yWjeDA6ewJ",
               target: "_blank",
               text: "Discord Server",
             },
             {
-              link: "https://github.com/FancyStudioTeam/FancyScript",
+              link: "https://github.com/FancyStudioTeam/YAMLCord",
               target: "_blank",
               text: "GitHub Repository",
             },

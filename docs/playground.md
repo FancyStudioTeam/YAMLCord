@@ -15,7 +15,7 @@ const Playground = inBrowser
 <!-- markdownlint-restore -->
 
 :::info Interactive Editor
-This is an interactive editor where you can write FancyScript syntax and export it as a file to load into a bot.
+This is an interactive editor where you can write YAMLCord syntax and export it as a file to load into a bot.
 :::
 
 <!-- markdownlint-disable -->
