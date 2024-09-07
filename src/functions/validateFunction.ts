@@ -2,9 +2,9 @@ import { match } from "ts-pattern";
 import { type Function, SequenceType } from "#types";
 import { ErrorCodes } from "../util/errors/ErrorCodes";
 import { throwError } from "../util/errors/throwError";
-import { validateAddReactionFunction } from "./_/add_reaction/validateAddReactionFunction";
-import { validateCreateMessageFunction } from "./_/create_message/validateCreateMessageFunction";
-import { validateWaitFunction } from "./_/wait/validateWaitFunction";
+import { validateAddReactionFunction } from "./functions/add_reaction/validateAddReactionFunction";
+import { validateCreateMessageFunction } from "./functions/create_message/validateCreateMessageFunction";
+import { validateWaitFunction } from "./functions/wait/validateWaitFunction";
 
 const isValid = (sequence: unknown): sequence is Function =>
   typeof sequence === "object" && sequence !== null && "type" in sequence && sequence.type === SequenceType.FUNCTION;
