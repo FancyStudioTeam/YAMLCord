@@ -1,4 +1,4 @@
-import type { ResultErrorType } from "../../types";
+import type { ResultErrorType } from "#types";
 import { YAMLCordError } from "./Errors";
 
 export const throwError = (error: ResultErrorType) => {

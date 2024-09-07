@@ -1,8 +1,8 @@
 <!-- markdownlint-disable -->
 <div align="center">
   <picture>
-    <source srcset="/assets/images/Dark.png" media="(prefers-color-scheme: dark)">
-    <img src="/assets/images/Light.png">
+    <source srcset="https://yamlcord.pages.dev/banners/Dark.png" media="(prefers-color-scheme: dark)">
+    <img src="https://yamlcord.pages.dev/banners/Light.png">
   </picture>
 </div>
 <!-- markdownlint-restore -->

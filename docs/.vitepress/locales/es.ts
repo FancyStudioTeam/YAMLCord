@@ -9,10 +9,6 @@ export const es = defineConfig({
         link: "/es/team",
         text: "Nuestro Equipo",
       },
-      {
-        link: "/es/playground",
-        text: "Playground",
-      },
     ],
     outline: {
       label: "En esta página",

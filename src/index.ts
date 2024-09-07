@@ -1,1 +1,1 @@
-export { createSequences } from "./util/functions/createSequences";
+export { createSequences } from "./util/createSequences";

@@ -24,6 +24,9 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "outDir": "dist",
+    "paths": {
+      "#types": ["./src/types.ts"]
+    },
     "preserveConstEnums": true,
     "pretty": true,
     "removeComments": false,
