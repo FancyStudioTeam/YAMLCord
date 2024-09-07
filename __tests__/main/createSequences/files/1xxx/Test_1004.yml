@@ -1,0 +1,3 @@
+sequences:
+  - create_message: "Hello, world!"
+  - add_reaction: "👋"

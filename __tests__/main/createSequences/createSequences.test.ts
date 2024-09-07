@@ -157,6 +157,23 @@ describe("Function: createSequences", () => {
           },
         ],
       }));
+
+    it("[1004] Creates valid sequences", async () =>
+      await expect(createSequences(loader("1xxx/Test_1004"))).resolves.toStrictEqual({
+        custom_variables: null,
+        sequences: [
+          {
+            data: "Hello, world!",
+            name: "create_message",
+            type: SequenceType.FUNCTION,
+          },
+          {
+            data: "👋",
+            name: "add_reaction",
+            type: SequenceType.FUNCTION,
+          },
+        ],
+      }));
   });
 
   describe("Failure cases (2xxx)", () => {

@@ -1,5 +1,6 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
+import { validateFunction } from "#functions/validateFunction.js";
 import type { ResultErrorType, Sequence } from "#types";
 import { validateConditional } from "../../conditionals/validateConditional";
 import { throwError } from "../errors/throwError";
@@ -20,9 +21,9 @@ export const validateSequences = async (sequence: unknown): Promise<Sequence[]> 
   const data = result.unwrap();
 
   for (const sequence of data) {
-    if (isRawConditionalObject(sequence)) {
-      sequences.push(await validateConditional(sequence));
-    }
+    sequences.push(
+      isRawConditionalObject(sequence) ? await validateConditional(sequence) : await validateFunction(sequence),
+    );
   }
 
   return sequences;
