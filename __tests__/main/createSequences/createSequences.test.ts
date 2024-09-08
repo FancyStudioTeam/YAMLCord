@@ -1,17 +1,16 @@
-import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 import { SequenceType } from "../../../src/types";
 import { createSequences } from "../../../src/util/createSequences";
 import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
 import { getErrorMessage } from "../../../src/util/errors/Errors";
+import { baseLoader, fileName } from "../../utils";
 
-const loader = (path: string) => readFileSync(join(__dirname, "files", `${path}.yml`), "utf8");
+const loader = (path: string) => baseLoader(__dirname, path);
 
 describe("Function: createSequences", () => {
   describe("Success cases (1xxx)", () => {
-    it("[1001] Creates valid sequences", async () =>
-      await expect(createSequences(loader("1xxx/Test_1001"))).resolves.toStrictEqual({
+    it("[1001]", async ({ task }) =>
+      await expect(createSequences(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom_variables: null,
         sequences: [
           {
@@ -43,8 +42,8 @@ describe("Function: createSequences", () => {
         ],
       }));
 
-    it("[1002] Creates valid sequences", async () =>
-      await expect(createSequences(loader("1xxx/Test_1002"))).resolves.toStrictEqual({
+    it("[1002]", async ({ task }) =>
+      await expect(createSequences(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom_variables: null,
         sequences: [
           {
@@ -101,8 +100,8 @@ describe("Function: createSequences", () => {
         ],
       }));
 
-    it("[1003] Creates valid sequences", async () =>
-      await expect(createSequences(loader("1xxx/Test_1003"))).resolves.toStrictEqual({
+    it("[1003]", async ({ task }) =>
+      await expect(createSequences(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom_variables: null,
         sequences: [
           {
@@ -158,8 +157,8 @@ describe("Function: createSequences", () => {
         ],
       }));
 
-    it("[1004] Creates valid sequences", async () =>
-      await expect(createSequences(loader("1xxx/Test_1004"))).resolves.toStrictEqual({
+    it("[1004]", async ({ task }) =>
+      await expect(createSequences(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom_variables: null,
         sequences: [
           {
@@ -177,22 +176,21 @@ describe("Function: createSequences", () => {
   });
 
   describe("Failure cases (2xxx)", () => {
-    it("[2001] Creates invalid sequences and then rejects with error", async () =>
-      await expect(createSequences(loader("2xxx/Test_2001"))).rejects.toThrowError(
+    it("[2001]", async ({ task }) =>
+      await expect(createSequences(loader(fileName(task.name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "array", "null"),
       ));
 
-    it("[2002] Creates invalid sequences and then rejects with error", async () =>
-      await expect(createSequences(loader("2xxx/Test_2002"))).rejects.toThrowError(
+    it("[2002]", async ({ task }) =>
+      await expect(createSequences(loader(fileName(task.name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_PROPERTY, "unknown_global_property"),
       ));
 
-    it("[2003] Creates invalid sequences and then rejects with error", async () =>
-      await expect(createSequences(loader("2xxx/Test_2003"))).rejects.toThrowError(
+    it("[2003]", async ({ task }) =>
+      await expect(createSequences(loader(fileName(task.name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_ARRAY_LENGTH, "min", 1),
       ));
 
-    it("[2004] Creates invalid sequences and then rejects with error", async () =>
-      await expect(createSequences(loader("2xxx/Test_2004"))).rejects.toThrowError());
+    it("[2004]", async ({ task }) => await expect(createSequences(loader(fileName(task.name)))).rejects.toThrowError());
   });
 });
