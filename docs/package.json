@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@fontsource-variable/jetbrains-mono": "5.0.22",
+    "@fontsource-variable/jetbrains-mono": "5.0.23",
     "@fontsource-variable/plus-jakarta-sans": "5.0.22",
     "@fontsource/jetbrains-mono": "5.0.21",
     "@shikijs/monaco": "1.16.2",
