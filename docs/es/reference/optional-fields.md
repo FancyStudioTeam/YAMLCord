@@ -17,10 +17,11 @@ example: # Object
 
 El objeto `example` admite estos campos:
 
-| Nombre            | Tipo               | Descripción                          |
-| ----------------- | ------------------ | ------------------------------------ |
-| required_field    | [`string`][String] | Un campo requerido.                  |
-| optional_field`?` | [`string`][String] | Un campo opcional. (Marcado con `?`) |
+| Nombre               | Tipo               | Descripción                          |
+| -------------------- | ------------------ | ------------------------------------ |
+| required_field       | [`string`][String] | Un campo requerido.                  |
+| other_required_field | [`string`][String] | Un campo requerido.                  |
+| optional_field`?`    | [`string`][String] | Un campo opcional. (Marcado con `?`) |
 
 :::info Ejemplos mezclando campos
 
@@ -29,27 +30,43 @@ El objeto `example` admite estos campos:
 ```yml [Objeto 1 (Válido)]
 example:
   required_field: "..." // [!code highlight]
+  other_required_field: "..." // [!code highlight]
 
 # El campo "required_field", que es requerido, está presente
+# Y el campo "other_required_field", que es requerido, está presente
 # Por lo que es un objeto válido
 ```
 
 ```yml [Objeto 2 (Válido)]
 example:
   required_field: "..." // [!code highlight]
+  other_required_field: "..." // [!code highlight]
   optional_field: "..." // [!code ++]
 
 # El campo "required_field", que es requerido, está presente
-# Y el campo "optional_field", que es opcional, también está presente
+# El campo "other_required_field", que es requerido, está presente
+# Y el campo "optional_field", que es opcional, está presente
 # Por lo que es un objeto válido
 ```
 
 ```yml [Objeto 3 (Inválido)]
 example:
-  optional_field: "..." // [!code error]
+  optional_field: "..." // [!code ++]
 
 # El campo "optional_field", que es opcional, está presente
-# Pero el campo "required_field", que es requerido, no está presente
+# El campo "required_field", que es requerido, no está presente
+# Y el campo "other_required_field", que es requerido, no está presente
+# Por lo que no es un objeto válido
+```
+
+```yml [Objeto 4 (Inválido)]
+example:
+  required_field: "..." // [!code highlight]
+  optional_field: "..." // [!code ++]
+
+# El campo "optional_field", que es opcional, está presente
+# El campo "required_field", que es requerido, está presente
+# Y el campo "other_required_field", que es requerido, no está presente
 # Por lo que no es un objeto válido
 ```
 

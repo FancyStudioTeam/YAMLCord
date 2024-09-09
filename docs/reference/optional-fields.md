@@ -17,10 +17,11 @@ example: # Object
 
 The `example` object supports these fields:
 
-| Name              | Type               | Description                          |
-| ----------------- | ------------------ | ------------------------------------ |
-| required_field    | [`string`][String] | A required field.                    |
-| optional_field`?` | [`string`][String] | An optional field. (Marked with `?`) |
+| Name                 | Type               | Description                          |
+| -------------------- | ------------------ | ------------------------------------ |
+| required_field       | [`string`][String] | A required field.                    |
+| other_required_field | [`string`][String] | A required field.                    |
+| optional_field`?`    | [`string`][String] | An optional field. (Marked with `?`) |
 
 :::info Examples mixing fields
 
@@ -29,28 +30,44 @@ The `example` object supports these fields:
 ```yml [Object 1 (Valid)]
 example:
   required_field: "..." // [!code highlight]
+  other_required_field: "..." // [!code highlight]
 
-# The "required_field", which is required, is present
-# Therefore, it is a valid object
+# The “required_field” field, which is required, is present.
+# And the field “other_required_field”, which is required, is present
+# So it is a valid object
 ```
 
 ```yml [Object 2 (Valid)]
 example:
   required_field: "..." // [!code highlight]
+  other_required_field: "..." // [!code highlight]
   optional_field: "..." // [!code ++]
 
-# The "required_field", which is required, is present
-# And the "optional_field", which is optional, is also present
-# Therefore, it is a valid object
+# The “required_field” field, which is required, is present.
+# The “other_required_field” field, which is required, is present
+# And the field “optional_field”, which is optional, is present
+# So it is a valid object
 ```
 
 ```yml [Object 3 (Invalid)]
 example:
-  optional_field: "..." // [!code error]
+  optional_field: "..." // [!code ++]
 
-# The "optional_field", which is optional, is present
-# But the "required_field", which is required, is not present
-# Therefore, it is not a valid object
+# The “optional_field” field, which is optional, is present.
+# The “required_field” field, which is required, is not present.
+# And the field “other_required_field”, which is required, is not present
+# So it is not a valid object
+```
+
+```yml [Object 4 (Invalid)]
+example:
+  required_field: "..." // [!code highlight]
+  optional_field: "..." // [!code ++]
+
+# The “optional_field” field, which is optional, is present.
+# The “required_field” field, which is required, is present
+# And the field “other_required_field”, which is required, is not present
+# So it is not a valid object
 ```
 
 :::
