@@ -46,6 +46,10 @@ export const en = defineConfig({
                   text: "Data Types",
                 },
                 {
+                  link: "sequences-and-flows",
+                  text: "Sequences and Flows",
+                },
+                {
                   link: "conditionals",
                   text: "Conditionals",
                 },

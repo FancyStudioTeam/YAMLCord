@@ -56,9 +56,6 @@ export const shared = defineConfig({
     ],
   ],
   lastUpdated: true,
-  markdown: {
-    theme: "vitesse-dark",
-  },
   themeConfig: {
     editLink: {
       pattern: "https://github.com/FancyStudioTeam/YAMLCord/tree/main/docs/:path",

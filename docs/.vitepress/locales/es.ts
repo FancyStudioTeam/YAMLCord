@@ -46,6 +46,10 @@ export const es = defineConfig({
                   text: "Tipos de Datos",
                 },
                 {
+                  link: "sequences-and-flows",
+                  text: "Secuencias y Flujos",
+                },
+                {
                   link: "conditionals",
                   text: "Condicionales",
                 },
