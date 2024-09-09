@@ -61,8 +61,8 @@ importers:
         specifier: 5.0.22
         version: 5.0.22
       '@fontsource/jetbrains-mono':
-        specifier: 5.0.21
-        version: 5.0.21
+        specifier: 5.0.22
+        version: 5.0.22
       '@shikijs/monaco':
         specifier: 1.16.2
         version: 1.16.2
@@ -560,8 +560,8 @@ packages:
   '@fontsource-variable/plus-jakarta-sans@5.0.22':
     resolution: {integrity: sha512-YDV+FVn+icpvB004N3R973K/0W75FRPaEmeOoZ5nBuPAN8hizhUfTHpWpEv9FUr3C8FkPFwzrVl3gvdkzDdBxw==}
 
-  '@fontsource/jetbrains-mono@5.0.21':
-    resolution: {integrity: sha512-BjI7a4U4HC4R3rEq96dN4CKtH8qxHFA+zU+6Ftusn/9k+VbF+VZ1l5bmHCUtg2ekjXbGF955/1FODlCKXleaGQ==}
+  '@fontsource/jetbrains-mono@5.0.22':
+    resolution: {integrity: sha512-eFjS3ilq9n9FeRCdSSDhj3BTtr74FYeJswSJr9VDIxb02A07sQ59VugLuq1EKs6eLha+IOT5+4qVpllGaQNNHg==}
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -2206,7 +2206,7 @@ snapshots:
 
   '@fontsource-variable/plus-jakarta-sans@5.0.22': {}
 
-  '@fontsource/jetbrains-mono@5.0.21': {}
+  '@fontsource/jetbrains-mono@5.0.22': {}
 
   '@isaacs/cliui@8.0.2':
     dependencies:
