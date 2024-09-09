@@ -3,7 +3,7 @@
     "@fontsource-variable/jetbrains-mono": "5.0.23",
     "@fontsource-variable/plus-jakarta-sans": "5.0.22",
     "@fontsource/jetbrains-mono": "5.0.22",
-    "@shikijs/monaco": "1.16.2",
+    "@shikijs/monaco": "1.16.3",
     "monaco-editor": "0.51.0",
     "monaco-themes": "0.4.4",
     "monaco-yaml": "5.2.2",
