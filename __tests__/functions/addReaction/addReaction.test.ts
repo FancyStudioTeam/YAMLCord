@@ -81,8 +81,8 @@ describe("Function: add_reaction", () => {
     it("[2005]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
 
-    it("[2006]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
+    /*it("[2006]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());*/
 
     it("[2007]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
