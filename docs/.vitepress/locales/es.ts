@@ -46,8 +46,8 @@ export const es = defineConfig({
                   text: "Tipos de Datos",
                 },
                 {
-                  link: "sequences-and-flows",
-                  text: "Secuencias y Flujos",
+                  link: "how-yamlcord-works",
+                  text: "Como funciona YAMLCord",
                 },
                 {
                   link: "conditionals",
