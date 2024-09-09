@@ -15,7 +15,7 @@ wait: # Number [seconds]
 :::details Important Notes
 
 - The number of seconds must be an integer.
-- The range of seconds is from `1` second minimum to `500` seconds maximum.
+- The range of seconds is from `1` second minimum to `300` seconds maximum.
 
 :::
 
