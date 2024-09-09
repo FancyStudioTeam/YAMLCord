@@ -15,8 +15,21 @@ export const validateAddReactionFunction = async (sequence: unknown): Promise<Ad
     throwError(result.unwrapErr());
   }
 
+  const data = result.unwrap();
+  let validData = data;
+
+  if (Array.isArray(data)) {
+    validData = [];
+
+    for (const element of data) {
+      validData.push(element.trim());
+    }
+  } else {
+    validData = data.trim();
+  }
+
   return {
-    data: Array.isArray(result.unwrap()) ? Array.from(new Set(result.unwrap())) : result.unwrap(),
+    data: Array.isArray(validData) ? Array.from(new Set(validData)) : validData,
     name: "add_reaction",
     type: SequenceType.FUNCTION,
   };
