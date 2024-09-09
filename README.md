@@ -31,7 +31,7 @@ sequences:
 
 ## 📄 License
 
-This project is licensed under the [BSD-3-Clause][BSD3ClauseURL] license.
+This project is licensed under the [CC BY-SA 4.0][CCBYSAURL] license.
 
 ## 💻 Security
 
@@ -43,7 +43,7 @@ Thanks to all these people who have made YAMLCord possible!
 
 [![All Contributors][ContributorsImageURL]][ContributorsURL]
 
-[BSD3ClauseURL]: https://opensource.org/license/bsd-3-clause/
+[CCBYSAURL]: https://creativecommons.org/licenses/by-sa/4.0/
 [ContributorsImageURL]: https://contrib.rocks/image?repo=FancyStudioTeam/YAMLCord&max=500&columns=20
 [ContributorsURL]: https://github.com/FancyStudioTeam/YAMLCord/graphs/contributors
 [DownloadsBadgeURL]: https://img.shields.io/npm/dt/yamlcord?style=for-the-badge&color=4cb699&label=Downloads&logo=npm&logoColor=white
