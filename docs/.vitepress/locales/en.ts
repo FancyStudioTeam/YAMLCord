@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { GLOBAL_FUNCTIONS } from "../functions";
+import { FUNCTIONS } from "../functions";
 
 export const en = defineConfig({
   lang: "en",
@@ -60,10 +60,10 @@ export const en = defineConfig({
           text: "Introduction",
         },
         {
-          base: "/global-functions/",
+          base: "/functions/",
           collapsed: false,
-          items: GLOBAL_FUNCTIONS("en"),
-          text: "Global Functions",
+          items: FUNCTIONS("en"),
+          text: "Functions",
         },
         {
           items: [

@@ -5,7 +5,7 @@ const OVERLOAD_TRANSLATION: Record<Locales, string> = {
   es: "Sobrecarga",
 };
 
-export const GLOBAL_FUNCTIONS: (locale: Locales) => DefaultTheme.SidebarItem[] = (locale) => [
+export const FUNCTIONS: (locale: Locales) => DefaultTheme.SidebarItem[] = (locale) => [
   {
     items: [
       {
