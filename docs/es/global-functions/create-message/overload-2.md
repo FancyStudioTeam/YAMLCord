@@ -2,19 +2,17 @@
 
 Crea un mensaje.
 
-## Sintaxis
+## Firma
 
 ```yml
 create_message: # String [content]
 ```
 
-## Argumentos
+### Argumentos
 
-| Nombre  | Tipo               | Descripción               |
-| ------- | ------------------ | ------------------------- |
-| content | [`string`][String] | El contenido del mensaje. |
+- `content` ([`string`][String]): El contenido del mensaje.
 
-:::info Notas Importantes
+:::details Notas Importantes
 
 - El rango de caracteres del contenido es de `1` carácter como mínimo a `2000` caracteres como máximo.
 

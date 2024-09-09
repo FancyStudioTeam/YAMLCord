@@ -2,17 +2,15 @@
 
 Add a reaction to the original message.
 
-## Syntax
+## Signature
 
 ```yml
 add_reaction: # String [reaction]
 ```
 
-## Arguments
+### Arguments
 
-| Name     | Type               | Description          |
-| -------- | ------------------ | -------------------- |
-| reaction | [`string`][String] | The reaction to add. |
+- `reaction` ([`string`][String]): The reaction to add.
 
 ## Examples
 

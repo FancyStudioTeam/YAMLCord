@@ -2,19 +2,17 @@
 
 Añade una reacción al mensaje original.
 
-## Sintaxis
+## Firma
 
 ```yml
 add_reaction: # Array [reaction]
 ```
 
-## Argumentos
+### Argumentos
 
-| Nombre   | Tipo               | Descripción           |
-| -------- | ------------------ | --------------------- |
-| reaction | [`string`][String] | La reacción a añadir. |
+- `reaction` ([`string`][String]): La reacción a añadir.
 
-## Ejemplo
+## Ejemplos
 
 :::code-group
 

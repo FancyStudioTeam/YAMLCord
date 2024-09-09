@@ -2,19 +2,17 @@
 
 Wait a number of seconds before executing the next sequence.
 
-## Syntax
+## Signature
 
 ```yml
 wait: # Number [seconds]
 ```
 
-## Arguments
+### Arguments
 
-| Name    | Type               | Description                    |
-| ------- | ------------------ | ------------------------------ |
-| seconds | [`number`][Number] | The number of seconds to wait. |
+- `seconds` ([`number`][Number]): The number of seconds to wait.
 
-:::info Important Notes
+:::details Important Notes
 
 - The number of seconds must be an integer.
 - The range of seconds is from `1` second minimum to `500` seconds maximum.

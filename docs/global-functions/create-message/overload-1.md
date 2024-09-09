@@ -2,21 +2,19 @@
 
 Create a message.
 
-## Syntax
+## Signature
 
 ```yml
 create_message: # Object
 ```
 
-## Arguments
+### Arguments
 
-| Name          | Type                       | Description                                        |
-| ------------- | -------------------------- | -------------------------------------------------- |
-| channel_id`?` | [`string`][String]         | The ID of the channel to send the message.         |
-| content       | [`string`][String]         | The content of the message.                        |
-| reply`?`      | [`ping`/`no_ping`][String] | If a reply to the original message should be made. |
+- `channel_id?` ([`string`][String]): The ID of the channel to send the message.
+- `content` ([`string`][String]): The content of the message.
+- `reply?` ([`ping`/`no_ping`][String]): If a reply to the original message should be made.
 
-:::info Important Notes
+:::details Important Notes
 
 - The content character range is from `1` character minimum to `2000` characters maximum.
 - If the `reply` property is set to `no_ping`, the bot will not make a mention of the original author. Otherwise, the bot will mention the original author.

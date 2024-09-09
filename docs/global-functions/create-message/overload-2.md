@@ -2,19 +2,17 @@
 
 Create a message.
 
-## Syntax
+## Signature
 
 ```yml
 create_message: # String [content]
 ```
 
-## Arguments
+### Arguments
 
-| Name    | Type               | Description                 |
-| ------- | ------------------ | --------------------------- |
-| content | [`string`][String] | The content of the message. |
+- `content` ([`string`][String]): The content of the message.
 
-:::info Important Notes
+:::details Important Notes
 
 - The content character range is from `1` character minimum to `2000` characters maximum.
 
