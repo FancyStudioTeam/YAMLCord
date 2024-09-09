@@ -58,8 +58,8 @@ importers:
         specifier: 5.0.23
         version: 5.0.23
       '@fontsource-variable/plus-jakarta-sans':
-        specifier: 5.0.22
-        version: 5.0.22
+        specifier: 5.0.23
+        version: 5.0.23
       '@fontsource/jetbrains-mono':
         specifier: 5.0.22
         version: 5.0.22
@@ -557,8 +557,8 @@ packages:
   '@fontsource-variable/jetbrains-mono@5.0.23':
     resolution: {integrity: sha512-AzdFE3IqYJ9/2hFRwcqJre/+/MKZHMz2y6dRYPwfz6aC0WE3Hv/PwzCLcv3W/oGMmu/xmBL3URbkUfxjgmMhjQ==}
 
-  '@fontsource-variable/plus-jakarta-sans@5.0.22':
-    resolution: {integrity: sha512-YDV+FVn+icpvB004N3R973K/0W75FRPaEmeOoZ5nBuPAN8hizhUfTHpWpEv9FUr3C8FkPFwzrVl3gvdkzDdBxw==}
+  '@fontsource-variable/plus-jakarta-sans@5.0.23':
+    resolution: {integrity: sha512-fp78ShRTC3mQ8HgmKcLiA70E5/o5niAyadJ2qt92IfwgAKCREtyFVvmBXZSWBbjodYO/ulWRloGYNUSWEOtEMQ==}
 
   '@fontsource/jetbrains-mono@5.0.22':
     resolution: {integrity: sha512-eFjS3ilq9n9FeRCdSSDhj3BTtr74FYeJswSJr9VDIxb02A07sQ59VugLuq1EKs6eLha+IOT5+4qVpllGaQNNHg==}
@@ -2210,7 +2210,7 @@ snapshots:
 
   '@fontsource-variable/jetbrains-mono@5.0.23': {}
 
-  '@fontsource-variable/plus-jakarta-sans@5.0.22': {}
+  '@fontsource-variable/plus-jakarta-sans@5.0.23': {}
 
   '@fontsource/jetbrains-mono@5.0.22': {}
 
