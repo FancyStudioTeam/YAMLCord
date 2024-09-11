@@ -55,6 +55,9 @@ describe("Function: loadYAMLData", () => {
   });
 
   describe("Failure cases (2xxx)", () => {
-    it("[2001]", async ({ task }) => await expect(loadYAMLData(loader(fileName(task.name)))).rejects.toThrowError());
+    it("[2001]", async ({ task }) =>
+      await expect(loadYAMLData(loader(fileName(task.name)))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.INVALID_YAML_DATA),
+      ));
   });
 });
