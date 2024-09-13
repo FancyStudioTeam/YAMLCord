@@ -55,8 +55,8 @@ importers:
   docs:
     dependencies:
       '@fontsource-variable/jetbrains-mono':
-        specifier: 5.0.23
-        version: 5.0.23
+        specifier: 5.1.0
+        version: 5.1.0
       '@fontsource-variable/plus-jakarta-sans':
         specifier: 5.0.23
         version: 5.0.23
@@ -554,8 +554,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@fontsource-variable/jetbrains-mono@5.0.23':
-    resolution: {integrity: sha512-AzdFE3IqYJ9/2hFRwcqJre/+/MKZHMz2y6dRYPwfz6aC0WE3Hv/PwzCLcv3W/oGMmu/xmBL3URbkUfxjgmMhjQ==}
+  '@fontsource-variable/jetbrains-mono@5.1.0':
+    resolution: {integrity: sha512-Hk2HCSep+EmX6nSPNTS3goN0V0TOigdVWcGdnxTVIZIa89HtZAe/zhzFEM1iBXrBShilPwKEdjANHa5plSi38A==}
 
   '@fontsource-variable/plus-jakarta-sans@5.0.23':
     resolution: {integrity: sha512-fp78ShRTC3mQ8HgmKcLiA70E5/o5niAyadJ2qt92IfwgAKCREtyFVvmBXZSWBbjodYO/ulWRloGYNUSWEOtEMQ==}
@@ -2309,7 +2309,7 @@ snapshots:
   '@esbuild/win32-x64@0.23.1':
     optional: true
 
-  '@fontsource-variable/jetbrains-mono@5.0.23': {}
+  '@fontsource-variable/jetbrains-mono@5.1.0': {}
 
   '@fontsource-variable/plus-jakarta-sans@5.0.23': {}
 
