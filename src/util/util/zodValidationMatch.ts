@@ -14,14 +14,20 @@ export const zodValidationMatch = async <T extends ZodSchema>(
       match(error.issues[0])
         .with(
           {
+            code: "invalid_type",
+          },
+          (issue) => reject([ErrorCodes.INVALID_VALUE_TYPE, issue.expected, issue.received]),
+        )
+        .with(
+          {
             code: "too_small",
           },
           (issue) => {
             let rejectData: ResultErrorType = [ErrorCodes.GENERAL_ERROR];
 
             match(issue.type)
-              .with("array", () => (rejectData = [ErrorCodes.INVALID_MAX_ARRAY_LENGTH, issue.minimum]))
-              .with("string", () => (rejectData = [ErrorCodes.INVALID_MAX_STRING_LENGTH, issue.minimum]));
+              .with("array", () => (rejectData = [ErrorCodes.INVALID_MIN_ARRAY_LENGTH, issue.minimum]))
+              .with("string", () => (rejectData = [ErrorCodes.INVALID_MIN_STRING_LENGTH, issue.minimum]));
 
             reject(rejectData);
           },

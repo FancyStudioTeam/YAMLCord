@@ -1,4 +1,0 @@
-sequences:
-  - if: "[message.content] eq '!admin'"
-    then:
-      - create_message: 1
