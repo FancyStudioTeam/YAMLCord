@@ -2,8 +2,8 @@ import emojiRegex from "emoji-regex";
 import { z } from "zod";
 
 export const EMOJI_REGEX = {
-  UNICODE: emojiRegex(),
-  CUSTOM: /<a?:[a-zA-Z0-9_]+:\d{17,21}>/,
+  UNICODE: new RegExp(`^(?:${emojiRegex().source})$`),
+  CUSTOM: /^<a?:[a-zA-Z0-9_]+:\d{17,21}>$/,
 };
 
 const AddReactionUnicodeEmojiSchema = z.string().regex(EMOJI_REGEX.UNICODE);

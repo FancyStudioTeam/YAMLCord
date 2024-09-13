@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { validateFunction } from "../../../src/functions/validateFunction";
 import { SequenceType } from "../../../src/types";
+import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
+import { getErrorMessage } from "../../../src/util/errors/Errors";
 import { loadYAMLData } from "../../../src/util/util/loadYAMLData";
 import { baseLoader, fileName } from "../../utils";
 
@@ -38,26 +40,12 @@ describe("YAMLCord Function: add_reaction", () => {
 
     it("[1005]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: "🚀",
-        name: "add_reaction",
-        type: SequenceType.FUNCTION,
-      }));
-
-    it("[1006]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: "<:emojiWithName:1055230048732450847>",
-        name: "add_reaction",
-        type: SequenceType.FUNCTION,
-      }));
-
-    it("[1007]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
         data: ["🫡", "<:_:1055230048732450847>", "🚀", "<:emojiWithName:1055230048732450847>", "🔗"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
 
-    it("[1008]", async ({ task }) =>
+    it("[1006]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
         data: "<a:_:489818863341535247>",
         name: "add_reaction",
@@ -70,7 +58,9 @@ describe("YAMLCord Function: add_reaction", () => {
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
 
     it("[2002]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.INVALID_MIN_ARRAY_LENGTH, 1),
+      ));
 
     it("[2003]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
@@ -81,10 +71,19 @@ describe("YAMLCord Function: add_reaction", () => {
     it("[2005]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
 
-    /*it("[2006]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());*/
+    it("[2006]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
 
     it("[2007]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
+
+    it("[2008]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
+
+    it("[2009]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
+
+    it("[2010]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
   });
 });
