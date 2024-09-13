@@ -7,11 +7,15 @@ export const ErrorMessages: Record<ErrorCodes, string | ((...args: any[]) => str
   [ErrorCodes.INVALID_YAML_DATA]:
     "Invalid YAML data. This may be due to an identation problem, duplicate keys or bad syntax",
   [ErrorCodes.INVALID_MAX_STRING_LENGTH]: (length: number) =>
-    `Invalid string length. Max length is ${length} characters`,
+    `Invalid string length. Maximum length is ${length} characters`,
   [ErrorCodes.INVALID_MIN_STRING_LENGTH]: (length: number) =>
-    `Invalid string length. Min length is ${length} characters`,
-  [ErrorCodes.INVALID_MAX_ARRAY_LENGTH]: (length: number) => `Invalid array length. Max length is ${length} elements`,
-  [ErrorCodes.INVALID_MIN_ARRAY_LENGTH]: (length: number) => `Invalid array length. Min length is ${length} elements`,
+    `Invalid string length. Minimum length is ${length} characters`,
+  [ErrorCodes.INVALID_MAX_ARRAY_LENGTH]: (length: number) =>
+    `Invalid array length. Maximum length is ${length} elements`,
+  [ErrorCodes.INVALID_MIN_ARRAY_LENGTH]: (length: number) =>
+    `Invalid array length. Minimum length is ${length} elements`,
+  [ErrorCodes.INVALID_VALUE_TYPE]: (expected: string, received: string) =>
+    `Invalid value type. Expected "${expected}", received "${received}"`,
 
   [ErrorCodes.UNKNOWN_GLOBAL_PROPERTY]: (property: string) => `Unknown global property "${property}"`,
   [ErrorCodes.UNKNOWN_GLOBAL_FUNCTION]: (functionName: string) => `Unknown global function "${functionName}"`,
