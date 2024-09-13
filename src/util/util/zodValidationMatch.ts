@@ -27,6 +27,7 @@ export const zodValidationMatch = async <T extends ZodSchema>(
 
             match(issue.type)
               .with("array", () => (rejectData = [ErrorCodes.INVALID_MIN_ARRAY_LENGTH, issue.minimum]))
+              .with("number", () => (rejectData = [ErrorCodes.INVALID_MIN_NUMBER_VALUE, issue.minimum]))
               .with("string", () => (rejectData = [ErrorCodes.INVALID_MIN_STRING_LENGTH, issue.minimum]));
 
             reject(rejectData);
@@ -41,6 +42,7 @@ export const zodValidationMatch = async <T extends ZodSchema>(
 
             match(issue.type)
               .with("array", () => (rejectData = [ErrorCodes.INVALID_MAX_ARRAY_LENGTH, issue.maximum]))
+              .with("number", () => (rejectData = [ErrorCodes.INVALID_MAX_NUMBER_VALUE, issue.maximum]))
               .with("string", () => (rejectData = [ErrorCodes.INVALID_MAX_STRING_LENGTH, issue.maximum]));
 
             reject(rejectData);

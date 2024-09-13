@@ -16,6 +16,8 @@ export const ErrorMessages: Record<ErrorCodes, string | ((...args: any[]) => str
     `Invalid array length. Minimum length is ${length} elements`,
   [ErrorCodes.INVALID_VALUE_TYPE]: (expected: string, received: string) =>
     `Invalid value type. Expected "${expected}", received "${received}"`,
+  [ErrorCodes.INVALID_MIN_NUMBER_VALUE]: (length: number) => `Invalid number value. Minimum value is ${length} `,
+  [ErrorCodes.INVALID_MAX_NUMBER_VALUE]: (length: number) => `Invalid number value. Maximum value is ${length}`,
 
   [ErrorCodes.UNKNOWN_GLOBAL_PROPERTY]: (property: string) => `Unknown global property "${property}"`,
   [ErrorCodes.UNKNOWN_GLOBAL_FUNCTION]: (functionName: string) => `Unknown global function "${functionName}"`,
