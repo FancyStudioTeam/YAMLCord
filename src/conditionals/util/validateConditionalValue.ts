@@ -1,7 +1,6 @@
 import { Result } from "@sapphire/result";
 import type { z } from "zod";
 import type { ResultErrorType } from "#types";
-import { ErrorCodes } from "../../util/errors/ErrorCodes";
 import { throwError } from "../../util/errors/throwError";
 import { zodValidationMatch } from "../../util/util/zodValidationMatch";
 import { ConditionalIfValueSchema } from "../schemas/ConditionalSchemas";
