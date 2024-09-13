@@ -9,16 +9,16 @@
   },
   "description": "YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML",
   "devDependencies": {
-    "@biomejs/biome": "1.8.3",
+    "@biomejs/biome": "1.9.0",
     "@types/js-yaml": "4.0.9",
     "@types/node": "22.5.4",
     "husky": "9.1.5",
     "js-yaml": "4.1.0",
     "lint-staged": "15.2.10",
-    "tsx": "4.19.0",
-    "typescript": "5.5.4",
+    "tsx": "4.19.1",
+    "typescript": "5.6.2",
     "vite-tsconfig-paths": "5.0.1",
-    "vitest": "2.0.5"
+    "vitest": "2.1.0"
   },
   "exports": {
     ".": {
