@@ -10,7 +10,7 @@ describe("Main Function: loadYAMLData", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
       await expect(loadYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
-        string: "hello world",
+        string: "Hello, world!",
       }));
 
     it("[1002]", async ({ task }) =>
@@ -25,7 +25,7 @@ describe("Main Function: loadYAMLData", () => {
 
     it("[1004]", async ({ task }) =>
       await expect(loadYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
-        array: ["hello", "world"],
+        array: ["Hello", "world!"],
       }));
 
     it("[1005]", async ({ task }) =>
