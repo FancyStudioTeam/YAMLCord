@@ -7,7 +7,7 @@ import { baseLoader, fileName } from "../../utils";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
-describe("Function: createSequences", () => {
+describe("Main Function: createSequences", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
       await expect(createSequences(loader(fileName(task.name)))).resolves.toStrictEqual({

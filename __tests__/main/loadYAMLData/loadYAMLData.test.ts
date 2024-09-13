@@ -6,7 +6,7 @@ import { baseLoader, fileName } from "../../utils";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
-describe("Function: loadYAMLData", () => {
+describe("Main Function: loadYAMLData", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
       await expect(loadYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({

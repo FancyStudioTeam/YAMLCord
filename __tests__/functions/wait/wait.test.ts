@@ -8,7 +8,7 @@ import { baseLoader, fileName } from "../../utils";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
-describe("Function: wait", () => {
+describe("YAMLCord Function: wait", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
