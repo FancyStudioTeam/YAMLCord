@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { validateFunction } from "../../../src/functions/validateFunction";
 import { SequenceType } from "../../../src/types";
+import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
+import { getErrorMessage } from "../../../src/util/errors/Errors";
 import { loadYAMLData } from "../../../src/util/util/loadYAMLData";
 import { baseLoader, fileName } from "../../utils";
 
@@ -32,15 +34,23 @@ describe("Function: wait", () => {
 
   describe("Failure cases (2xxx)", () => {
     it("[2001]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.INVALID_MIN_NUMBER_VALUE, 1),
+      ));
 
     it("[2002]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.INVALID_MIN_NUMBER_VALUE, 1),
+      ));
 
     it("[2003]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.INVALID_MAX_NUMBER_VALUE, 300),
+      ));
 
     it("[2004]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError());
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "integer", "float"),
+      ));
   });
 });
