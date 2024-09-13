@@ -8,4 +8,7 @@ export const ConditionalSchema = z.object({
 
 export const ConditionalIfVariableSchema = z.string().regex(/^\[[^[\]]+\]$/);
 export const ConditionalIfOperatorSchema = z.enum(["eq"]);
-export const ConditionalIfValueSchema = z.string().regex(/^'.+'$/);
+export const ConditionalIfValueSchema = z
+  .string()
+  .regex(/^'.+'$/)
+  .transform((value) => value.slice(1, -1));

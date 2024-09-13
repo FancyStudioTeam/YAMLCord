@@ -15,15 +15,7 @@ export const validateConditionalValue = async (value: unknown) => {
     throwError(result.unwrapErr());
   }
 
-  const data = result.unwrap();
-  const regex = /^'(.*)'$/;
-  const matchedValue = data.match(regex);
-
-  if (!matchedValue) {
-    return throwError([ErrorCodes.INVALUD_REGEX_VALUE]);
-  }
-
-  return matchedValue[1];
+  return result.unwrap();
 };
 
 type ConditionalIfValueSchemaType = typeof ConditionalIfValueSchema;
