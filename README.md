@@ -19,7 +19,7 @@
 
 YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML.
 
-## 🚀 Example
+## Example
 
 ```yml
 sequences:
@@ -29,21 +29,21 @@ sequences:
       - add_reaction: "👋"
 ```
 
-## 📄 License
+## License
 
-[YAMLCord][YAMLCordRepositoryURL] © 2024 by [FancyStudio][FancyStudioGitHubURL] is licensed under [CC BY-SA 4.0][CCBYSAURL].
+[YAMLCord][YAMLCordRepositoryURL] © 2024 by [FancyStudio][FancyStudioGitHubURL] is licensed under [CC BY-SA 4.0][CCBYSALicenseURL].
 
-## 💻 Security
+## Security
 
 If you believe you have found a security vulnerability, please **DO NOT make a public issue**, instead, go to our [Support Server][SupportServerURL] and contact the developers privately.
 
-## 💖 Contributors
+## Contributors
 
 Thanks to all these people who have made YAMLCord possible!
 
 [![All Contributors][ContributorsImageURL]][ContributorsURL]
 
-[CCBYSAURL]: https://creativecommons.org/licenses/by-sa/4.0/
+[CCBYSALicenseURL]: https://creativecommons.org/licenses/by-sa/4.0/
 [ContributorsImageURL]: https://contrib.rocks/image?repo=FancyStudioTeam/YAMLCord&max=500&columns=20
 [ContributorsURL]: https://github.com/FancyStudioTeam/YAMLCord/graphs/contributors
 [DownloadsBadgeURL]: https://img.shields.io/npm/dt/yamlcord?style=for-the-badge&color=5865f2&label=Downloads&logo=npm&logoColor=white
