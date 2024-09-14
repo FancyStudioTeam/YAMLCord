@@ -9,14 +9,14 @@ export const shared = defineConfig({
       {
         rel: "icon",
         type: "image/png",
-        href: "/Logo.png",
+        href: "/logos/Dark.svg",
       },
     ],
     [
       "meta",
       {
         name: "theme-color",
-        content: "#4cb699",
+        content: "#5865f2",
       },
     ],
     [
@@ -60,7 +60,10 @@ export const shared = defineConfig({
     editLink: {
       pattern: "https://github.com/FancyStudioTeam/YAMLCord/tree/main/docs/:path",
     },
-    logo: "/Logo.png",
+    logo: {
+      dark: "/logos/Dark.svg",
+      light: "/logos/Light.svg",
+    },
     search: {
       provider: "local",
     },
