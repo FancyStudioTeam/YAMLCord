@@ -7,7 +7,7 @@
 
 [![Version][VersionBadgeURL]][NPMURL]
 [![Downloads][DownloadsBadgeURL]][NPMURL]
-[![Stars][StarsBadgeURL]][NPMURL]
+[![Stars][StarsBadgeURL]][YAMLCordRepositoryURL]
 [![Support][SupportBadgeURL]][SupportServerURL]
 
   </div>
