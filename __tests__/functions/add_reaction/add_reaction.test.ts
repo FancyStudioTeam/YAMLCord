@@ -103,5 +103,15 @@ describe("YAMLCord Function: add_reaction", () => {
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
+
+    it("[2011]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.UNDOCUMENTED_ERROR),
+      ));
+
+    it("[2012]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.UNDOCUMENTED_ERROR),
+      ));
   });
 });
