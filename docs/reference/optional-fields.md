@@ -17,11 +17,9 @@ example: # Object
 
 The `example` object supports these fields:
 
-| Name                 | Type               | Description                          |
-| -------------------- | ------------------ | ------------------------------------ |
-| required_field       | [`string`][String] | A required field.                    |
-| other_required_field | [`string`][String] | A required field.                    |
-| optional_field`?`    | [`string`][String] | An optional field. (Marked with `?`) |
+- `required_field` ([`string`][String]): A required field.
+- `other_required_field` ([`string`][String]): A required field.
+- `optional_field?` ([`string`][String]): An optional field. (Marked with `?`)
 
 :::info Examples mixing fields
 
@@ -67,6 +65,17 @@ example:
 # The “optional_field” field, which is optional, is present.
 # The “required_field” field, which is required, is present
 # And the field “other_required_field”, which is required, is not present
+# So it is not a valid object
+```
+
+```yml [Objeto 5 (Inválido)]
+example:
+  other_required_field: "..." // [!code highlight]
+  optional_field: "..." // [!code ++]
+
+# The “optional_field” field, which is optional, is present.
+# The “required_field” field, which is required, is not present.
+# And the field “other_required_field”, which is required, is present
 # So it is not a valid object
 ```
 

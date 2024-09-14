@@ -17,11 +17,9 @@ example: # Object
 
 El objeto `example` admite estos campos:
 
-| Nombre               | Tipo               | Descripción                          |
-| -------------------- | ------------------ | ------------------------------------ |
-| required_field       | [`string`][String] | Un campo requerido.                  |
-| other_required_field | [`string`][String] | Un campo requerido.                  |
-| optional_field`?`    | [`string`][String] | Un campo opcional. (Marcado con `?`) |
+- `required_field` ([`string`][String]): Un campo requerido.
+- `other_required_field` ([`string`][String]): Un campo requerido.
+- `optional_field?` ([`string`][String]): Un campo opcional. (Marcado con `?`)
 
 :::info Ejemplos mezclando campos
 
@@ -67,6 +65,17 @@ example:
 # El campo "optional_field", que es opcional, está presente
 # El campo "required_field", que es requerido, está presente
 # Y el campo "other_required_field", que es requerido, no está presente
+# Por lo que no es un objeto válido
+```
+
+```yml [Objeto 5 (Inválido)]
+example:
+  other_required_field: "..." // [!code highlight]
+  optional_field: "..." // [!code ++]
+
+# El campo "optional_field", que es opcional, está presente
+# El campo "required_field", que es requerido, no está presente
+# Y el campo "other_required_field", que es requerido, está presente
 # Por lo que no es un objeto válido
 ```
 

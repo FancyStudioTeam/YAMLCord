@@ -23,21 +23,6 @@ export const en = defineConfig({
               text: "About YAMLCord",
             },
             {
-              base: "/reference/",
-              collapsed: false,
-              items: [
-                {
-                  link: "optional-fields",
-                  text: "Optional Fields",
-                },
-                {
-                  link: "overloaded-functions",
-                  text: "Overloaded Functions",
-                },
-              ],
-              text: "Reference",
-            },
-            {
               base: "/learning/",
               collapsed: false,
               items: [
@@ -55,6 +40,17 @@ export const en = defineConfig({
                 },
               ],
               text: "Learning",
+            },
+            {
+              base: "/reference/",
+              collapsed: false,
+              items: [
+                {
+                  link: "optional-fields",
+                  text: "Optional Fields",
+                },
+              ],
+              text: "Reference",
             },
           ],
           text: "Introduction",
