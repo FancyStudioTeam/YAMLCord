@@ -7,4 +7,4 @@ const CreateMessagePayloadSchema = z.object({
   reply: z.enum(["no_ping", "ping"]).optional(),
 });
 
-export const CreateMessageSchema = z.union([CreateMessageContentSchema, CreateMessagePayloadSchema]);
+export const CreateMessageSchema = z.union([CreateMessagePayloadSchema, CreateMessageContentSchema]);

@@ -15,35 +15,35 @@ export const zodValidationMatch = async <T extends ZodSchema>(
           {
             code: "invalid_string",
           },
-          (issue) => match(issue.validation).with("regex", () => reject([ErrorCodes.INVALID_STRING_REGEX])),
+          ({ validation }) => match(validation).with("regex", () => reject([ErrorCodes.INVALID_STRING_REGEX])),
         )
         .with(
           {
             code: "invalid_type",
           },
-          (issue) => reject([ErrorCodes.INVALID_VALUE_TYPE, issue.expected, issue.received]),
+          ({ expected, received }) => reject([ErrorCodes.INVALID_VALUE_TYPE, expected, received]),
         )
         .with(
           {
             code: "too_small",
           },
-          (issue) =>
-            match(issue.type)
-              .with("array", () => reject([ErrorCodes.INVALID_MIN_ARRAY_LENGTH, issue.minimum]))
-              .with("number", () => reject([ErrorCodes.INVALID_MIN_NUMBER_VALUE, issue.minimum]))
-              .with("string", () => reject([ErrorCodes.INVALID_MIN_STRING_LENGTH, issue.minimum])),
+          ({ type, minimum }) =>
+            match(type)
+              .with("array", () => reject([ErrorCodes.INVALID_MIN_ARRAY_LENGTH, minimum]))
+              .with("number", () => reject([ErrorCodes.INVALID_MIN_NUMBER_VALUE, minimum]))
+              .with("string", () => reject([ErrorCodes.INVALID_MIN_STRING_LENGTH, minimum])),
         )
         .with(
           {
             code: "too_big",
           },
-          (issue) =>
-            match(issue.type)
-              .with("array", () => reject([ErrorCodes.INVALID_MAX_ARRAY_LENGTH, issue.maximum]))
-              .with("number", () => reject([ErrorCodes.INVALID_MAX_NUMBER_VALUE, issue.maximum]))
-              .with("string", () => reject([ErrorCodes.INVALID_MAX_STRING_LENGTH, issue.maximum])),
+          ({ type, maximum }) =>
+            match(type)
+              .with("array", () => reject([ErrorCodes.INVALID_MAX_ARRAY_LENGTH, maximum]))
+              .with("number", () => reject([ErrorCodes.INVALID_MAX_NUMBER_VALUE, maximum]))
+              .with("string", () => reject([ErrorCodes.INVALID_MAX_STRING_LENGTH, maximum])),
         )
-        .otherwise(() => reject([ErrorCodes.GENERAL_ERROR]));
+        .otherwise(() => reject([ErrorCodes.UNDOCUMENTED_ERROR]));
     }
 
     resolve(data);
