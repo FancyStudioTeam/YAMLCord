@@ -27,12 +27,12 @@ export const en = defineConfig({
               collapsed: false,
               items: [
                 {
-                  link: "data-types",
-                  text: "Data Types",
-                },
-                {
                   link: "how-yamlcord-works",
                   text: "How YAMLCord Works",
+                },
+                {
+                  link: "data-types",
+                  text: "Data Types",
                 },
                 {
                   link: "conditionals",

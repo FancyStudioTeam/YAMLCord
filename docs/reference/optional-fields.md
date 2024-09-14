@@ -65,7 +65,7 @@ profile:
 # As a result, the object is invalid
 ```
 
-```yml [Objeto 5 (Inválido)]
+```yml [Object 5 (Invalid)]
 profile:
   email: "johndoe@example.com" // [!code highlight]
   about_me: "I am a software developer" // [!code ++]
