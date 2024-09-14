@@ -1,17 +1,16 @@
 <!-- markdownlint-disable -->
 <div align="center">
-  <picture>
-    <source srcset="https://yamlcord.pages.dev/banners/Dark.png" media="(prefers-color-scheme: dark)">
-    <img src="https://yamlcord.pages.dev/banners/Light.png">
-  </picture>
-
-YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML
+  <img src="https://yamlcord.pages.dev/banners/Light.png#light">
+  <img src="https://yamlcord.pages.dev/banners/Dark.png#dark">
+  <p>YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML</p>
+  <div>
 
 [![Version][VersionBadgeURL]][NPMURL]
 [![Downloads][DownloadsBadgeURL]][NPMURL]
 [![Stars][StarsBadgeURL]][NPMURL]
 [![Support][SupportBadgeURL]][SupportServerURL]
 
+  </div>
 </div>
 <!-- markdownlint-restore -->
 

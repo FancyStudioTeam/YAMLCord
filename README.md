@@ -4,14 +4,15 @@
     <source srcset="https://yamlcord.pages.dev/banners/Dark.png" media="(prefers-color-scheme: dark)">
     <img src="https://yamlcord.pages.dev/banners/Light.png">
   </picture>
-
-YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML
+  <p>YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML</p>
+  <div>
 
 [![Version][VersionBadgeURL]][NPMURL]
 [![Downloads][DownloadsBadgeURL]][NPMURL]
 [![Stars][StarsBadgeURL]][NPMURL]
 [![Support][SupportBadgeURL]][SupportServerURL]
 
+  </div>
 </div>
 <!-- markdownlint-restore -->
 
