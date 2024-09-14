@@ -2,7 +2,7 @@
 <div align="center">
   <img src="https://yamlcord.pages.dev/banners/Light.png#light" />
   <img src="https://yamlcord.pages.dev/banners/Dark.png#dark" />
-  <p>YAMLCord es una sintaxis fácil de usar para crear acciones personalizadas para bots de Discord utilizando YAML</p>
+  <p>YAMLCord es una sintaxis fácil de usar para crear acciones personalizadas para bots de Discord usando YAML</p>
   <div style="display: flex; justify-content: center; gap: 5px; flex-wrap: wrap;">
     <a href="https://www.npmjs.com/package/yamlcord" style="text-decoration: none;">
       <img src="https://img.shields.io/npm/v/yamlcord?style=for-the-badge&color=5865f2&label=Version&logo=npm&logoColor=white">
