@@ -2,83 +2,80 @@
 
 Some objects have fields that are required, and others that are optional.
 
-## Difference between Required and Optional Fields
+## Difference Between Required and Optional Fields
 
-- `Required`: These are fields that must be present within the object. Otherwise, an error will be returned.
-- `Optional`: These are fields that can be omitted within the object. Optional fields are marked with a `?` at the end of their name.
+- `Required`: These fields must be present in the object. If they are not, an error will be returned.
+- `Optional`: These fields can be omitted from the object. Optional fields are marked with a `?` at the end of their name.
 
-### Example
+### Practical Example
 
-Let's take as an example this object called `example`.
+Let's take as an example this object called `profile`.
 
 ```yml
-example: # Object
+profile: # Object
 ```
 
-The `example` object supports these fields:
+The `profile` object supports these fields:
 
-- `required_field` ([`string`][String]): A required field.
-- `other_required_field` ([`string`][String]): A required field.
-- `optional_field?` ([`string`][String]): An optional field. (Marked with `?`)
+- `username` (`string`): The user's username.
+- `email` (`string`): The user's email address.
+- `about_me?` (`string`): The user's about me.
 
-:::info Examples mixing fields
+:::info Practical Examples
 
 :::code-group
 
 ```yml [Object 1 (Valid)]
-example:
-  required_field: "..." // [!code highlight]
-  other_required_field: "..." // [!code highlight]
+profile:
+  username: "John Doe" // [!code highlight]
+  email: "johndoe@example.com" // [!code highlight]
 
-# The “required_field” field, which is required, is present.
-# And the field “other_required_field”, which is required, is present
-# So it is a valid object
+# Both "username" and "email" fields, which are required, are present
+# As a result, the object is valid
 ```
 
 ```yml [Object 2 (Valid)]
-example:
-  required_field: "..." // [!code highlight]
-  other_required_field: "..." // [!code highlight]
-  optional_field: "..." // [!code ++]
+profile:
+  username: "John Doe" // [!code highlight]
+  email: "johndoe@example.com" // [!code highlight]
+  about_me: "I am a software developer" // [!code ++]
 
-# The “required_field” field, which is required, is present.
-# The “other_required_field” field, which is required, is present
-# And the field “optional_field”, which is optional, is present
-# So it is a valid object
+# Both "username" and "email" fields, which are required, are present
+# And the "about_me" field, which is optional, is also present
+# As a result, the object is valid
 ```
 
 ```yml [Object 3 (Invalid)]
-example:
-  optional_field: "..." // [!code ++]
+profile:
+  about_me: "I am a software developer" // [!code ++]
 
-# The “optional_field” field, which is optional, is present.
-# The “required_field” field, which is required, is not present.
-# And the field “other_required_field”, which is required, is not present
-# So it is not a valid object
+# The "about_me" field, which is optional, is present
+# But the "username" and "email" fields, which are required, are not present
+# As a result, the object is invalid
 ```
 
 ```yml [Object 4 (Invalid)]
-example:
-  required_field: "..." // [!code highlight]
-  optional_field: "..." // [!code ++]
+profile:
+  username: "John Doe" // [!code highlight]
+  about_me: "I am a software developer" // [!code ++]
 
-# The “optional_field” field, which is optional, is present.
-# The “required_field” field, which is required, is present
-# And the field “other_required_field”, which is required, is not present
-# So it is not a valid object
+# The "username" field, which is required, is present
+# The "about_me" field, which is optional, is present
+# But the "email" field, which is required, is not present
+# As a result, the object is invalid
 ```
 
 ```yml [Objeto 5 (Inválido)]
-example:
-  other_required_field: "..." // [!code highlight]
-  optional_field: "..." // [!code ++]
+profile:
+  email: "johndoe@example.com" // [!code highlight]
+  about_me: "I am a software developer" // [!code ++]
 
-# The “optional_field” field, which is optional, is present.
-# The “required_field” field, which is required, is not present.
-# And the field “other_required_field”, which is required, is present
-# So it is not a valid object
+# The "email" field, which is required, is present
+# The "about_me" field, which is optional, is present
+# But the "username" field, which is required, is not present
+# As a result, the object is invalid
 ```
 
 :::
 
-[String]: /learning/data-types#text-strings-string
+All required fields (`username` and `email`) must be present in the `profile` object. Otherwise, the object is invalid.
