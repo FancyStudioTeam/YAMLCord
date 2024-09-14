@@ -1,15 +1,21 @@
 <!-- markdownlint-disable -->
 <div align="center">
-  <img src="https://yamlcord.pages.dev/banners/Light.png#light">
-  <img src="https://yamlcord.pages.dev/banners/Dark.png#dark">
+  <img src="https://yamlcord.pages.dev/banners/Light.png#light" />
+  <img src="https://yamlcord.pages.dev/banners/Dark.png#dark" />
   <p>YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML</p>
-  <div>
-
-[![Version][VersionBadgeURL]][NPMURL]
-[![Downloads][DownloadsBadgeURL]][NPMURL]
-[![Stars][StarsBadgeURL]][YAMLCordRepositoryURL]
-[![Support][SupportBadgeURL]][SupportServerURL]
-
+  <div style="display: flex; justify-content: center; gap: 5px; flex-wrap: wrap;">
+    <a url="https://www.npmjs.com/package/yamlcord">
+      <img src="https://img.shields.io/npm/v/yamlcord?style=for-the-badge&color=5865f2&label=Version&logo=npm&logoColor=white">
+    </a>
+    <a url="https://www.npmjs.com/package/yamlcord">
+      <img src="https://img.shields.io/npm/dt/yamlcord?style=for-the-badge&color=5865f2&label=Downloads&logo=npm&logoColor=white">
+    </a>
+    <a url="https://github.com/FancyStudioTeam/YAMLCord">
+      <img src="https://img.shields.io/github/stars/FancyStudioTeam/YAMLCord?style=for-the-badge&color=5865f2&label=Stars&logo=github&logoColor=white">
+    </a>
+    <a url="https://discord.gg/yWjeDA6ewJ">
+      <img src="https://img.shields.io/badge/Support-Support?style=for-the-badge&color=5865f2&label=Discord&logo=discord&logoColor=white">
+    </a>
   </div>
 </div>
 <!-- markdownlint-restore -->
