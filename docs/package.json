@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@fontsource-variable/jetbrains-mono": "5.1.0",
-    "@fontsource-variable/plus-jakarta-sans": "5.0.23",
+    "@fontsource-variable/plus-jakarta-sans": "5.1.0",
     "@fontsource/jetbrains-mono": "5.1.0",
     "@shikijs/monaco": "1.17.5",
     "monaco-editor": "0.51.0",
