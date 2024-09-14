@@ -20,7 +20,7 @@ export const validateFunction = async (sequence: unknown): Promise<Function> => 
       .otherwise((key) => throwError([ErrorCodes.UNKNOWN_GLOBAL_FUNCTION, key]));
   }
 
-  if (!isValid(validFunction)) return throwError([ErrorCodes.GENERAL_ERROR]);
+  if (!isValid(validFunction)) return throwError([ErrorCodes.UNDOCUMENTED_ERROR]);
 
   return validFunction;
 };

@@ -1,9 +1,9 @@
 import { match } from "ts-pattern";
-import type { ZodSchema, z } from "zod";
+import type { z } from "zod";
 import { ErrorCodes } from "../errors/ErrorCodes";
 
-export const zodValidationMatch = async <T extends ZodSchema>(
-  zodSchema: ZodSchema,
+export const zodValidationMatch = async <T extends z.ZodSchema>(
+  zodSchema: z.ZodSchema,
   dataToValidate: unknown,
 ): Promise<z.infer<T>> =>
   new Promise((resolve, reject) => {
