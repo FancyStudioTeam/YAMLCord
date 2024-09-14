@@ -5,6 +5,8 @@
     <img src="https://yamlcord.pages.dev/banners/Light.png">
   </picture>
 
+YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML
+
 [![Version][VersionBadgeURL]][NPMURL]
 [![Downloads][DownloadsBadgeURL]][NPMURL]
 [![Stars][StarsBadgeURL]][NPMURL]
@@ -14,10 +16,6 @@
 <!-- markdownlint-restore -->
 
 ---
-
-# YAMLCord
-
-YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML.
 
 ## Example
 
