@@ -46,11 +46,11 @@ Thanks to all these people who have made YAMLCord possible!
 [CCBYSAURL]: https://creativecommons.org/licenses/by-sa/4.0/
 [ContributorsImageURL]: https://contrib.rocks/image?repo=FancyStudioTeam/YAMLCord&max=500&columns=20
 [ContributorsURL]: https://github.com/FancyStudioTeam/YAMLCord/graphs/contributors
-[DownloadsBadgeURL]: https://img.shields.io/npm/dt/yamlcord?style=for-the-badge&color=4cb699&label=Downloads&logo=npm&logoColor=white
+[DownloadsBadgeURL]: https://img.shields.io/npm/dt/yamlcord?style=for-the-badge&color=5865f2&label=Downloads&logo=npm&logoColor=white
 [FancyStudioGitHubURL]: https://github.com/FancyStudioTeam
 [NPMURL]: https://www.npmjs.com/package/yamlcord
-[StarsBadgeURL]: https://img.shields.io/github/stars/FancyStudioTeam/YAMLCord?style=for-the-badge&color=4cb699&label=Stars&logo=github&logoColor=white
-[SupportBadgeURL]: https://img.shields.io/badge/Support-Support?style=for-the-badge&color=4cb699&label=Discord&logo=discord&logoColor=white
+[StarsBadgeURL]: https://img.shields.io/github/stars/FancyStudioTeam/YAMLCord?style=for-the-badge&color=5865f2&label=Stars&logo=github&logoColor=white
+[SupportBadgeURL]: https://img.shields.io/badge/Support-Support?style=for-the-badge&color=5865f2&label=Discord&logo=discord&logoColor=white
 [SupportServerURL]: https://discord.gg/yWjeDA6ewJ
-[VersionBadgeURL]: https://img.shields.io/npm/v/yamlcord?style=for-the-badge&color=4cb699&label=Version&logo=npm&logoColor=white
+[VersionBadgeURL]: https://img.shields.io/npm/v/yamlcord?style=for-the-badge&color=5865f2&label=Version&logo=npm&logoColor=white
 [YAMLCordRepositoryURL]: https://github.com/FancyStudioTeam/YAMLCord
