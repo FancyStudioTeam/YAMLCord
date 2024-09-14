@@ -37,10 +37,6 @@ sequences:
 
 If you believe you have found a security vulnerability, please **DO NOT make a public issue**, instead, go to our [Support Server][SupportServerURL] and contact the developers privately.
 
-## 🎏 Credits
-
-The logo for this project uses an icon from [Lucide.dev][LucideURL], which is licensed under [ISC][ISCURL].
-
 ## 💖 Contributors
 
 Thanks to all these people who have made YAMLCord possible!
@@ -52,8 +48,6 @@ Thanks to all these people who have made YAMLCord possible!
 [ContributorsURL]: https://github.com/FancyStudioTeam/YAMLCord/graphs/contributors
 [DownloadsBadgeURL]: https://img.shields.io/npm/dt/yamlcord?style=for-the-badge&color=4cb699&label=Downloads&logo=npm&logoColor=white
 [FancyStudioGitHubURL]: https://github.com/FancyStudioTeam
-[ISCURL]: https://opensource.org/licenses/ISC
-[LucideURL]: https://lucide.dev
 [NPMURL]: https://www.npmjs.com/package/yamlcord
 [StarsBadgeURL]: https://img.shields.io/github/stars/FancyStudioTeam/YAMLCord?style=for-the-badge&color=4cb699&label=Stars&logo=github&logoColor=white
 [SupportBadgeURL]: https://img.shields.io/badge/Support-Support?style=for-the-badge&color=4cb699&label=Discord&logo=discord&logoColor=white
