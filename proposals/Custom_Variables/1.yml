@@ -1,0 +1,23 @@
+sequences:
+  # Custom variables are defined using the $ symbol
+  - $greetings:
+      - "Hello! How are you today?"
+      - "Hi there! What's up?"
+      - "Good morning! Did you sleep well?"
+      - "Hey! How's everything going?"
+      - "Hi! Nice to see you again."
+      - "Hello! How have you been?"
+      - "Greetings! How was your weekend?"
+      - "Hi! What's new with you?"
+      - "Hey there! How's your day going?"
+      - "Hello! It's great to meet you."
+
+  - if: "[message.content] eq 'hello'"
+    then:
+      # Select random greeting from greetings array and use it as a variable
+      - $greeting:
+          # Built-in function "random_element" should return a string
+          random_element: "[greetings]"
+
+      # When using a custom variable, you don't need to add the $ symbol
+      - create_message: "[greeting]"
