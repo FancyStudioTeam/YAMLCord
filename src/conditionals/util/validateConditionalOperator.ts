@@ -7,7 +7,7 @@ import { ConditionalIfOperatorSchema } from "../schemas/ConditionalSchemas";
 
 export const validateConditionalOperator = async (operator: unknown) => {
   const result = await Result.fromAsync<z.infer<ConditionalIfOperatorSchemaType>, ResultErrorType>(
-    async () => await zodValidationMatch<ConditionalIfOperatorSchemaType>(ConditionalIfOperatorSchema, operator),
+    async () => await zodValidationMatch(ConditionalIfOperatorSchema, operator),
   );
 
   if (result.isErr()) {

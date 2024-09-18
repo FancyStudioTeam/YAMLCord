@@ -8,7 +8,7 @@ import type { AddReactionFunction } from "./types";
 
 export const validateAddReactionFunction = async (sequence: unknown): Promise<AddReactionFunction> => {
   const result = await Result.fromAsync<z.infer<AddReactionSchemaType>, ResultErrorType>(
-    async () => await zodValidationMatch<AddReactionSchemaType>(AddReactionSchema, sequence),
+    async () => await zodValidationMatch(AddReactionSchema, sequence),
   );
 
   if (result.isErr()) {

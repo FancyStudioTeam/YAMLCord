@@ -10,7 +10,7 @@ import { zodValidationMatch } from "./zodValidationMatch";
 
 export const validateSequences = async (sequence: unknown): Promise<Sequence[]> => {
   const result = await Result.fromAsync<z.infer<CreateSequenceSchemaType>, ResultErrorType>(
-    async () => await zodValidationMatch<CreateSequenceSchemaType>(CreateSequencesSchema, sequence),
+    async () => await zodValidationMatch(CreateSequencesSchema, sequence),
   );
 
   if (result.isErr()) {

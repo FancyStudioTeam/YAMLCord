@@ -7,7 +7,7 @@ import { ConditionalIfValueSchema } from "../schemas/ConditionalSchemas";
 
 export const validateConditionalValue = async (value: unknown) => {
   const result = await Result.fromAsync<z.infer<ConditionalIfValueSchemaType>, ResultErrorType>(
-    async () => await zodValidationMatch<ConditionalIfValueSchemaType>(ConditionalIfValueSchema, value),
+    async () => await zodValidationMatch(ConditionalIfValueSchema, value),
   );
 
   if (result.isErr()) {

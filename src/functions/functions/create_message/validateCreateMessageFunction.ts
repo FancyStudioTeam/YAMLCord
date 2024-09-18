@@ -8,7 +8,7 @@ import type { CreateMessageFunction } from "./types";
 
 export const validateCreateMessageFunction = async (sequence: unknown): Promise<CreateMessageFunction> => {
   const result = await Result.fromAsync<z.infer<CreateMessageSchemaType>, ResultErrorType>(
-    async () => await zodValidationMatch<CreateMessageSchemaType>(CreateMessageSchema, sequence),
+    async () => await zodValidationMatch(CreateMessageSchema, sequence),
   );
 
   if (result.isErr()) {

@@ -8,7 +8,7 @@ import type { WaitFunction } from "./types";
 
 export const validateWaitFunction = async (sequence: unknown): Promise<WaitFunction> => {
   const result = await Result.fromAsync<z.infer<WaitSchemaType>, ResultErrorType>(
-    async () => await zodValidationMatch<WaitSchemaType>(WaitSchema, sequence),
+    async () => await zodValidationMatch(WaitSchema, sequence),
   );
 
   if (result.isErr()) {
