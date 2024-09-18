@@ -3,7 +3,7 @@ import type { z } from "zod";
 import { ErrorCodes } from "../errors/ErrorCodes";
 
 export const zodValidationMatch = async <T extends z.ZodSchema>(
-  zodSchema: z.ZodSchema,
+  zodSchema: T,
   dataToValidate: unknown,
 ): Promise<z.infer<T>> =>
   new Promise((resolve, reject) => {
