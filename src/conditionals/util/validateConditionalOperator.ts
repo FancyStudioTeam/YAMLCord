@@ -1,7 +1,7 @@
+import { ConditionalIfOperatorSchema } from "#conditionals/schemas/ConditionalSchemas.js";
+import { throwError } from "#errors";
 import type { ConditionalIfOperator } from "#types";
 import { zod } from "#zod";
-import { throwError } from "../../util/errors/throwError";
-import { ConditionalIfOperatorSchema } from "../schemas/ConditionalSchemas";
 
 export const validateConditionalOperator = async (operator: unknown) => {
   const data = await zod(ConditionalIfOperatorSchema, operator).catch((error) => throwError(error));

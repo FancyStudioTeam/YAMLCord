@@ -1,7 +1,7 @@
 import { match } from "ts-pattern";
 import type { z } from "zod";
+import { ErrorCodes } from "#errors";
 import type { ResultErrorType } from "#types";
-import { ErrorCodes } from "../errors/ErrorCodes";
 
 const zodIssueToErrorCode = (issue: z.ZodIssue) =>
   match(issue)

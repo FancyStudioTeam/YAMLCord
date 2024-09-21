@@ -1,12 +1,14 @@
+import { throwError } from "#errors";
+import { validateFunction } from "#functions/validateFunction.js";
 import { type Conditional, type Sequence, SequenceType } from "#types";
 import { zod } from "#zod";
-import { validateFunction } from "../functions/validateFunction";
-import { throwError } from "../util/errors/throwError";
-import { isRawConditionalObject } from "../util/util/isRawConditionalObject";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas";
 import { validateConditionalOperator } from "./util/validateConditionalOperator";
 import { validateConditionalValue } from "./util/validateConditionalValue";
 import { validateConditionalVariable } from "./util/validateConditionalVariable";
+
+export const isRawConditionalObject = (sequence: unknown) =>
+  typeof sequence === "object" && sequence !== null && "if" in sequence && "then" in sequence;
 
 export const validateConditional = async (conditional: unknown): Promise<Conditional> => {
   const data = await zod(ConditionalSchema, conditional).catch((error) => throwError(error));

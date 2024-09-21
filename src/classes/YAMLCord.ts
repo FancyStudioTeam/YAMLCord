@@ -1,9 +1,8 @@
 import { load } from "js-yaml";
 import { match } from "ts-pattern";
-import { ErrorCodes } from "#errors/ErrorCodes";
-import { throwError } from "#errors/throwError";
+import { ErrorCodes, throwError } from "#errors";
+import { validateSequences } from "#sequences/validateSequences.js";
 import type { Sequence } from "#types";
-import { validateSequences } from "../sequences/validateSequences";
 
 export class YAMLCord {
   loadYAMLData = async (data: string) => {

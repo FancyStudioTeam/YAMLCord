@@ -1,5 +1,5 @@
 import type { z } from "zod";
-import type { SequenceType } from "../../../types";
+import type { SequenceType } from "#types";
 import type { AddReactionSchema } from "./schemas/AddReactionSchema";
 
 export type AddReactionFunction = {

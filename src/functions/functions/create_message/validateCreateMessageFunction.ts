@@ -1,6 +1,6 @@
-import { throwError } from "#errors/throwError";
+import { throwError } from "#errors";
+import { SequenceType } from "#types";
 import { zod } from "#zod";
-import { SequenceType } from "../../../types";
 import { CreateMessageSchema } from "./schemas/CreateMessageSchema";
 import type { CreateMessageFunction } from "./types";
 

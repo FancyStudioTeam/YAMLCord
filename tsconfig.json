@@ -26,8 +26,9 @@
     "outDir": "dist",
     "paths": {
       "#conditionals/*": ["./src/conditionals/*"],
-      "#errors/*": ["./src/util/errors/*"],
+      "#errors": ["./src/util/errors/index.ts"],
       "#functions/*": ["./src/functions/*"],
+      "#sequences/*": ["./src/sequences/*"],
       "#types": ["./src/types.ts"],
       "#util/*": ["./src/util/*"],
       "#zod": ["./src/util/util/zod.ts"]

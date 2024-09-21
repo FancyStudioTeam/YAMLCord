@@ -1,4 +1,4 @@
-import type { ErrorCodes } from "#errors/ErrorCodes.js";
+import type { ErrorCodes } from "#errors";
 import type { Conditional } from "#types";
 import type { Function } from "#types";
 
