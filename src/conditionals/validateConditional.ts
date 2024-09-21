@@ -2,14 +2,14 @@ import { type Conditional, type Sequence, SequenceType } from "#types";
 import { validateFunction } from "../functions/validateFunction";
 import { throwError } from "../util/errors/throwError";
 import { isRawConditionalObject } from "../util/util/isRawConditionalObject";
-import { zodValidationMatch } from "../util/util/zodValidationMatch";
+import { zod } from "../util/util/zod";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas";
 import { validateConditionalOperator } from "./util/validateConditionalOperator";
 import { validateConditionalValue } from "./util/validateConditionalValue";
 import { validateConditionalVariable } from "./util/validateConditionalVariable";
 
 export const validateConditional = async (conditional: unknown): Promise<Conditional> => {
-  const data = await zodValidationMatch(ConditionalSchema, conditional).catch((error) => throwError(error));
+  const data = await zod(ConditionalSchema, conditional).catch((error) => throwError(error));
   const [rawVariable, rawOperator, ...rawValue] = data.if.split(" ");
   const [variable, operator, value] = await Promise.all([
     validateConditionalVariable(rawVariable),
