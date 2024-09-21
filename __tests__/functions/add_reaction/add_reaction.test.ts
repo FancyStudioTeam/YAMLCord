@@ -3,8 +3,7 @@ import { validateFunction } from "../../../src/functions/validateFunction";
 import { SequenceType } from "../../../src/types";
 import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
 import { getErrorMessage } from "../../../src/util/errors/Errors";
-import { loadYAMLData } from "../../../src/util/util/loadYAMLData";
-import { baseLoader, fileName } from "../../utils";
+import { baseLoader, fileName, loadYAMLData } from "../../utils";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
