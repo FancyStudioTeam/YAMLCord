@@ -1,6 +1,6 @@
+import { zod } from "#zod";
 import { SequenceType } from "../../../types";
 import { throwError } from "../../../util/errors/throwError";
-import { zod } from "../../../util/util/zod";
 import { AddReactionSchema } from "./schemas/AddReactionSchema";
 import type { AddReactionFunction } from "./types";
 

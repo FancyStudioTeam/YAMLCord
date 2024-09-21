@@ -1,6 +1,6 @@
 import type { ConditionalIfOperator } from "#types";
+import { zod } from "#zod";
 import { throwError } from "../../util/errors/throwError";
-import { zod } from "../../util/util/zod";
 import { ConditionalIfOperatorSchema } from "../schemas/ConditionalSchemas";
 
 export const validateConditionalOperator = async (operator: unknown) => {

@@ -1,9 +1,9 @@
 import { validateFunction } from "#functions/validateFunction.js";
 import type { Sequence } from "#types";
+import { zod } from "#zod";
 import { validateConditional } from "../conditionals/validateConditional";
 import { throwError } from "../util/errors/throwError";
 import { isRawConditionalObject } from "../util/util/isRawConditionalObject";
-import { zod } from "../util/util/zod";
 import { SequencesSchema } from "./schemas/SequencesSchema";
 
 export const validateSequences = async (sequence: unknown): Promise<Sequence[]> => {

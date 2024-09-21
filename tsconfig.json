@@ -29,7 +29,8 @@
       "#errors/*": ["./src/util/errors/*"],
       "#functions/*": ["./src/functions/*"],
       "#types": ["./src/types.ts"],
-      "#util/*": ["./src/util/*"]
+      "#util/*": ["./src/util/*"],
+      "#zod": ["./src/util/util/zod.ts"]
     },
     "preserveConstEnums": true,
     "pretty": true,

@@ -1,8 +1,8 @@
 import { type Conditional, type Sequence, SequenceType } from "#types";
+import { zod } from "#zod";
 import { validateFunction } from "../functions/validateFunction";
 import { throwError } from "../util/errors/throwError";
 import { isRawConditionalObject } from "../util/util/isRawConditionalObject";
-import { zod } from "../util/util/zod";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas";
 import { validateConditionalOperator } from "./util/validateConditionalOperator";
 import { validateConditionalValue } from "./util/validateConditionalValue";

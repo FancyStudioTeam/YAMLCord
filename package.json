@@ -32,7 +32,8 @@
     "#errors/*": "./dist/util/errors/*",
     "#functions/*": "./dist/functions/*",
     "#types": "./dist/types.js",
-    "#util/*": "./dist/util/*"
+    "#util/*": "./dist/util/*",
+    "#zod": "./dist/util/util/zod.js"
   },
   "keywords": [],
   "license": "CC BY-SA 4.0",
