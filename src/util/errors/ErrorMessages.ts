@@ -18,13 +18,15 @@ export const ErrorMessages: Record<ErrorCodes, string | ((...args: any[]) => str
     `Invalid array length. Maximum length is ${length} elements`,
   [ErrorCodes.INVALID_MIN_ARRAY_LENGTH]: (length: number) =>
     `Invalid array length. Minimum length is ${length} elements`,
-  [ErrorCodes.INVALID_VALUE_TYPE]: (expected: string, received: string) =>
-    `Invalid value type. Expected ${expected}, received ${received}`,
+  [ErrorCodes.INVALID_VALUE_TYPE]: (expected: string | string[], received: string) =>
+    `Invalid value type. Expected ${Array.isArray(expected) ? disjunctionFormat.format(expected) : expected}, received ${received}`,
   [ErrorCodes.INVALID_MIN_NUMBER_VALUE]: (length: number) => `Invalid number value. Minimum value is ${length}`,
   [ErrorCodes.INVALID_MAX_NUMBER_VALUE]: (length: number) => `Invalid number value. Maximum value is ${length}`,
   [ErrorCodes.INVALID_STRING_REGEX]: "Invalid string value. The value does not match the regex",
   [ErrorCodes.INVALID_ENUM_VALUE]: (expected: string[], received: string) =>
-    `Invalid enum value. Expected ${disjunctionFormat.format(expected)}, received: ${received}`,
+    `Invalid enum value. Expected ${disjunctionFormat.format(expected)}, received ${received}`,
+  /* [ErrorCodes.INVALID_UNION]: (errors: string[]) =>
+    `Invalid union. Received ${errors.map((error) => error).join(", ")}`, */
 
   [ErrorCodes.UNKNOWN_GLOBAL_PROPERTY]: (property: string) => `Unknown global property. Received ${property}`,
   [ErrorCodes.UNKNOWN_GLOBAL_FUNCTION]: (functionName: string) => `Unknown global function. Received ${functionName}`,

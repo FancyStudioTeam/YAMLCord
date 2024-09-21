@@ -20,6 +20,7 @@ const DOCS_SIDEBAR: DefaultTheme.SidebarItem[] = [
         collapsed: false,
         items: [
           {
+            base: "/learning/how-yamlcord-works/",
             collapsed: false,
             items: [
               {

@@ -21,7 +21,7 @@ describe("YAMLCord Conditional Structure: operator", () => {
 
     it("[2003]", async () =>
       await expect(validateConditionalOperator(1)).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, ["eq", "neq"], "gte"),
+        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, ["eq", "neq"], "number"),
       ));
   });
 });

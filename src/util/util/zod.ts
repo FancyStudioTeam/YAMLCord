@@ -20,7 +20,11 @@ const zodIssueToErrorCode = (issue: z.ZodIssue) =>
       {
         code: "invalid_type",
       },
-      ({ expected, received }) => [ErrorCodes.INVALID_VALUE_TYPE, expected, received],
+      ({ expected, received }) => {
+        const matches = expected.match(/'([^']*)'/g)?.map((match) => match.slice(1, -1));
+
+        return [ErrorCodes.INVALID_VALUE_TYPE, matches ?? expected, received];
+      },
     )
     .with(
       {
@@ -52,6 +56,14 @@ const zodIssueToErrorCode = (issue: z.ZodIssue) =>
       },
       ({ received, options }) => [ErrorCodes.INVALID_ENUM_VALUE, options, received],
     )
+    /*.with(
+      {
+        code: "invalid_union",
+      },
+      ({ unionErrors }) => {
+        return [ErrorCodes.INVALID_UNION, unionErrors.map(({ issues }) => zodIssueToErrorCode(issues[0])[0])];
+      },
+    )*/
     .otherwise(() => [ErrorCodes.UNDOCUMENTED_ERROR]);
 
 export const zod = async <T extends z.ZodSchema>(schema: T, toValidate: unknown): Promise<z.infer<T>> =>
