@@ -43,6 +43,14 @@ export const zodValidationMatch = async <T extends z.ZodSchema>(
               .with("number", () => reject([ErrorCodes.INVALID_MAX_NUMBER_VALUE, maximum]))
               .with("string", () => reject([ErrorCodes.INVALID_MAX_STRING_LENGTH, maximum])),
         )
+        .with(
+          {
+            code: "invalid_enum_value",
+          },
+          ({ received, options }) => {
+            reject([ErrorCodes.INVALID_ENUM_VALUE, options, received]);
+          },
+        )
         .otherwise(() => reject([ErrorCodes.UNDOCUMENTED_ERROR]));
     }
 
