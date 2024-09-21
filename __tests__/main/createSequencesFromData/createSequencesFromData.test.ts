@@ -1,16 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { SequenceType } from "../../../src/types";
-import { createSequences } from "../../../src/util/createSequences";
 import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
 import { getErrorMessage } from "../../../src/util/errors/Errors";
-import { baseLoader, fileName } from "../../utils";
+import { baseLoader, createSequencesFromData, fileName } from "../../utils";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
-describe("Main Function: createSequences", () => {
+describe("YAMLCord Class Function: createSequencesFromData", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
-      await expect(createSequences(loader(fileName(task.name)))).resolves.toStrictEqual({
+      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom_variables: null,
         sequences: [
           {
@@ -43,7 +42,7 @@ describe("Main Function: createSequences", () => {
       }));
 
     it("[1002]", async ({ task }) =>
-      await expect(createSequences(loader(fileName(task.name)))).resolves.toStrictEqual({
+      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom_variables: null,
         sequences: [
           {
@@ -101,7 +100,7 @@ describe("Main Function: createSequences", () => {
       }));
 
     it("[1003]", async ({ task }) =>
-      await expect(createSequences(loader(fileName(task.name)))).resolves.toStrictEqual({
+      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom_variables: null,
         sequences: [
           {
@@ -158,7 +157,7 @@ describe("Main Function: createSequences", () => {
       }));
 
     it("[1004]", async ({ task }) =>
-      await expect(createSequences(loader(fileName(task.name)))).resolves.toStrictEqual({
+      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom_variables: null,
         sequences: [
           {
@@ -177,17 +176,17 @@ describe("Main Function: createSequences", () => {
 
   describe("Failure cases (2xxx)", () => {
     it("[2001]", async ({ task }) =>
-      await expect(createSequences(loader(fileName(task.name)))).rejects.toThrowError(
+      await expect(createSequencesFromData(loader(fileName(task.name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "array", "null"),
       ));
 
     it("[2002]", async ({ task }) =>
-      await expect(createSequences(loader(fileName(task.name)))).rejects.toThrowError(
+      await expect(createSequencesFromData(loader(fileName(task.name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_PROPERTY, "unknown_global_property"),
       ));
 
     it("[2003]", async ({ task }) =>
-      await expect(createSequences(loader(fileName(task.name)))).rejects.toThrowError(
+      await expect(createSequencesFromData(loader(fileName(task.name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_MIN_ARRAY_LENGTH, 1),
       ));
   });

@@ -1,12 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
 import { getErrorMessage } from "../../../src/util/errors/Errors";
-import { loadYAMLData } from "../../../src/util/util/loadYAMLData";
-import { baseLoader, fileName } from "../../utils";
+import { baseLoader, fileName, loadYAMLData } from "../../utils";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
-describe("Main Function: loadYAMLData", () => {
+describe("YAMLCord Class Function: loadYAMLData", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
       await expect(loadYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
