@@ -10,7 +10,14 @@ add_reaction: # String [reaction]
 
 ### Argumentos
 
-- `reaction` ([`string`][String]): La reacción a añadir.
+- `reaction` (`string`): La reacción a añadir.
+
+:::details Notas Importantes
+
+- Los emojis no pueden contener espacios u otros caracteres.
+- Los emojis personalizados deben estar en el formato `<:NOMBRE:ID>` o `<a:NOMBRE:ID>`.
+
+:::
 
 ## Ejemplos
 
@@ -25,5 +32,3 @@ add_reaction: "<:custom:123456789012345678>"
 ```
 
 :::
-
-[String]: /es/learning/data-types#cadenas-de-texto-string

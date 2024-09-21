@@ -10,9 +10,9 @@ create_message: # Object
 
 ### Arguments
 
-- `channel_id?` ([`string`][String]): The ID of the channel to send the message.
-- `content` ([`string`][String]): The content of the message.
-- `reply?` ([`ping`/`no_ping`][String]): If a reply to the original message should be made.
+- `channel_id?` (`string`): The ID of the channel to send the message.
+- `content` (`string`): The content of the message.
+- `reply?` (`ping`/`no_ping`): If a reply to the original message should be made.
 
 :::details Important Notes
 
@@ -45,5 +45,3 @@ create_message:
 ```
 
 :::
-
-[String]: /learning/data-types#text-strings-string

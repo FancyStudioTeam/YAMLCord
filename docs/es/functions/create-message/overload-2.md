@@ -10,7 +10,7 @@ create_message: # String [content]
 
 ### Argumentos
 
-- `content` ([`string`][String]): El contenido del mensaje.
+- `content` (`string`): El contenido del mensaje.
 
 :::details Notas Importantes
 
@@ -33,5 +33,3 @@ create_message: |-
 ```
 
 :::
-
-[String]: /es/learning/data-types#cadenas-de-texto-string

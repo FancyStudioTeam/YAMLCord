@@ -10,7 +10,7 @@ wait: # Number [seconds]
 
 ### Argumentos
 
-- `seconds` ([`number`][Number]): El número de segundos a esperar.
+- `seconds` (`number`): El número de segundos a esperar.
 
 :::details Notas Importantes
 
@@ -28,5 +28,3 @@ wait: 5 # Espera 5 segundos...
 create_message:
   content: "Ya han pasado 5 segundos"
 ```
-
-[Number]: /es/learning/data-types#numeros-number
