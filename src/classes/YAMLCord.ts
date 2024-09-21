@@ -3,7 +3,7 @@ import { match } from "ts-pattern";
 import { ErrorCodes } from "#errors/ErrorCodes";
 import { throwError } from "#errors/throwError";
 import type { Sequence } from "#types";
-import { validateSequences } from "#util/util/validateSequences";
+import { validateSequences } from "../sequences/validateSequences";
 
 export class YAMLCord {
   loadYAMLData = async (data: string) => {
