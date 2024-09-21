@@ -62,9 +62,6 @@ export const shared = defineConfig({
     },
   },
   themeConfig: {
-    editLink: {
-      pattern: "https://github.com/FancyStudioTeam/YAMLCord/tree/main/docs/:path",
-    },
     logo: {
       dark: "/logos/Dark.svg",
       light: "/logos/Light.svg",
