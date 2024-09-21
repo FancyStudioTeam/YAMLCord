@@ -1,7 +1,6 @@
 {
   "author": "FancyStudio",
   "dependencies": {
-    "@sapphire/result": "2.6.6",
     "emoji-regex": "10.4.0",
     "js-yaml": "4.1.0",
     "ts-pattern": "5.3.1",
