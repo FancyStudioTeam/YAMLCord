@@ -8,9 +8,7 @@ Los campos de nivel superior son obligatorios en YAMLCord.
 
 ## Lista de Campos de Nivel Superior
 
-| Nombre      | Descripción             |
-| ----------- | ----------------------- |
-| `sequences` | Un array de secuencias. |
+- `sequences` (`array`): Un array de secuencias.
 
 ### Campo Superior: `sequences`
 

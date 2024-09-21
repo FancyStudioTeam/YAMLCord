@@ -8,16 +8,14 @@ Top level fields are required in YAMLCord.
 
 ## List of Top Level Fields
 
-| Name        | Description            |
-| ----------- | ---------------------- |
-| `sequences` | An array of sequences. |
+- `sequences` (`array`): An array of sequences.
 
 ### Top Level Field: `sequences`
 
 Because YAMLCord is executed by sequences, YAML files must have a top-level field called `sequences`. This field is an array where the sequences to be executed are indicated.
 
 ```yml
-sequences: # Sequences array
+sequences: # Array of sequences
 ```
 
 :::info Example
