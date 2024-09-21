@@ -7,6 +7,7 @@ export const validateConditionalOperator = async (operator: unknown) => {
   const data = await zod(ConditionalIfOperatorSchema, operator).catch((error) => throwError(error));
   const operatorMap: Record<typeof data, ConditionalIfOperator> = {
     eq: "===",
+    neq: "!==",
   };
 
   return operatorMap[data];
