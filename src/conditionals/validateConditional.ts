@@ -1,6 +1,4 @@
-import { Result } from "@sapphire/result";
-import type { z } from "zod";
-import { type Conditional, type ResultErrorType, type Sequence, SequenceType } from "#types";
+import { type Conditional, type Sequence, SequenceType } from "#types";
 import { validateFunction } from "../functions/validateFunction";
 import { throwError } from "../util/errors/throwError";
 import { isRawConditionalObject } from "../util/util/isRawConditionalObject";
@@ -11,15 +9,7 @@ import { validateConditionalValue } from "./util/validateConditionalValue";
 import { validateConditionalVariable } from "./util/validateConditionalVariable";
 
 export const validateConditional = async (conditional: unknown): Promise<Conditional> => {
-  const result = await Result.fromAsync<z.infer<ConditionalSchemaType>, ResultErrorType>(
-    async () => await zodValidationMatch(ConditionalSchema, conditional),
-  );
-
-  if (result.isErr()) {
-    throwError(result.unwrapErr());
-  }
-
-  const data = result.unwrap();
+  const data = await zodValidationMatch(ConditionalSchema, conditional).catch((error) => throwError(error));
   const [rawVariable, rawOperator, ...rawValue] = data.if.split(" ");
   const [variable, operator, value] = await Promise.all([
     validateConditionalVariable(rawVariable),
@@ -56,5 +46,3 @@ export const validateConditional = async (conditional: unknown): Promise<Conditi
     },
   };
 };
-
-type ConditionalSchemaType = typeof ConditionalSchema;
