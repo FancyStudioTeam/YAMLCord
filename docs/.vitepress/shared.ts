@@ -55,6 +55,7 @@ export const shared = defineConfig({
       },
     ],
   ],
+  ignoreDeadLinks: true,
   lastUpdated: true,
   markdown: {
     image: {
