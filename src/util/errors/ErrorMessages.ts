@@ -28,4 +28,8 @@ export const ErrorMessages: Record<ErrorCodes, string | ((...args: any[]) => str
 
   [ErrorCodes.UNKNOWN_GLOBAL_PROPERTY]: (property: string) => `Unknown global property. Received ${property}`,
   [ErrorCodes.UNKNOWN_GLOBAL_FUNCTION]: (functionName: string) => `Unknown global function. Received ${functionName}`,
+
+  [ErrorCodes.EXCEEDED_MAXIMUM_DEPTH]: (depth: number) => `Exceeded maximum depth. Maximum depth is ${depth}`,
+  [ErrorCodes.EXCEEDED_MAXIMUM_FUNCTION_CALLS]: (functionName: string, calls: number) =>
+    `Exceeded maximum function calls. Maximum ${functionName} calls is ${calls}`,
 };
