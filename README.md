@@ -4,6 +4,7 @@
     <source srcset="https://yamlcord.pages.dev/banners/Dark.png" media="(prefers-color-scheme: dark)">
     <img src="https://yamlcord.pages.dev/banners/Light.png">
   </picture>
+  <p>YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML.</p>
 </div>
 <!-- markdownlint-restore -->
 
