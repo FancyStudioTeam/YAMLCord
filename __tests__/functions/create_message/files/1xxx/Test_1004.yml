@@ -1,4 +1,4 @@
 create_message:
   content: "Hello, world! (with embeds)"
   embeds:
-    - title: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"

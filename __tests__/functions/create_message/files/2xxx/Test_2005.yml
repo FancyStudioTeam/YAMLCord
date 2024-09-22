@@ -1,14 +1,14 @@
 create_message:
   content: "Hello, world! (with embeds)"
   embeds:
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!"
-    - title: "Wow! It's an embed!" # max 10 embeds, this is 11
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!"
+    - description: "Wow! It's an embed!" # Maximum 10 embeds, this is 11

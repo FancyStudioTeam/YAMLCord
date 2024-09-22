@@ -2,7 +2,7 @@ create_message:
   content: "Hello, world! (with embeds)"
   reply: "ping"
   embeds:
-    - title: "Wow! It's an embed!"
-      color: "#ff00ff"
+    - color: "#ff00ff"
       author: "The Embed God"
       url: "https://helloworld.org/"
+      description: "Wow! It's an embed!"

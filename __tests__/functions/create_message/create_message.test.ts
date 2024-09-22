@@ -34,19 +34,21 @@ describe("YAMLCord Function: create_message", () => {
         name: "create_message",
         type: SequenceType.FUNCTION,
       }));
+
     it("[1004]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
         data: {
           content: "Hello, world! (with embeds)",
           embeds: [
             {
-              title: "Wow! It's an embed!",
+              description: "Wow! It's an embed!",
             },
           ],
         },
         name: "create_message",
         type: SequenceType.FUNCTION,
       }));
+
     it("[1005]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
         data: {
@@ -54,24 +56,24 @@ describe("YAMLCord Function: create_message", () => {
           reply: "ping",
           embeds: [
             {
-              title: "Wow! It's an embed!",
-              color: "#ff00ff",
+              color: 16711935,
               author: "The Embed God",
               url: "https://helloworld.org/",
+              description: "Wow! It's an embed!",
             },
           ],
         },
         name: "create_message",
         type: SequenceType.FUNCTION,
       }));
+
     it("[1006]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
         data: {
           content: "Hello, world! (with embeds)",
           embeds: [
             {
-              title: "Wow! It's an embed!",
-              color: "#ff00ff",
+              color: 16711935,
               author: {
                 name: "The Embed God",
               },
@@ -82,12 +84,14 @@ describe("YAMLCord Function: create_message", () => {
                 },
               ],
               timestamp: "now",
+              description: "Wow! It's an embed!",
             },
           ],
         },
         name: "create_message",
         type: SequenceType.FUNCTION,
       }));
+
     it("[1007]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
         data: {
@@ -95,12 +99,13 @@ describe("YAMLCord Function: create_message", () => {
           embeds: [
             {
               image: {
-                proxy_url: "https://clearly.notaproxiedurl.com/assets/helloworld.png",
+                url: "https://clearly.notaproxiedurl.com/assets/helloworld.png",
                 height: 32,
                 width: 48,
               },
               timestamp: "2024-09-22T02:54:19.015Z",
               footer: "Made with love.",
+              description: "Wow! It's an embed!",
             },
           ],
         },
