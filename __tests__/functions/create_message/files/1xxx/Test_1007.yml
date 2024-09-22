@@ -2,7 +2,7 @@ create_message:
   content: "Hello, world! (with embeds)"
   embeds:
     - image:
-        proxied_url: "https://clearly.notaproxiedurl.com/assets/helloworld.png"
+        proxy_url: "https://clearly.notaproxiedurl.com/assets/helloworld.png"
         height: 32
         width: 48
       timestamp: "2024-09-22T02:54:19.015Z"

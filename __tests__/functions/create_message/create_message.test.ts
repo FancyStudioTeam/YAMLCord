@@ -78,7 +78,7 @@ describe("YAMLCord Function: create_message", () => {
               fields: [
                 {
                   name: "Why I should be the Embed God.",
-                  content: "Because I love embeds!",
+                  value: "Because I love embeds!",
                 },
               ],
               timestamp: "now",
@@ -95,7 +95,7 @@ describe("YAMLCord Function: create_message", () => {
           embeds: [
             {
               image: {
-                proxied_url: "https://clearly.notaproxiedurl.com/assets/helloworld.png",
+                proxy_url: "https://clearly.notaproxiedurl.com/assets/helloworld.png",
                 height: 32,
                 width: 48,
               },
