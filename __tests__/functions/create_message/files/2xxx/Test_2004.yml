@@ -1,0 +1,4 @@
+create_message:
+  content: "Hello, world! (with embeds)"
+  embeds:
+    - title: "" # Empty string
