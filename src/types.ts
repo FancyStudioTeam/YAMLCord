@@ -1,10 +1,5 @@
 import type { ErrorCodes } from "#errors";
 
-export enum SequenceType {
-  CONDITIONAL,
-  FUNCTION,
-}
-
 export type ResultErrorType = [ErrorCodes, ...unknown[]];
 
 export * from "./conditionals/types";
