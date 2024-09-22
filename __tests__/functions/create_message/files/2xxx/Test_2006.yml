@@ -1,0 +1,4 @@
+create_message:
+  content: "Hello, world! (with embeds)"
+  embeds:
+    - timestamp: "someday" # invalid value
