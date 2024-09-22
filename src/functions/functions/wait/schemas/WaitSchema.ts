@@ -1,8 +1,3 @@
 import { z } from "zod";
 
-export const WaitSchema = z
-  .number()
-  .min(1)
-  .max(300)
-  .positive()
-  .transform((value) => value * 1000);
+export const WaitSchema = z.number().min(1).max(300).positive().int();
