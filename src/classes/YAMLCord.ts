@@ -2,7 +2,7 @@ import { load } from "js-yaml";
 import { match } from "ts-pattern";
 import { ErrorCodes, throwError } from "#errors";
 import { validateSequences } from "#sequences/validateSequences.js";
-import { type Conditional, type Function, type Sequence, SequenceType } from "#types";
+import type { Sequence } from "#types";
 
 export class YAMLCord {
   loadYAMLData = async (data: string) => {
@@ -38,7 +38,4 @@ export class YAMLCord {
       sequences,
     };
   };
-
-  sequenceIsConditional = (sequence: Sequence): sequence is Conditional => sequence.type === SequenceType.CONDITIONAL;
-  sequenceIsFunction = (sequence: Sequence): sequence is Function => sequence.type === SequenceType.FUNCTION;
 }
