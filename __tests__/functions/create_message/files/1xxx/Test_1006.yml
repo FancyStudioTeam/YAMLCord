@@ -1,0 +1,11 @@
+create_message:
+  content: "Hello, world! (with embeds)"
+  embeds:
+    - title: "Wow! It's an embed!"
+      color: "#FF00FF" # should turn into lowercase
+      author:
+        name: "The Embed God"
+      fields:
+        - name: "Why I should be the Embed God."
+          value: "Because I love embeds!"
+      timestamp: "now"
