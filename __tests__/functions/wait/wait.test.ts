@@ -11,21 +11,27 @@ describe("YAMLCord Function: wait", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: 5,
+        data: 5000,
         name: "wait",
         type: SequenceType.FUNCTION,
       }));
 
     it("[1002]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: 1,
+        data: 1000,
         name: "wait",
         type: SequenceType.FUNCTION,
       }));
 
     it("[1003]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: 300,
+        data: 300000,
+        name: "wait",
+        type: SequenceType.FUNCTION,
+      }));
+    it("[1004]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
+        data: 12500,
         name: "wait",
         type: SequenceType.FUNCTION,
       }));
@@ -45,11 +51,6 @@ describe("YAMLCord Function: wait", () => {
     it("[2003]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_MAX_NUMBER_VALUE, 300),
-      ));
-
-    it("[2004]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "integer", "float"),
       ));
   });
 });
