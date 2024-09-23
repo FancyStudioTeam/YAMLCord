@@ -15,7 +15,7 @@
     "incremental": true,
     "isolatedModules": true,
     "module": "CommonJS",
-    "newLine": "crlf",
+    "newLine": "lf",
     "noEmitHelpers": false,
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
