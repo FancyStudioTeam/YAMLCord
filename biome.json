@@ -7,7 +7,7 @@
     "enabled": true,
     "indentStyle": "space",
     "indentWidth": 2,
-    "lineEnding": "crlf",
+    "lineEnding": "lf",
     "lineWidth": 120
   },
   "json": {
