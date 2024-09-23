@@ -26,8 +26,8 @@
 sequences:
   - if: "[message.content] eq '!hi'"
     then:
-      - create_message: "Hello!"
-      - add_reaction: "👋"
+      - create_message(): "Hello!"
+      - add_reaction(): "👋"
 ```
 
 ## Licencia
