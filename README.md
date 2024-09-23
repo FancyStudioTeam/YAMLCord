@@ -39,7 +39,7 @@ If you need help, you can join our [Support Server][SupportServerURL] and ask yo
 
 ## Security
 
-If you believe you have found a security vulnerability, please **DO NOT make a public issue**, instead, go to our [Support Server][SupportServerURL] and contact the developers privately.7
+If you believe you have found a security vulnerability, please **DO NOT make a public issue**, instead, go to our [Support Server][SupportServerURL] and contact the developers privately.
 
 ## Contributors
 
