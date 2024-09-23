@@ -19,17 +19,6 @@ const members = {
       name: "LonelyDeathVGX",
       title: "Creador y Desarrollador Principal",
     },
-    // {
-    //   avatar: "https://www.github.com/Dymidless.png",
-    //   links: [
-    //     {
-    //       icon: "github",
-    //       link: "https://github.com/Dymidless",
-    //     },
-    //   ],
-    //   name: "Dymidless",
-    //   title: "Desarrollador",
-    // },
     {
       avatar: "https://www.github.com/hozhai.png",
       links: [
@@ -41,7 +30,6 @@ const members = {
       name: "Zhai",
       title: "Desarrollador",
     },
-
   ],
 };
 </script>
