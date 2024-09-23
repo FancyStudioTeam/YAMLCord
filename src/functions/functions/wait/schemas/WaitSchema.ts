@@ -1,5 +1,6 @@
 import { z } from "zod";
 
+// Main
 export const WaitSchema = z
   .number()
   .min(1)

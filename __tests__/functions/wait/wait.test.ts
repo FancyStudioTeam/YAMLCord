@@ -29,6 +29,7 @@ describe("YAMLCord Function: wait", () => {
         name: "wait",
         type: SequenceType.FUNCTION,
       }));
+
     it("[1004]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
         data: 12500,
