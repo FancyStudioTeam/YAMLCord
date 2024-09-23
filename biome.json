@@ -10,11 +10,6 @@
     "lineEnding": "lf",
     "lineWidth": 120
   },
-  "json": {
-    "formatter": {
-      "enabled": true
-    }
-  },
   "linter": {
     "enabled": true,
     "rules": {
