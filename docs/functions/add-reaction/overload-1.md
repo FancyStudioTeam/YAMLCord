@@ -5,7 +5,7 @@ Add a reaction to the original message.
 ## Signature
 
 ```yml
-add_reaction: # String [reaction]
+add_reaction(): # String [reaction]
 ```
 
 ### Arguments
@@ -24,11 +24,11 @@ add_reaction: # String [reaction]
 :::code-group
 
 ```yml [Unicode Emoji]
-add_reaction: "👍"
+add_reaction(): "👍"
 ```
 
 ```yml [Custom Emoji]
-add_reaction: "<:custom:123456789012345678>"
+add_reaction(): "<:custom:123456789012345678>"
 ```
 
 :::

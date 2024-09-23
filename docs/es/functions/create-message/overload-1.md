@@ -5,7 +5,7 @@ Crea un mensaje.
 ## Firma
 
 ```yml
-create_message: # Object
+create_message(): # Object
 ```
 
 ### Argumentos
@@ -26,19 +26,19 @@ create_message: # Object
 :::code-group
 
 ```yml [Mensaje Básico]
-create_message:
+create_message():
   content: "Esto es un mensaje básico"
 ```
 
 ```yml [Saltos de Línea]
-create_message:
+create_message():
   content: |-
     Esto es un mensaje
     con múltiples líneas
 ```
 
 ```yml [Como una Respuesta]
-create_message:
+create_message():
   content: "Esto es un mensaje básico"
   # Si quieres hacer una mención al autor original, usa "ping"
   reply: "no_ping"

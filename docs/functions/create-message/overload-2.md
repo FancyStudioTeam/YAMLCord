@@ -5,7 +5,7 @@ Create a message.
 ## Signature
 
 ```yml
-create_message: # String [content]
+create_message(): # String [content]
 ```
 
 ### Arguments
@@ -23,11 +23,11 @@ create_message: # String [content]
 :::code-group
 
 ```yml [Basic Message]
-create_message: "This is a basic message"
+create_message(): "This is a basic message"
 ```
 
 ```yml [Line Breaks]
-create_message: |-
+create_message(): |-
   This is a message
   with multiple lines
 ```

@@ -5,7 +5,7 @@ Espera un número de segundos antes de ejecutar la próxima secuencia.
 ## Firma
 
 ```yml
-wait: # Number [seconds]
+wait(): # Number [seconds]
 ```
 
 ### Argumentos
@@ -22,9 +22,7 @@ wait: # Number [seconds]
 ## Ejemplo
 
 ```yml
-create_message:
-  content: "Esperando 5 segundos..."
-wait: 5 # Espera 5 segundos...
-create_message:
-  content: "Ya han pasado 5 segundos"
+create_message(): "Esperando 5 segundos..."
+wait(): 5 # Espera 5 segundos...
+create_message(): "Ya han pasado 5 segundos"
 ```
