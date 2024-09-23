@@ -18,9 +18,7 @@ const CreateMessageEmbedColorSchema = z
 
 // Asset
 const CreateMessageEmbedAssetPayloadSchema = z.object({
-  height: z.number().optional(),
   url: CreateMessageEmbedUrlSchema,
-  width: z.number().optional(),
 });
 const CreateMessageEmbedAssetSchema = z.union([CreateMessageEmbedAssetPayloadSchema, CreateMessageEmbedUrlSchema]);
 
