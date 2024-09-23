@@ -1,1 +1,0 @@
-# How YAMLCord works
