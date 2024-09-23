@@ -1,8 +1,9 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { YAMLCord } from "../src";
+import { YAMLCord } from "../src/index.js";
 
 const yamlCord = new YAMLCord();
+const REGEX = /\[(\d+)\]/;
 
 export const loadYAMLData = async (data: string) => await yamlCord.loadYAMLData(data);
 
@@ -11,7 +12,7 @@ export const createSequencesFromData = async (data: string) => await yamlCord.cr
 export const baseLoader = (dirname: string, path: string) =>
   readFileSync(join(dirname, "files", `${path}.yml`), "utf-8");
 
-export const getTaskId = (taskName: string) => String(taskName.match(/\[(\d+)\]/)?.at(1));
+export const getTaskId = (taskName: string) => String(taskName.match(REGEX)?.at(1));
 
 export const fileName = (taskName: string) => {
   const taskId = getTaskId(taskName);

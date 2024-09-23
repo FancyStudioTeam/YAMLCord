@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { validateFunction } from "../../../src/functions/validateFunction";
-import { SequenceType } from "../../../src/types";
-import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
-import { getErrorMessage } from "../../../src/util/errors/Errors";
-import { baseLoader, fileName, loadYAMLData } from "../../utils";
+import { validateFunction } from "../../../src/functions/validateFunction.js";
+import { SequenceType } from "../../../src/types.js";
+import { ErrorCodes } from "../../../src/util/errors/ErrorCodes.js";
+import { getErrorMessage } from "../../../src/util/errors/Errors.js";
+import { baseLoader, fileName, loadYAMLData } from "../../utils.js";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
@@ -100,8 +100,6 @@ describe("YAMLCord Function: create_message", () => {
             {
               image: {
                 url: "https://clearly.notaproxiedurl.com/assets/helloworld.png",
-                height: 32,
-                width: 48,
               },
               timestamp: "2024-09-22T02:54:19.015Z",
               footer: "Made with love.",

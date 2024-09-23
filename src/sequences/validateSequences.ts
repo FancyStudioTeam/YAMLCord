@@ -3,7 +3,7 @@ import { throwError } from "#errors";
 import { validateFunction } from "#functions/validateFunction.js";
 import type { Sequence } from "#types";
 import { zod } from "#zod";
-import { SequencesSchema } from "./schemas/SequencesSchema";
+import { SequencesSchema } from "./schemas/SequencesSchema.js";
 
 export const isRawConditionalObject = (sequence: unknown) =>
   typeof sequence === "object" && sequence !== null && "if" in sequence && "then" in sequence;

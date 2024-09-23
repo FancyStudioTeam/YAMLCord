@@ -70,7 +70,9 @@ export const zod = async <T extends z.ZodSchema>(schema: T, toValidate: unknown)
   new Promise((resolve, reject) => {
     const { error, data } = schema.safeParse(toValidate);
 
-    if (error) reject(zodIssueToErrorCode(error.issues[0]));
+    if (error) {
+      reject(zodIssueToErrorCode(error.issues[0]));
+    }
 
     resolve(data);
   });

@@ -13,8 +13,45 @@
   "linter": {
     "enabled": true,
     "rules": {
+      "all": true,
+      "correctness": {
+        "noNodejsModules": "off",
+        "noUndeclaredDependencies": "off"
+      },
+      "performance": {
+        "noBarrelFile": "off",
+        "noReExportAll": "off"
+      },
       "style": {
-        "useEnumInitializers": "off"
+        "useEnumInitializers": "off",
+        "useFilenamingConvention": {
+          "level": "error",
+          "options": {
+            "filenameCases": ["export", "PascalCase", "camelCase", "snake_case"],
+            "strictCase": false
+          }
+        },
+        "useNamingConvention": {
+          "level": "warn",
+          "options": {
+            "conventions": [
+              {
+                "formats": ["CONSTANT_CASE"],
+                "selector": {
+                  "kind": "enumMember"
+                }
+              },
+              {
+                "formats": ["camelCase", "CONSTANT_CASE", "snake_case"],
+                "selector": {
+                  "kind": "objectLiteralProperty"
+                }
+              }
+            ],
+            "enumMemberCase": "CONSTANT_CASE",
+            "strictCase": false
+          }
+        }
       },
       "suspicious": {
         "noAssignInExpressions": "off",

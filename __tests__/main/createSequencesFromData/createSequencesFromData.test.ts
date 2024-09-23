@@ -1,8 +1,8 @@
 import { describe, expect, it } from "vitest";
-import { SequenceType } from "../../../src/types";
-import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
-import { getErrorMessage } from "../../../src/util/errors/Errors";
-import { baseLoader, createSequencesFromData, fileName } from "../../utils";
+import { SequenceType } from "../../../src/types.js";
+import { ErrorCodes } from "../../../src/util/errors/ErrorCodes.js";
+import { getErrorMessage } from "../../../src/util/errors/Errors.js";
+import { baseLoader, createSequencesFromData, fileName } from "../../utils.js";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
@@ -10,7 +10,9 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
       await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
-        custom_variables: null,
+        custom: {
+          variables: null,
+        },
         sequences: [
           {
             data: {
@@ -43,7 +45,9 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
 
     it("[1002]", async ({ task }) =>
       await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
-        custom_variables: null,
+        custom: {
+          variables: null,
+        },
         sequences: [
           {
             data: {
@@ -101,7 +105,9 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
 
     it("[1003]", async ({ task }) =>
       await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
-        custom_variables: null,
+        custom: {
+          variables: null,
+        },
         sequences: [
           {
             data: {
@@ -158,7 +164,9 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
 
     it("[1004]", async ({ task }) =>
       await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
-        custom_variables: null,
+        custom: {
+          variables: null,
+        },
         sequences: [
           {
             data: "Hello, world!",

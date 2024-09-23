@@ -20,11 +20,13 @@ export class YAMLCord {
   createSequencesFromData = async (
     data: string,
   ): Promise<{
-    custom_variables: null;
+    custom: {
+      variables: null;
+    };
     sequences: Sequence[];
   }> => {
     const yamlData = await this.loadYAMLData(data);
-    const loadedDataObject = Object(yamlData);
+    const loadedDataObject = new Object(yamlData);
     const sequences: Sequence[] = [];
 
     for (const [property, data] of Object.entries(loadedDataObject)) {
@@ -34,7 +36,9 @@ export class YAMLCord {
     }
 
     return {
-      custom_variables: null,
+      custom: {
+        variables: null,
+      },
       sequences,
     };
   };

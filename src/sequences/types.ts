@@ -1,5 +1,5 @@
-import type { Conditional } from "../conditionals/types";
-import type { Function } from "../functions/types";
+import type { Conditional } from "../conditionals/types.js";
+import type { Function } from "../functions/types.js";
 
 export enum SequenceType {
   CONDITIONAL,

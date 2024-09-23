@@ -2,10 +2,10 @@ import { throwError } from "#errors";
 import { validateFunction } from "#functions/validateFunction.js";
 import { type Conditional, type Sequence, SequenceType } from "#types";
 import { zod } from "#zod";
-import { ConditionalSchema } from "./schemas/ConditionalSchemas";
-import { validateConditionalOperator } from "./util/validateConditionalOperator";
-import { validateConditionalValue } from "./util/validateConditionalValue";
-import { validateConditionalVariable } from "./util/validateConditionalVariable";
+import { ConditionalSchema } from "./schemas/ConditionalSchemas.js";
+import { validateConditionalOperator } from "./util/validateConditionalOperator.js";
+import { validateConditionalValue } from "./util/validateConditionalValue.js";
+import { validateConditionalVariable } from "./util/validateConditionalVariable.js";
 
 export const isRawConditionalObject = (sequence: unknown) =>
   typeof sequence === "object" && sequence !== null && "if" in sequence && "then" in sequence;
@@ -27,7 +27,7 @@ export const validateConditional = async (conditional: unknown): Promise<Conditi
     );
   }
 
-  if (data.else?.length) {
+  if (data.else && data.else.length > 0) {
     for (const sequence of data.else) {
       elseSequences.push(
         isRawConditionalObject(sequence) ? await validateConditional(sequence) : await validateFunction(sequence),

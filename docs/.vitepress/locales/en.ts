@@ -1,5 +1,5 @@
 import { type DefaultTheme, defineConfig } from "vitepress";
-import { FUNCTIONS } from "../functions";
+import { FUNCTIONS } from "../functions.js";
 
 const NAVBAR: DefaultTheme.NavItem[] = [
   {

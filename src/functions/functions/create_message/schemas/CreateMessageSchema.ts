@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { CreateMessageEmbedSchema } from "./CreateMessageEmbedSchema";
+import { CreateMessageEmbedSchema } from "./CreateMessageEmbedSchema.js";
 
 const MAXIMUM_CONTENT_LENGTH = 2000;
 

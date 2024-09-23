@@ -1,6 +1,6 @@
 import type { z } from "zod";
 import type { SequenceType } from "#types";
-import type { AddReactionSchema } from "./schemas/AddReactionSchema";
+import type { AddReactionSchema } from "./schemas/AddReactionSchema.js";
 
 export type AddReactionFunction = {
   data: z.infer<typeof AddReactionSchema>;

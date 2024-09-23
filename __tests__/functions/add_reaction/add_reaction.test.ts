@@ -1,9 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { validateFunction } from "../../../src/functions/validateFunction";
-import { SequenceType } from "../../../src/types";
-import { ErrorCodes } from "../../../src/util/errors/ErrorCodes";
-import { getErrorMessage } from "../../../src/util/errors/Errors";
-import { baseLoader, fileName, loadYAMLData } from "../../utils";
+import { validateFunction } from "../../../src/functions/validateFunction.js";
+import { SequenceType } from "../../../src/types.js";
+import { ErrorCodes } from "../../../src/util/errors/ErrorCodes.js";
+import { getErrorMessage } from "../../../src/util/errors/Errors.js";
+import { baseLoader, fileName, loadYAMLData } from "../../utils.js";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
