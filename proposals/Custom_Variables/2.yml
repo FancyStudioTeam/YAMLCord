@@ -1,33 +1,34 @@
+# Information
+# Custom variables are defined using the $ symbol
+# The $ symbol is only required when defining a variable, but it must not be used when using the variable
+
 sequences:
-  # Create a new custom variable called "object"
-  # Value is an object
-  - $object:
+  # Create a custom variable called "data"
+  # This custom variable has a value of an object
+  - $data:
       greetings:
-        - "Hello! How are you today?"
-        - "Hi there! What's up?"
-        - "Good morning! Did you sleep well?"
-        - "Hey! How's everything going?"
-        - "Hi! Nice to see you again."
-        - "Hello! How have you been?"
-        - "Greetings! How was your weekend?"
-        - "Hi! What's new with you?"
-        - "Hey there! How's your day going?"
-        - "Hello! It's great to meet you."
-      random:
-        max: 10
-        min: 1
+        [
+          "Hello! How are you today?",
+          "Hi there! What's up?",
+          "Good morning! Did you sleep well?",
+          "Hey! How's everything going?",
+          "Hi! Nice to see you again.",
+        ]
+      random_number:
+        random_int():
+          minimum: 1
+          maximum: 10
 
   - if: "[message.content] eq '!random'"
     then:
-      # Select random greetings from object.greetings array and use it as a variable
-      - $greeting:
-          # Due object variable is an object, we need to use the dot notation
-          random_element: "[object.greetings]"
-      # Same as above
-      - $number:
-          minimum: "[object.random.min]"
-          maximum: "[object.random.max]"
+      # Create a custom variable called "greeting"
+      # This custom variable has a value of a random element (string) selected from "greetings" array
 
-      - create_message: |-
+      # When accessing a property from an object, we use the dot notation
+      - $greeting:
+          random_element(): "[data.greetings]"
+
+      # Use the "greeting" and "random_number" custom variabless in the message
+      - create_message(): |-
           Random greeting: [greeting]
-          Random number: [number]
+          Random number: [data.random_number]
