@@ -39,7 +39,17 @@ If you need help, you can join our [Support Server][SupportServerURL] and ask yo
 
 ## Security
 
-If you believe you have found a security vulnerability, please **DO NOT make a public issue**, instead, go to our [Support Server][SupportServerURL] and contact the developers privately.
+If you believe you have found a security vulnerability, please **DO NOT make a public issue**, instead, go to our [Support Server][SupportServerURL] and contact the developers privately.7
+
+## Contributors
+
+Thanks to all these people who have made YAMLCord possible!
+
+<!-- markdownlint-disable -->
+<a href="https://github.com/FancyStudioTeam/YAMLCord/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=FancyStudioTeam/YAMLCord" />
+</a>
+<!-- markdownlint-restore -->
 
 [CCBYSALicenseURL]: https://creativecommons.org/licenses/by-sa/4.0/
 [FancyStudioGitHubURL]: https://github.com/FancyStudioTeam

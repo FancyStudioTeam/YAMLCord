@@ -44,7 +44,7 @@ Thanks to all these people who have made YAMLCord possible!
 
 <!-- markdownlint-disable -->
 <a href="https://github.com/FancyStudioTeam/YAMLCord/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=FancyStudioTeam/YAMLCord&max=500&columns=20" />
+  <img src="https://contrib.rocks/image?repo=FancyStudioTeam/YAMLCord" />
 </a>
 <!-- markdownlint-restore -->
 
