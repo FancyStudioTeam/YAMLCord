@@ -1,4 +1,4 @@
-import type { Sequence, SequenceType } from "#types";
+import type { Sequence, SequenceType } from "@types";
 
 export type ConditionalIfOperator = "===" | "!==";
 

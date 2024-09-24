@@ -1,6 +1,6 @@
+import type { WaitSchema } from "@functions/functions/wait/schemas/WaitSchema.js";
+import type { SequenceType } from "@types";
 import type { z } from "zod";
-import type { SequenceType } from "#types";
-import type { WaitSchema } from "./schemas/WaitSchema.js";
 
 export type WaitFunction = {
   data: z.infer<typeof WaitSchema>;

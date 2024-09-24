@@ -25,13 +25,14 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "paths": {
-      "#conditionals/*": ["./src/conditionals/*"],
-      "#errors": ["./src/util/errors/index.ts"],
-      "#functions/*": ["./src/functions/*"],
-      "#sequences/*": ["./src/sequences/*"],
-      "#types": ["./src/types.ts"],
-      "#util/*": ["./src/util/*"],
-      "#zod": ["./src/util/util/zod.ts"]
+      "@/*": ["./src/*"],
+      "@conditionals/*": ["./src/conditionals/*"],
+      "@errors": ["./src/util/errors/index.js"],
+      "@functions/*": ["./src/functions/*"],
+      "@sequences/*": ["./src/sequences/*"],
+      "@types": ["./src/types.js"],
+      "@util/*": ["./src/util/*"],
+      "@zod": ["./src/util/util/zod.js"]
     },
     "preserveConstEnums": true,
     "pretty": true,

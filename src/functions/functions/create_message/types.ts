@@ -1,6 +1,6 @@
+import type { CreateMessageSchema } from "@functions/functions/create_message/schemas/CreateMessageSchema.js";
+import type { SequenceType } from "@types";
 import type { z } from "zod";
-import type { SequenceType } from "#types";
-import type { CreateMessageSchema } from "./schemas/CreateMessageSchema.js";
 
 export type CreateMessageFunction = {
   data: z.infer<typeof CreateMessageSchema>;

@@ -1,8 +1,8 @@
+import { ErrorCodes, throwError } from "@errors";
+import { validateSequences } from "@sequences/validateSequences.js";
+import type { Sequence } from "@types";
 import { load } from "js-yaml";
 import { match } from "ts-pattern";
-import { ErrorCodes, throwError } from "#errors";
-import { validateSequences } from "#sequences/validateSequences.js";
-import type { Sequence } from "#types";
 
 export class YAMLCord {
   loadYAMLData = async (data: string) => {

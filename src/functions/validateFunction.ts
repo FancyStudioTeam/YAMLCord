@@ -1,6 +1,6 @@
+import { ErrorCodes, throwError } from "@errors";
+import { type Function, SequenceType } from "@types";
 import { match } from "ts-pattern";
-import { ErrorCodes, throwError } from "#errors";
-import { type Function, SequenceType } from "#types";
 
 const isValid = (sequence: unknown): sequence is Function =>
   typeof sequence === "object" && sequence !== null && "type" in sequence && sequence.type === SequenceType.FUNCTION;

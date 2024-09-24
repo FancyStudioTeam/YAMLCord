@@ -1,4 +1,4 @@
-import { ErrorCodes } from "./ErrorCodes.js";
+import { ErrorCodes } from "@errors";
 
 const disjunctionFormat = new Intl.ListFormat("en", {
   type: "disjunction",
