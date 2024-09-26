@@ -1,7 +1,6 @@
+import { validateConditionalOperator } from "@conditionals/util/validateConditionalOperator.js";
+import { ErrorCodes, getErrorMessage } from "@errors";
 import { describe, expect, it } from "vitest";
-import { validateConditionalOperator } from "../../../src/conditionals/util/validateConditionalOperator.js";
-import { ErrorCodes } from "../../../src/util/errors/ErrorCodes.js";
-import { getErrorMessage } from "../../../src/util/errors/Errors.js";
 
 describe("YAMLCord Conditional Structure: operator", () => {
   describe("Success cases (1xxx)", () => {

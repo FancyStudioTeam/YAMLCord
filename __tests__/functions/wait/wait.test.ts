@@ -1,8 +1,7 @@
+import { SequenceType } from "@/types.js";
+import { ErrorCodes, getErrorMessage } from "@errors";
+import { validateFunction } from "@functions/validateFunction.js";
 import { describe, expect, it } from "vitest";
-import { validateFunction } from "../../../src/functions/validateFunction.js";
-import { SequenceType } from "../../../src/types.js";
-import { ErrorCodes } from "../../../src/util/errors/ErrorCodes.js";
-import { getErrorMessage } from "../../../src/util/errors/Errors.js";
 import { baseLoader, fileName, loadYAMLData } from "../../utils.js";
 
 const loader = (path: string) => baseLoader(__dirname, path);
