@@ -27,12 +27,11 @@
     "paths": {
       "@/*": ["./src/*"],
       "@conditionals/*": ["./src/conditionals/*"],
-      "@errors": ["./src/util/errors/index.js"],
       "@functions/*": ["./src/functions/*"],
       "@sequences/*": ["./src/sequences/*"],
       "@types": ["./src/types.js"],
-      "@util/*": ["./src/util/*"],
-      "@zod": ["./src/util/util/zod.js"]
+      "@errors": ["./src/util/errors/index.js"],
+      "@utils/*": ["./src/util/util/*"]
     },
     "preserveConstEnums": true,
     "pretty": true,

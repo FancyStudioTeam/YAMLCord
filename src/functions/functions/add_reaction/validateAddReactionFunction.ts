@@ -1,6 +1,6 @@
 import { throwError } from "@errors";
 import { SequenceType } from "@types";
-import { zod } from "@util/util/zod.js";
+import { zod } from "@utils/zod.js";
 import { AddReactionSchema } from "./schemas/AddReactionSchema.js";
 import type { AddReactionFunction } from "./types.js";
 

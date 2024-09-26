@@ -1,7 +1,7 @@
 import { throwError } from "@errors";
 import { validateFunction } from "@functions/validateFunction.js";
 import { type Conditional, type Sequence, SequenceType } from "@types";
-import { zod } from "@util/util/zod.js";
+import { zod } from "@utils/zod.js";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas.js";
 import { validateConditionalOperator } from "./util/validateConditionalOperator.js";
 import { validateConditionalValue } from "./util/validateConditionalValue.js";
