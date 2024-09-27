@@ -3,14 +3,14 @@
   "dependencies": {
     "emoji-regex": "10.4.0",
     "js-yaml": "4.1.0",
-    "ts-pattern": "5.3.1",
+    "ts-pattern": "5.4.0",
     "zod": "3.23.8"
   },
   "description": "YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML",
   "devDependencies": {
     "@biomejs/biome": "1.9.2",
     "@types/js-yaml": "4.0.9",
-    "@types/node": "22.6.0",
+    "@types/node": "22.7.3",
     "husky": "9.1.6",
     "js-yaml": "4.1.0",
     "lint-staged": "15.2.10",
