@@ -20,19 +20,12 @@ const DOCS_SIDEBAR: DefaultTheme.SidebarItem[] = [
         collapsed: false,
         items: [
           {
-            base: "/es/learning/how-yamlcord-works/",
-            collapsed: false,
-            items: [
-              {
-                link: "top-level-fields",
-                text: "Campos de Nivel Superior",
-              },
-              {
-                link: "sequences-and-flows",
-                text: "Secuencias y Flujos",
-              },
-            ],
-            text: "Como funciona YAMLCord",
+            link: "top-level-fields",
+            text: "Campos de Nivel Superior",
+          },
+          {
+            link: "sequences-and-flows",
+            text: "Secuencias y Flujos",
           },
           {
             link: "data-types",
