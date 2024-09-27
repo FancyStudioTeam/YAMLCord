@@ -2,10 +2,6 @@
 
 The top level fields are fields where YAMLCord will get the input data.
 
-:::warning Top Level Fields
-Top level fields are required in YAMLCord.
-:::
-
 ## List of Top Level Fields
 
 - `sequences` (`array`): An array of sequences.
@@ -18,14 +14,12 @@ Because YAMLCord is executed by sequences, YAML files must have a top-level fiel
 sequences: # Array of sequences
 ```
 
-:::info Example
+:::info Sequences Example
 
 ```yml
 sequences:
-  - if: "[message.content] eq '!hello'"
-    then:
-      - create_message: "Hello, world!"
-      - add_reaction: "👋"
+  - create_message(): "Hello, world!"
+  - add_reaction(): "👋"
 ```
 
 :::

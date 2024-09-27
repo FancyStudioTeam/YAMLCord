@@ -2,10 +2,6 @@
 
 Los campos de nivel superior son campos donde YAMLCord obtendrá los datos de entrada.
 
-:::warning Campos de Nivel Superior
-Los campos de nivel superior son obligatorios en YAMLCord.
-:::
-
 ## Lista de Campos de Nivel Superior
 
 - `sequences` (`array`): Un array de secuencias.
@@ -18,14 +14,12 @@ Debido que YAMLCord se ejecuta mediante secuencias, los archivos YAML deben tene
 sequences: # Array de secuencias
 ```
 
-:::info Ejemplo
+:::info Ejemplo de Secuencias
 
 ```yml
 sequences:
-  - if: "[message.content] eq '!hello'"
-    then:
-      - create_message: "¡Hola, mundo!"
-      - add_reaction: "👋"
+  - create_message(): "¡Hola, mundo!"
+  - add_reaction(): "👋"
 ```
 
 :::
