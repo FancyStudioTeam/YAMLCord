@@ -7,7 +7,7 @@ En YAMLCord, el término de `secuencia` se refiere a las estructuras condicional
 YAMLCord se ejecuta mediante secuencias, las cuales, se ejecutan uno tras otro, teniendo que esperar a que se finalice la anterior secuencia antes de iniciar la siguiente.
 
 :::warning Indicando las Secuencias
-Todas las secuencias se indican dentro del campo de nivel superior `sequences`.
+Todas las secuencias se indican dentro del campo de nivel superior [`sequences`][SequencesTopLevelField].
 :::
 
 Las secuencias pueden ser lineales o bifurcadas.
@@ -63,3 +63,5 @@ Cuando llega a la condicional, el flujo cambia a un flujo bifurcado, y dependien
 
 - Si el resultado es `true`, solo se ejecutarán las secuencias dentro de `True Result Sequences`.
 - Si el resultado es `false`, solo se ejecutarán las secuencias dentro de `False Result Sequences`.
+
+[SequencesTopLevelField]: ./top-level-fields.md#top-level-field-sequences

@@ -7,7 +7,7 @@ In YAMLCord, the term `sequence` refers to conditional structures or functions.
 YAMLCord is executed in sequences, which are executed one after the other, having to wait for the previous sequence to finish before starting the next one.
 
 :::warning Indicating Sequences
-All sequences are indicated within the top-level `sequences` field.
+All sequences are indicated within the top-level [`sequences`][SequencesTopLevelField] field.
 :::
 
 Sequences can be linear or forked.
@@ -63,3 +63,5 @@ When it reaches the conditional, the flow changes to a forked flow, and dependin
 
 - If the result is `true`, only the sequences within `True Result Sequences` will be executed.
 - If the result is `false`, only sequences within `False Result Sequences` will be executed.
+
+[SequencesTopLevelField]: ./top-level-fields.md#top-level-field-sequences
