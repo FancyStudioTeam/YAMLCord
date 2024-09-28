@@ -54,6 +54,10 @@ const DOCS_SIDEBAR: DefaultTheme.SidebarItem[] = [
             link: "operators",
             text: "Operators",
           },
+          {
+            link: "variables",
+            text: "Variables",
+          },
         ],
         text: "Reference",
       },
