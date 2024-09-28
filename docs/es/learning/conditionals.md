@@ -1,21 +1,62 @@
 # Condicionales
 
-En el mundo de la programación, a veces, tenemos que tomar decisiones en nuestro código. Por ejemplo, si queremos saber que el autor del mensaje es el propietario del servidor.
-
-Todo esto se puede lograr gracias a las condicionales.
+Las condicionales nos ayudan a tomar decisiones en nuestro código.
 
 Las condicionales se ejecutan mediante expresiones booleanas.
 
 ## Estructura
 
-La estructura de una condicional es la siguiente:
-
 ```yml
-if:
-then:
-else:
+if: # Expresión booleana
+then: # Array de secuencias
+else: # Array de secuencias (Opcional)
 ```
 
-- `if`: Una expresión booleana. Es un campo requerido.
-- `then`: La lista de secuencias que se ejecutará si la expresión booleana es verdadera. Es un campo requerido.
-- `else`: La lista de secuencias que se ejecutará si la expresión booleana es falsa. Es un campo opcional.
+| Campo  | Tipo     | Descripción                                                                    | Requerido |
+| ------ | -------- | ------------------------------------------------------------------------------ | --------- |
+| `if`   | `string` | La expresión booleana que se evaluará.                                         | `✅`      |
+| `then` | `string` | Un array de secuencias que se ejecutará si la expresión booleana es verdadera. | `✅`      |
+| `else` | `string` | Un array de secuencias que se ejecutará si la expresión booleana es falsa.     | `❌`      |
+
+### Expresiones Boleanas
+
+Las expresiones booleanas se componen mediante el siguiente formato:
+
+```yml
+variable operador valor
+```
+
+:::info Ejemplo de una Expresión Booleana
+
+```yml
+if: "[user_id] eq '945029082314338407'"
+```
+
+:::
+
+#### Variables
+
+:::info Lista de Variables
+Puedes encontrar la lista de variables disponibles en la página [Variables](../reference/variables.md).
+:::
+
+#### Operadores
+
+:::info Lista de Operadores
+Puedes encontrar la lista de operadores disponibles en la página [Operadores](../reference/operators.md).
+:::
+
+#### Valores
+
+Los valores tienen que estar envueltos dentro de comillas simples (`'`).
+
+```yml
+# Valores válidos
+'Valor válido' // [!code ++]
+'También pueden haber ' dentro de las comillas simples' // [!code ++]
+
+# Valores inválidos
+Valor inválido // [!code error]
+'Valor inválido // [!code error]
+Valor inválido' // [!code error]
+```
