@@ -5,7 +5,7 @@ Some objects have fields that are required, and others that are optional.
 ## Difference Between Required and Optional Fields
 
 - `Required`: These fields must be present in the object. If they are not, an error will be returned.
-- `Optional`: These fields can be omitted from the object. Optional fields are marked with a `?` at the end of their name.
+- `Optional`: These fields can be omitted from the object.
 
 ### Practical Example
 
@@ -15,11 +15,13 @@ Let's take as an example this object called `profile`.
 profile: # Object
 ```
 
-The `profile` object supports these fields:
+#### Arguments
 
-- `username` (`string`): The user's username.
-- `email` (`string`): The user's email address.
-- `about_me?` (`string`): The user's about me.
+| Field      | Type     | Description                    | Required |
+| ---------- | -------- | ------------------------------ | -------- |
+| `username` | `string` | The username of the user.      | `✅`     |
+| `email`    | `string` | The email address of the user. | `✅`     |
+| `about_me` | `string` | The user's about me.           | `❌`     |
 
 :::info Practical Examples
 
