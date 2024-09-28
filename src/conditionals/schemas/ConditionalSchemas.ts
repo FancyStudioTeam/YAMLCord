@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { VariableSchema } from "#variables/schemas/VariableSchema.js";
 
 export const ConditionalSchema = z.object({
   if: z.string(),
@@ -6,16 +7,7 @@ export const ConditionalSchema = z.object({
   else: z.array(z.unknown()).optional(),
 });
 
-export const ConditionalIfVariableSchema = z.enum([
-  "[date_now]",
-  "[guild_id]",
-  "[guild_name]",
-  "[message_content]",
-  "[owner_id]",
-  "[owner_name]",
-  "[user_id]",
-  "[user_name]",
-]);
+export const ConditionalIfVariableSchema = VariableSchema;
 export const ConditionalIfOperatorSchema = z.enum(["eq", "neq"]);
 export const ConditionalIfValueSchema = z
   .string()

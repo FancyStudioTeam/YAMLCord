@@ -31,6 +31,7 @@
       "#sequences/*": ["./src/sequences/*"],
       "#types": ["./src/types.ts"],
       "#util/*": ["./src/util/*"],
+      "#variables/*": ["./src/variables/*"],
       "#zod": ["./src/util/util/zod.ts"]
     },
     "preserveConstEnums": true,

@@ -1,12 +1,12 @@
 import type { Sequence, SequenceType } from "#types";
 
-export type ConditionalIfOperator = "===" | "!==";
+export type ResolvedConditionalIfOperator = "===" | "!==";
 
 export interface Conditional {
   type: SequenceType.CONDITIONAL;
   data: {
     if: {
-      operator: ConditionalIfOperator;
+      operator: ResolvedConditionalIfOperator;
       value: string;
       variable: string;
     };
