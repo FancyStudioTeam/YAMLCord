@@ -44,7 +44,7 @@ Las secuencias bifurcadas son las más complejas, teniendo una menor predicción
 
 ```yml
 sequences:
-  - if: "[message.user_id] eq '945029082314338407'"
+  - if: "[user_id] eq '945029082314338407'"
     then:
       - create_message(): "✅ ¡Eres el propietario del servidor!"
     else:

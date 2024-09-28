@@ -44,7 +44,7 @@ Forked sequences are the most complex, having less flow predictability and being
 
 ```yml
 sequences:
-  - if: "[message.user_id] eq '945029082314338407'"
+  - if: "[user_id] eq '945029082314338407'"
     then:
       - create_message(): "✅ You are the owner of the server!"
     else:
