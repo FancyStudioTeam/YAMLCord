@@ -4,7 +4,9 @@ Los campos de nivel superior son campos donde YAMLCord obtendrá los datos de en
 
 ## Lista de Campos de Nivel Superior
 
-- `sequences` (`array`): Un array de secuencias.
+| Campo       | Tipo    | Descripción             |
+| ----------- | ------- | ----------------------- |
+| `sequences` | `array` | Un array de secuencias. |
 
 ### Campo Superior: `sequences`
 

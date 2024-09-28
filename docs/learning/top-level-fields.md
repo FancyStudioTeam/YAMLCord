@@ -4,7 +4,9 @@ The top level fields are fields where YAMLCord will get the input data.
 
 ## List of Top Level Fields
 
-- `sequences` (`array`): An array of sequences.
+| Field       | Type    | Description            |
+| ----------- | ------- | ---------------------- |
+| `sequences` | `array` | An array of sequences. |
 
 ### Top Level Field: `sequences`
 
