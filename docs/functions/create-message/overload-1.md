@@ -10,9 +10,11 @@ create_message(): # Object
 
 ### Arguments
 
-- `channel_id?` (`string`): The ID of the channel to send the message.
-- `content` (`string`): The content of the message.
-- `reply?` (`ping`/`no_ping`): If a reply to the original message should be made.
+| Field        | Type     | Description                                                                            | Required |
+| ------------ | -------- | -------------------------------------------------------------------------------------- | -------- |
+| `channel_id` | `string` | The ID of the channel to send the message.                                             | `❌`     |
+| `content`    | `string` | The content of the message.                                                            | `✅`     |
+| `reply`      | `string` | If a reply to the original message should be made. Available values: `ping`, `no_ping` | `❌`     |
 
 :::details Important Notes
 
