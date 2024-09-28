@@ -1,8 +1,6 @@
 # Condicionales
 
-Las condicionales nos ayudan a tomar decisiones en nuestro código.
-
-Las condicionales se ejecutan mediante expresiones booleanas.
+Las condicionales nos ayudan a tomar decisiones en nuestro código. Las condicionales se ejecutan mediante expresiones booleanas.
 
 ## Estructura
 
@@ -48,15 +46,38 @@ Puedes encontrar la lista de operadores disponibles en la página [Operadores](.
 
 #### Valores
 
-Los valores tienen que estar envueltos dentro de comillas simples (`'`).
+:::info Usando Variables o Valores Literales
+Los valores pueden admitir variables o valores literales.
+:::
+
+##### Usando Variables
+
+Cuando se usan variables como valores, la variable se puede poner tal como se ve en la página [Variables](../reference/variables.md).
+
+:::info Ejemplo de Variables
 
 ```yml
-# Valores válidos
-'Valor válido' // [!code ++]
-'También pueden haber ' dentro de las comillas simples' // [!code ++]
-
-# Valores inválidos
-Valor inválido // [!code error]
-'Valor inválido // [!code error]
-Valor inválido' // [!code error]
+if: "[user_id] eq [owner_id]" // [!code ++]
 ```
+
+:::warning Uso de Comillas Simples
+Cuando se usan variables, las comillas simples se tienen que omitir. Si se incluyen, el valor se interpretará como un Valor Literal.
+:::
+
+##### Usando Valores Literales
+
+Cuando se usan valores literales como valores, el valor tiene que estar envuelto dentro de comillas simples (`'`).
+
+:::info Ejemplo de Valores Literales
+
+```yml
+if: "[user_id] eq '945029082314338407'" // [!code ++]
+
+if: "[user_id] eq 945029082314338407" # Faltan ambas comillas simples // [!code error]
+if: "[user_id] eq '945029082314338407" # Falta una comilla simple al final // [!code error]
+if: "[user_id] eq 945029082314338407'" # Falta una comilla simple al inicio // [!code error]
+```
+
+:::warning Uso de Comillas Simples
+Cuando se usan variables, las comillas simples son obligatorias. Si no se incluyen, se retornará un error.
+:::
