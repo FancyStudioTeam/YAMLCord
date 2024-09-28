@@ -9,7 +9,13 @@ export const ConditionalSchema = z.object({
 
 export const ConditionalIfVariableSchema = VariableSchema;
 export const ConditionalIfOperatorSchema = z.enum(["eq", "neq"]);
-export const ConditionalIfValueSchema = z
+
+const ConditionalIfValueWithValueSchema = z
   .string()
   .regex(/^'.+'$/)
   .transform((value) => value.slice(1, -1));
+const ConditionalIfValueWithVariableSchema = ConditionalIfVariableSchema;
+export const ConditionalIfValueSchema = z.union([
+  ConditionalIfValueWithValueSchema,
+  ConditionalIfValueWithVariableSchema,
+]);

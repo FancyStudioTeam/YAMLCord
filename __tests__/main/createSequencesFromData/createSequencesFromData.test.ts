@@ -180,6 +180,55 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
           },
         ],
       }));
+
+    it("[1005]", async ({ task }) =>
+      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
+        custom: {
+          variables: null,
+        },
+        sequences: [
+          {
+            data: {
+              if: {
+                operator: "===",
+                value: "[owner_id]",
+                variable: "[user_id]",
+              },
+              then: [
+                {
+                  data: {
+                    content: "You are the owner of the server!",
+                    reply: "no_ping",
+                  },
+                  name: "create_message",
+                  type: SequenceType.FUNCTION,
+                },
+                {
+                  data: "🎉",
+                  name: "add_reaction",
+                  type: SequenceType.FUNCTION,
+                },
+              ],
+              else: [
+                {
+                  data: {
+                    content: "You are not the owner of the server!",
+                    reply: "no_ping",
+                  },
+                  name: "create_message",
+                  type: SequenceType.FUNCTION,
+                },
+                {
+                  data: "😢",
+                  name: "add_reaction",
+                  type: SequenceType.FUNCTION,
+                },
+              ],
+            },
+            type: SequenceType.CONDITIONAL,
+          },
+        ],
+      }));
   });
 
   describe("Failure cases (2xxx)", () => {
