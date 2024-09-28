@@ -49,7 +49,7 @@
     "url": "https://github.com/FancyStudioTeam/YAMLCord"
   },
   "scripts": {
-    "biome": "biome check --write --config-path=\"./biome.json\" .",
+    "biome": "BIOME_BINARY=${IN_NIX_SHELL:+$BIOME_BIN_PATH} npx @biomejs/biome check --write --config-path=\"./biome.json\"",
     "build": "tsc",
     "dev": "tsx --env-file=\".env\" --watch src/index.ts",
     "docs:build": "pnpm --filter=docs build",
