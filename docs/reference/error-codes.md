@@ -1,7 +1,5 @@
 # Error Codes
 
-Error codes are codes that help identify the type of error that occurred during compilation.
-
 ## General Errors
 
 - `0`: Occurs when an error occurs that has not been documented with an error code.

@@ -1,7 +1,5 @@
 # Códigos de Error
 
-Los códigos de error son códigos que ayudan a identificar el tipo de error que ha ocurrido durante la compilación.
-
 ## Errores Generales
 
 - `0`: Se produce cuando ocurre un error que no ha sido documentado con un código de error.
