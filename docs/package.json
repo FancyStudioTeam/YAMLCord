@@ -7,7 +7,7 @@
     "monaco-yaml": "5.2.2",
     "shiki": "1.19.0",
     "vitepress": "1.3.4",
-    "vue": "3.5.9"
+    "vue": "3.5.10"
   },
   "name": "docs",
   "scripts": {
