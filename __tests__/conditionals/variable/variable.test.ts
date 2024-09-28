@@ -15,32 +15,32 @@ describe("YAMLCord Conditional Structure: variable", () => {
   describe("Failure cases (2xxx)", () => {
     it("[2001]", async () =>
       await expect(validateConditionalVariable("[data")).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE),
+        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, "[data"),
       ));
 
     it("[2002]", async () =>
       await expect(validateConditionalVariable("data")).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE),
+        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, "data"),
       ));
 
     it("[2003]", async () =>
       await expect(validateConditionalVariable("data]")).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE),
+        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, "data]"),
       ));
 
     it("[2004]", async () =>
       await expect(validateConditionalVariable("message.content")).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE),
+        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, "message.content"),
       ));
 
     it("[2005]", async () =>
       await expect(validateConditionalVariable("[message.[content]")).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE),
+        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, "[message.[content]"),
       ));
 
     it("[2006]", async () =>
       await expect(validateConditionalVariable("[[message.content]]")).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE),
+        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, "[[message.content]]"),
       ));
   });
 });

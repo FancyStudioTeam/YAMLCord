@@ -19,7 +19,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
               if: {
                 operator: "===",
                 value: "!hello",
-                variable: "[message.content]",
+                variable: "[message_content]",
               },
               then: [
                 {
@@ -54,7 +54,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
               if: {
                 operator: "===",
                 value: "!admin",
-                variable: "[message.content]",
+                variable: "[message_content]",
               },
               then: [
                 {
@@ -62,7 +62,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
                     if: {
                       operator: "===",
                       value: "945029082314338407",
-                      variable: "[message.user_id]",
+                      variable: "[user_id]",
                     },
                     then: [
                       {
@@ -114,7 +114,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
               if: {
                 operator: "===",
                 value: "!admin",
-                variable: "[message.content]",
+                variable: "[message_content]",
               },
               then: [
                 {
@@ -122,7 +122,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
                     if: {
                       operator: "===",
                       value: "945029082314338407",
-                      variable: "[message.user_id]",
+                      variable: "[user_id]",
                     },
                     then: [
                       {
@@ -185,7 +185,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
   describe("Failure cases (2xxx)", () => {
     it("[2001]", async ({ task }) =>
       await expect(createSequencesFromData(loader(fileName(task.name)))).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "array", "null"),
+        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "null"),
       ));
 
     it("[2002]", async ({ task }) =>

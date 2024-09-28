@@ -1,5 +1,5 @@
 sequences:
-  - if: "[message.content] eq '!hello'"
+  - if: "[message_content] eq '!hello'"
     then:
       - create_message:
           content: "Hello, world!"

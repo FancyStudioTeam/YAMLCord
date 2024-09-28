@@ -20,11 +20,7 @@ const zodIssueToErrorCode = (issue: z.ZodIssue) =>
       {
         code: "invalid_type",
       },
-      ({ expected, received }) => {
-        const matches = expected.match(/'([^']*)'/g)?.map((match) => match.slice(1, -1));
-
-        return [ErrorCodes.INVALID_VALUE_TYPE, matches ?? expected, received];
-      },
+      ({ received }) => [ErrorCodes.INVALID_VALUE_TYPE, received],
     )
     .with(
       {
@@ -54,7 +50,7 @@ const zodIssueToErrorCode = (issue: z.ZodIssue) =>
       {
         code: "invalid_enum_value",
       },
-      ({ received, options }) => [ErrorCodes.INVALID_ENUM_VALUE, options, received],
+      ({ received }) => [ErrorCodes.INVALID_ENUM_VALUE, received],
     )
     /*.with(
       {

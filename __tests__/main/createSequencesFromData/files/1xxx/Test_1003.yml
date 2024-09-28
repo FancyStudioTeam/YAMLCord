@@ -1,7 +1,7 @@
 sequences:
-  - if: "[message.content] eq '!admin'"
+  - if: "[message_content] eq '!admin'"
     then:
-      - if: "[message.user_id] eq '945029082314338407'"
+      - if: "[user_id] eq '945029082314338407'"
         then:
           - create_message:
               content: "You are an admin!"
