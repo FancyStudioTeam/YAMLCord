@@ -50,6 +50,10 @@ const DOCS_SIDEBAR: DefaultTheme.SidebarItem[] = [
             link: "error-codes",
             text: "Códigos de Error",
           },
+          {
+            link: "operators",
+            text: "Operadores",
+          },
         ],
         text: "Referencia",
       },
