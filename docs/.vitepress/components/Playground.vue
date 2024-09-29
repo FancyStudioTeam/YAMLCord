@@ -1,9 +1,9 @@
 <template>
-  <div v-if="errorReference" class="danger custom-block">
+  <div v-if="_errorReference" class="danger custom-block">
     <p class="custom-block-title">Error</p>
-    <p>{{ errorReference }}</p>
+    <p>{{ _errorReference }}</p>
   </div>
-  <a id="button" @click="exportYAML">Export</a>
+  <a id="button" @click="_exportYAML">Export</a>
   <div id="editor" />
 </template>
 
@@ -44,7 +44,7 @@ import { createHighlighter } from "shiki";
 import { onMounted, ref } from "vue";
 // import { YAMLCord } from "yamlcord";
 
-const errorReference = ref<string | null>(null);
+const _errorReference = ref<string | null>(null);
 let playground: monaco.editor.IStandaloneCodeEditor | null = null;
 
 onMounted(async () => {
@@ -112,7 +112,7 @@ onMounted(async () => {
   }
 });
 
-const exportYAML = () => {
+const _exportYAML = () => {
   if (playground) {
     const content = playground.getValue();
     const blob = new Blob([content], {
