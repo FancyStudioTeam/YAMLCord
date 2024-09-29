@@ -3,10 +3,10 @@ sequences:
     then:
       - if: "[user_id] eq '945029082314338407'"
         then:
-          - create_message:
+          - create_message():
               content: "You are an admin!"
-          - add_reaction: "🎉"
+          - add_reaction(): "🎉"
         else:
-          - create_message:
+          - create_message():
               content: "You are not an admin!"
-          - add_reaction: "😢"
+          - add_reaction(): "😢"

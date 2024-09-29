@@ -1,1 +1,1 @@
-add_reaction: "a" # Invalid emoji
+add_reaction(): "a" # Invalid emoji

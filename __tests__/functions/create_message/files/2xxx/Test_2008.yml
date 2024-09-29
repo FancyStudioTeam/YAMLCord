@@ -1,0 +1,4 @@
+create_message: # No suffix
+  content: "Hello, world! (with embeds)"
+  embeds:
+    - description: "Perfect."

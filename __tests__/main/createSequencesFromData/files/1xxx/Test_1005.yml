@@ -1,12 +1,12 @@
 sequences:
   - if: "[user_id] eq [owner_id]"
     then:
-      - create_message:
+      - create_message():
           content: "You are the owner of the server!"
           reply: "no_ping"
-      - add_reaction: "🎉"
+      - add_reaction(): "🎉"
     else:
-      - create_message:
+      - create_message():
           content: "You are not the owner of the server!"
           reply: "no_ping"
-      - add_reaction: "😢"
+      - add_reaction(): "😢"

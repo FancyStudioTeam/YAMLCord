@@ -53,5 +53,9 @@ describe("YAMLCord Function: wait", () => {
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_MAX_NUMBER_VALUE, 300),
       ));
+    it("[2004]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_FUNCTION, "wait"),
+      ));
   });
 });

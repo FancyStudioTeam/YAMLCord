@@ -147,5 +147,9 @@ describe("YAMLCord Function: create_message", () => {
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.UNDOCUMENTED_ERROR),
       ));
+    it("[2008]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_FUNCTION, "create_message"),
+      ));
   });
 });
