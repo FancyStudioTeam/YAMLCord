@@ -28,7 +28,7 @@ const members = {
         },
       ],
       name: "Zhai",
-      title: "Developer",
+      title: "Lead Developer",
     },
   ],
 };
