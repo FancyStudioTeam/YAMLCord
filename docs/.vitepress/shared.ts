@@ -2,7 +2,7 @@ import { defineConfig } from "vitepress";
 
 export const shared = defineConfig({
   cleanUrls: true,
-  description: "An easy-to-use syntax for Discord bots using YAML",
+  description: "An easy-to-use scripting language for Discord bots embedded in YAML",
   head: [
     [
       "link",
@@ -37,7 +37,7 @@ export const shared = defineConfig({
       "meta",
       {
         property: "og:title",
-        content: "YAMLCord | An easy-to-use syntax for Discord bots using YAML",
+        content: "YAMLCord | An easy-to-use scripting language for Discord bots",
       },
     ],
     [

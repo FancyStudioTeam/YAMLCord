@@ -6,7 +6,7 @@
     "ts-pattern": "5.4.0",
     "zod": "3.23.8"
   },
-  "description": "YAMLCord is an easy-to-use syntax for creating custom actions for Discord bots using YAML",
+  "description": "An easy-to-use scripting language for Discord bots embedded in YAML",
   "devDependencies": {
     "@biomejs/biome": "1.9.2",
     "@types/js-yaml": "4.0.9",
@@ -49,7 +49,8 @@
     "url": "https://github.com/FancyStudioTeam/YAMLCord"
   },
   "scripts": {
-    "biome": "BIOME_BINARY=${IN_NIX_SHELL:+$BIOME_BIN_PATH} npx @biomejs/biome check --write --config-path=\"./biome.json\"",
+    "biome": "pnpx @biomejs/biome check --write --config-path=\"./biome.json\"",
+    "biome:nix": "BIOME_BINARY=${IN_NIX_SHELL:+$BIOME_BIN_PATH} npx @biomejs/biome check --write --config-path=\"./biome.json\"",
     "build": "tsc",
     "dev": "tsx --env-file=\".env\" --watch src/index.ts",
     "docs:build": "pnpm --filter=docs build",
