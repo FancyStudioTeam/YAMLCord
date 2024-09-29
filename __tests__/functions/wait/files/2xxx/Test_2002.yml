@@ -1,1 +1,1 @@
-wait: -1 # Number must be positive
+wait(): -1 # Number must be positive

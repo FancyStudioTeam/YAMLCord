@@ -1,4 +1,4 @@
-create_message:
+create_message():
   content: "Hello, world! (with embeds)"
   embeds:
     - image: "not_a_url"

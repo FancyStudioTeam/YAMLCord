@@ -112,5 +112,10 @@ describe("YAMLCord Function: add_reaction", () => {
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.UNDOCUMENTED_ERROR),
       ));
+
+    it("[2013]", async ({ task }) =>
+      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+        getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_FUNCTION, "add_reaction"),
+      ));
   });
 });

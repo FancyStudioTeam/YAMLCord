@@ -1,7 +1,7 @@
 sequences:
   - if: "[message_content] eq '!hello'"
     then:
-      - create_message:
+      - create_message():
           content: "Hello, world!"
           reply: "no_ping"
-      - add_reaction: "👋"
+      - add_reaction(): "👋"
