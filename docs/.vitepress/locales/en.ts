@@ -10,6 +10,10 @@ const NAVBAR: DefaultTheme.NavItem[] = [
     link: "/developer-specification",
     text: "Developer Specification",
   },
+  {
+    link: "/playground",
+    text: "Playground",
+  },
 ];
 
 const DOCS_SIDEBAR: DefaultTheme.SidebarItem[] = [

@@ -3,27 +3,11 @@
     <p class="custom-block-title">Error</p>
     <p>{{ _errorReference }}</p>
   </div>
-  <a id="button" @click="_exportYAML">Export</a>
+  <VPButton :text="'Export'" style="margin-bottom: 16px; width: 100%;" @click="_exportYAML" />
   <div id="editor" />
 </template>
 
 <style>
-#button {
-  width: 100%;
-  text-align: center;
-  display: block;
-  border-color: var(--vp-button-brand-border);
-  color: var(--vp-button-brand-text);
-  background-color: var(--vp-button-brand-bg);
-  border-radius: 20px;
-  padding: 0 20px;
-  line-height: 38px;
-  font-size: 14px;
-  margin-bottom: 16px;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 #editor {
   height: 500px;
   width: 100%;
@@ -33,14 +17,14 @@
 </style>
 
 <script setup lang="ts">
-import { shikiToMonaco } from "@shikijs/monaco";
 // biome-ignore lint/style/noNamespaceImport:
 import * as monaco from "monaco-editor";
 // @ts-expect-error
 import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 // @ts-expect-error
 import YAMLWorker from "monaco-yaml/yaml.worker?worker";
-import { createHighlighter } from "shiki";
+// biome-ignore lint/correctness/noUnusedImports:
+import { VPButton } from "vitepress/theme";
 import { onMounted, ref } from "vue";
 // import { YAMLCord } from "yamlcord";
 
@@ -65,17 +49,6 @@ onMounted(async () => {
   const editorContainer = document.getElementById("editor");
 
   if (editorContainer) {
-    const highlighter = await createHighlighter({
-      themes: ["github-dark"],
-      langs: ["yaml"],
-    });
-
-    monaco.languages.register({
-      id: "yaml",
-    });
-
-    shikiToMonaco(highlighter, monaco);
-
     playground = monaco.editor.create(editorContainer, {
       fontFamily: "JetBrains Mono",
       fontLigatures: false,
@@ -93,7 +66,7 @@ onMounted(async () => {
         vertical: "auto",
       },
       tabSize: 2,
-      theme: "vitesse-dark",
+      theme: "vs-dark",
     });
 
     /*playground.onDidChangeModelContent(async () => {
