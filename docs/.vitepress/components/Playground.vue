@@ -3,18 +3,14 @@
     <p class="custom-block-title">Error</p>
     <p>{{ _errorReference }}</p>
   </div>
-  <VPButton :text="'Export'" style="margin-bottom: 16px; width: 100%;" @click="_exportYAML" />
-  <div id="editor" />
+  <VPButton :text="'Export YAML File'" style="margin-bottom: 16px; width: 100%;" @click="_exportYAML" />
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-height: 500px; height: 100%; gap: 16px;">
+    <div id="editor" style="height: 500px; width: 100%; border-radius: 8px; overflow: hidden; grid-column: span 2 / span 2;" />
+    <div>
+      <h1>Working on it...</h1>
+    </div>
+  </div>
 </template>
-
-<style>
-#editor {
-  height: 500px;
-  width: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-}
-</style>
 
 <script setup lang="ts">
 // biome-ignore lint/style/noNamespaceImport:
