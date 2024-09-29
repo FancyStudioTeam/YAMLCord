@@ -34,6 +34,7 @@
     "#sequences/*": "./dist/sequences/*",
     "#types": "./dist/types.js",
     "#util/*": "./dist/util/*",
+    "#variables/*": "./dist/variables/*",
     "#zod": "./dist/util/util/zod.js"
   },
   "keywords": [],
