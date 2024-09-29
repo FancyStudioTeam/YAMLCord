@@ -1,4 +1,4 @@
-import type { Sequence, SequenceType } from "#types";
+import type { ResolvedVariables, Sequence, SequenceType } from "#types";
 
 export type ResolvedConditionalIfOperator = "===" | "!==";
 
@@ -7,8 +7,8 @@ export interface Conditional {
   data: {
     if: {
       operator: ResolvedConditionalIfOperator;
-      value: string;
-      variable: string;
+      value: string | ResolvedVariables;
+      variable: string | ResolvedVariables;
     };
     then: Sequence[];
     else?: Sequence[];
