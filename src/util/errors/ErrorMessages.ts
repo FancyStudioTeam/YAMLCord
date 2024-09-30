@@ -1,4 +1,4 @@
-import { ErrorCodes } from "./ErrorCodes.js";
+import { ErrorCodes } from "@errors";
 
 // biome-ignore lint/suspicious/noExplicitAny:
 export const ErrorMessages: Record<ErrorCodes, string | ((...args: any[]) => string)> = {

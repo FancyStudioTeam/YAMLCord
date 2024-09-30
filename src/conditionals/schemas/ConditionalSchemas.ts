@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { VariableSchema } from "#variables/schemas/VariableSchema.js";
+import { VariableSchema } from "@variables/schemas/VariableSchema.js";
 
 export const ConditionalSchema = z.object({
   if: z.string(),

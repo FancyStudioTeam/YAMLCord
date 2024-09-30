@@ -3,5 +3,5 @@ import { defineConfig } from "vitest/config";
 
 // biome-ignore lint/style/noDefaultExport:
 export default defineConfig({
-  plugins: [tsconfigPaths()],
+  plugins: [tsconfigPaths({ projects: ["./tsconfig.json"] })],
 });

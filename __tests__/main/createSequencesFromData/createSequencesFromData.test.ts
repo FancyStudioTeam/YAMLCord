@@ -1,7 +1,6 @@
+import { SequenceType } from "@/types.js";
+import { ErrorCodes, getErrorMessage } from "@errors";
 import { describe, expect, it } from "vitest";
-import { SequenceType } from "../../../src/types.js";
-import { ErrorCodes } from "../../../src/util/errors/ErrorCodes.js";
-import { getErrorMessage } from "../../../src/util/errors/Errors.js";
 import { baseLoader, createSequencesFromData, fileName } from "../../utils.js";
 
 const loader = (path: string) => baseLoader(__dirname, path);

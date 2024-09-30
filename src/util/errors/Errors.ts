@@ -1,5 +1,5 @@
-import type { ErrorCodes } from "./ErrorCodes.js";
-import { ErrorMessages } from "./ErrorMessages.js";
+import type { ErrorCodes } from "@errors";
+import { ErrorMessages } from "@errors";
 
 // biome-ignore lint/suspicious/noExplicitAny:
 export const getErrorMessage = (code: ErrorCodes, ...args: any[]): string =>

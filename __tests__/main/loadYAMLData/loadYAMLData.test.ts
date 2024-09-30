@@ -1,6 +1,5 @@
+import { ErrorCodes, getErrorMessage } from "@errors";
 import { describe, expect, it } from "vitest";
-import { ErrorCodes } from "../../../src/util/errors/ErrorCodes.js";
-import { getErrorMessage } from "../../../src/util/errors/Errors.js";
 import { baseLoader, fileName, loadYAMLData } from "../../utils.js";
 
 const loader = (path: string) => baseLoader(__dirname, path);

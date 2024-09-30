@@ -1,4 +1,4 @@
-import type { ResolvedVariables, Sequence, SequenceType } from "#types";
+import type { ResolvedVariables, Sequence, SequenceType } from "@types";
 
 export type ResolvedConditionalIfOperator = "===" | "!==";
 

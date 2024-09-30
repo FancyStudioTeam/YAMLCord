@@ -1,7 +1,6 @@
+import { validateConditionalVariable } from "@conditionals/util/validateConditionalVariable.js";
+import { ErrorCodes, getErrorMessage } from "@errors";
 import { describe, expect, it } from "vitest";
-import { validateConditionalVariable } from "../../../src/conditionals/util/validateConditionalVariable.js";
-import { ErrorCodes } from "../../../src/util/errors/ErrorCodes.js";
-import { getErrorMessage } from "../../../src/util/errors/Errors.js";
 
 describe("YAMLCord Conditional Structure: variable", () => {
   describe("Success cases (1xxx)", () => {

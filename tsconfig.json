@@ -25,14 +25,14 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "paths": {
-      "#conditionals/*": ["./src/conditionals/*"],
-      "#errors": ["./src/util/errors/index.ts"],
-      "#functions/*": ["./src/functions/*"],
-      "#sequences/*": ["./src/sequences/*"],
-      "#types": ["./src/types.ts"],
-      "#util/*": ["./src/util/*"],
-      "#variables/*": ["./src/variables/*"],
-      "#zod": ["./src/util/util/zod.ts"]
+      "@/*": ["./src/*"],
+      "@conditionals/*": ["./src/conditionals/*"],
+      "@functions/*": ["./src/functions/*"],
+      "@sequences/*": ["./src/sequences/*"],
+      "@types": ["./src/types.js"],
+      "@errors": ["./src/util/errors/index.js"],
+      "@utils/*": ["./src/util/util/*"],
+      "@variables/*": ["./src/variables/*"]
     },
     "preserveConstEnums": true,
     "pretty": true,
@@ -43,5 +43,6 @@
     "target": "ESNext",
     "useDefineForClassFields": true
   },
-  "exclude": ["dist", "node_modules", "__tests__", "vitest.config.mts"]
+  "include": ["src/**/*", "__tests__/**/*"],
+  "exclude": ["dist", "node_modules", "vitest.config.mts"]
 }

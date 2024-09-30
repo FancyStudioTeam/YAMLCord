@@ -27,16 +27,6 @@
   },
   "files": ["dist"],
   "homepage": "https://yamlcord.pages.dev/",
-  "imports": {
-    "#conditionals/*": "./dist/conditionals/*",
-    "#errors": "./dist/util/errors/index.js",
-    "#functions/*": "./dist/functions/*",
-    "#sequences/*": "./dist/sequences/*",
-    "#types": "./dist/types.js",
-    "#util/*": "./dist/util/*",
-    "#variables/*": "./dist/variables/*",
-    "#zod": "./dist/util/util/zod.js"
-  },
   "keywords": [],
   "license": "CC BY-SA 4.0",
   "lint-staged": {

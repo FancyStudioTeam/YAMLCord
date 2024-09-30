@@ -1,9 +1,9 @@
-import { validateConditional } from "#conditionals/validateConditional.js";
-import { throwError } from "#errors";
-import { validateFunction } from "#functions/validateFunction.js";
-import type { Sequence } from "#types";
-import { zod } from "#zod";
-import { SequencesSchema } from "./schemas/SequencesSchema.js";
+import { validateConditional } from "@conditionals/validateConditional.js";
+import { throwError } from "@errors";
+import { validateFunction } from "@functions/validateFunction.js";
+import { SequencesSchema } from "@sequences/schemas/SequencesSchema.js";
+import type { Sequence } from "@sequences/types.js";
+import { zod } from "@utils/zod.js";
 
 export const isRawConditionalObject = (sequence: unknown) =>
   typeof sequence === "object" && sequence !== null && "if" in sequence && "then" in sequence;
