@@ -10,7 +10,9 @@ add_reaction(): # Array [reaction]
 
 ### Arguments
 
-- `reaction` (`string`): The reaction to add.
+| Field      | Type     | Description          | Required |
+| ---------- | -------- | -------------------- | -------- |
+| `reaction` | `string` | The reaction to add. | `✅`     |
 
 :::details Important Notes
 

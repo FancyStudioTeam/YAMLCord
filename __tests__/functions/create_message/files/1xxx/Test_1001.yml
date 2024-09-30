@@ -1,1 +1,1 @@
-create_message: "Hello, world!"
+create_message(): "Hello, world!"

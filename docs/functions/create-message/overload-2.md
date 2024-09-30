@@ -10,7 +10,9 @@ create_message(): # String [content]
 
 ### Arguments
 
-- `content` (`string`): The content of the message.
+| Field     | Type     | Description                 | Required |
+| --------- | -------- | --------------------------- | -------- |
+| `content` | `string` | The content of the message. | `✅`     |
 
 :::details Important Notes
 

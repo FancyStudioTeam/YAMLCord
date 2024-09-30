@@ -1,11 +1,11 @@
 # Campos Opcionales
 
-Algunos objetos tienen campos que son obligatorios, y otros que son opcionales.
+Algunos objetos tienen campos que son requeridos, y otros que son opcionales.
 
-## Diferencia entre Campos Obligatorios y Opcionales
+## Diferencia entre Campos Requeridos y Opcionales
 
-- `Obligatorios`: Son campos que deben estar presentes dentro del objeto. De lo contrario, se retonará un error.
-- `Opcionales`: Son campos que se pueden omitir dentro del objeto. Los campos opcionales se marcan con un `?` al final de su nombre.
+- `Requeridos`: Son campos que deben estar presentes dentro del objeto. De lo contrario, se retonará un error.
+- `Opcionales`: Son campos que se pueden omitir dentro del objeto.
 
 ### Ejemplo Práctico
 
@@ -15,11 +15,13 @@ Vamos a tomar como ejemplo este objeto llamado `profile`.
 profile: # Object
 ```
 
-El objeto `profile` admite estos campos:
+#### Argumentos
 
-- `username` (`string`): El nombre del usuario.
-- `email` (`string`): El correo electrónico del usuario.
-- `about_me?` (`string`): El sobre mí del usuario.
+| Campo      | Tipo     | Descripción                        | Requerido |
+| ---------- | -------- | ---------------------------------- | --------- |
+| `username` | `string` | El nombre del usuario.             | `✅`      |
+| `email`    | `string` | El correo electrónico del usuario. | `✅`      |
+| `about_me` | `string` | El sobre mí del usuario.           | `❌`      |
 
 :::info Ejemplos Prácticos
 
@@ -30,7 +32,7 @@ profile:
   username: "John Doe" // [!code highlight]
   email: "johndoe@example.com" // [!code highlight]
 
-# Los dos campos "username" y "email", que son obligatorios, están presentes
+# Los dos campos "username" y "email", que son requeridos, están presentes
 # Como resultado, el objeto es válido
 ```
 
@@ -40,7 +42,7 @@ profile:
   email: "johndoe@example.com" // [!code highlight]
   about_me: "I am a software developer" // [!code ++]
 
-# Los dos campos "username" y "email", que son obligatorios, están presentes
+# Los dos campos "username" y "email", que son requeridos, están presentes
 # Pero el campo "about_me", que es opcional, está presente
 # Como resultado, el objeto es válido
 ```
@@ -50,7 +52,7 @@ profile:
   about_me: "I am a software developer" // [!code ++]
 
 # El campo "about_me", que es opcional, está presente
-# Pero los dos campos "username" y "email", que son obligatorios, no están presentes
+# Pero los dos campos "username" y "email", que son requeridos, no están presentes
 # Como resultado, el objeto no es válido
 ```
 
@@ -78,4 +80,4 @@ profile:
 
 :::
 
-Todos los campos obligatorios (`username` y `email`) deben estar presentes dentro del objeto `profile`. De lo contrario, el objeto no es válido.
+Todos los campos requeridos (`username` y `email`) deben estar presentes dentro del objeto `profile`. De lo contrario, el objeto no es válido.

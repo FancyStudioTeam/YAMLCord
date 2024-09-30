@@ -10,6 +10,10 @@ const NAVBAR: DefaultTheme.NavItem[] = [
     link: "/es/developer-specification",
     text: "Especificación del Desarrollador",
   },
+  {
+    link: "/playground",
+    text: "Playground",
+  },
 ];
 
 const DOCS_SIDEBAR: DefaultTheme.SidebarItem[] = [
@@ -20,19 +24,12 @@ const DOCS_SIDEBAR: DefaultTheme.SidebarItem[] = [
         collapsed: false,
         items: [
           {
-            base: "/es/learning/how-yamlcord-works/",
-            collapsed: false,
-            items: [
-              {
-                link: "top-level-fields",
-                text: "Campos de Nivel Superior",
-              },
-              {
-                link: "sequences-and-flows",
-                text: "Secuencias y Flujos",
-              },
-            ],
-            text: "Como funciona YAMLCord",
+            link: "top-level-fields",
+            text: "Campos de Nivel Superior",
+          },
+          {
+            link: "sequences-and-flows",
+            text: "Secuencias y Flujos",
           },
           {
             link: "data-types",
@@ -56,6 +53,14 @@ const DOCS_SIDEBAR: DefaultTheme.SidebarItem[] = [
           {
             link: "error-codes",
             text: "Códigos de Error",
+          },
+          {
+            link: "operators",
+            text: "Operadores",
+          },
+          {
+            link: "variables",
+            text: "Variables",
           },
         ],
         text: "Referencia",

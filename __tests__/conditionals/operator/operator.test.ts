@@ -10,17 +10,17 @@ describe("YAMLCord Conditional Structure: operator", () => {
   describe("Failure cases (2xxx)", () => {
     it("[2001]", async () =>
       await expect(validateConditionalOperator("ne")).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, ["eq", "neq"], "ne"),
+        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, "ne"),
       ));
 
     it("[2002]", async () =>
       await expect(validateConditionalOperator("gt")).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, ["eq", "neq"], "gt"),
+        getErrorMessage(ErrorCodes.INVALID_ENUM_VALUE, "gt"),
       ));
 
     it("[2003]", async () =>
       await expect(validateConditionalOperator(1)).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, ["eq", "neq"], "number"),
+        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "number"),
       ));
   });
 });

@@ -10,7 +10,9 @@ wait(): # Number [seconds]
 
 ### Arguments
 
-- `seconds` (`number`): The number of seconds to wait.
+| Field     | Type     | Description                    | Required |
+| --------- | -------- | ------------------------------ | -------- |
+| `seconds` | `number` | The number of seconds to wait. | `✅`     |
 
 :::details Important Notes
 

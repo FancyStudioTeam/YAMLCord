@@ -28,7 +28,7 @@ const members = {
         },
       ],
       name: "Zhai",
-      title: "Desarrollador",
+      title: "Desarrollador Principal",
     },
   ],
 };

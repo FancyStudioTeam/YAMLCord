@@ -31,7 +31,8 @@
       "@sequences/*": ["./src/sequences/*"],
       "@types": ["./src/types.js"],
       "@errors": ["./src/util/errors/index.js"],
-      "@utils/*": ["./src/util/util/*"]
+      "@utils/*": ["./src/util/util/*"],
+      "@variables/*": ["./src/variables/*"]
     },
     "preserveConstEnums": true,
     "pretty": true,

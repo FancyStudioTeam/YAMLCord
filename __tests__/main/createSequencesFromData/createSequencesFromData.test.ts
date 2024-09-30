@@ -18,7 +18,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
               if: {
                 operator: "===",
                 value: "!hello",
-                variable: "[message.content]",
+                variable: "[message_content]",
               },
               then: [
                 {
@@ -53,7 +53,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
               if: {
                 operator: "===",
                 value: "!admin",
-                variable: "[message.content]",
+                variable: "[message_content]",
               },
               then: [
                 {
@@ -61,7 +61,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
                     if: {
                       operator: "===",
                       value: "945029082314338407",
-                      variable: "[message.user_id]",
+                      variable: "[user_id]",
                     },
                     then: [
                       {
@@ -113,7 +113,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
               if: {
                 operator: "===",
                 value: "!admin",
-                variable: "[message.content]",
+                variable: "[message_content]",
               },
               then: [
                 {
@@ -121,7 +121,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
                     if: {
                       operator: "===",
                       value: "945029082314338407",
-                      variable: "[message.user_id]",
+                      variable: "[user_id]",
                     },
                     then: [
                       {
@@ -179,12 +179,61 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
           },
         ],
       }));
+
+    it("[1005]", async ({ task }) =>
+      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
+        custom: {
+          variables: null,
+        },
+        sequences: [
+          {
+            data: {
+              if: {
+                operator: "===",
+                value: "[owner_id]",
+                variable: "[user_id]",
+              },
+              then: [
+                {
+                  data: {
+                    content: "You are the owner of the server!",
+                    reply: "no_ping",
+                  },
+                  name: "create_message",
+                  type: SequenceType.FUNCTION,
+                },
+                {
+                  data: "🎉",
+                  name: "add_reaction",
+                  type: SequenceType.FUNCTION,
+                },
+              ],
+              else: [
+                {
+                  data: {
+                    content: "You are not the owner of the server!",
+                    reply: "no_ping",
+                  },
+                  name: "create_message",
+                  type: SequenceType.FUNCTION,
+                },
+                {
+                  data: "😢",
+                  name: "add_reaction",
+                  type: SequenceType.FUNCTION,
+                },
+              ],
+            },
+            type: SequenceType.CONDITIONAL,
+          },
+        ],
+      }));
   });
 
   describe("Failure cases (2xxx)", () => {
     it("[2001]", async ({ task }) =>
       await expect(createSequencesFromData(loader(fileName(task.name)))).rejects.toThrowError(
-        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "array", "null"),
+        getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "null"),
       ));
 
     it("[2002]", async ({ task }) =>
