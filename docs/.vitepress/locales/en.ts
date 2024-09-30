@@ -77,6 +77,15 @@ const DOCS_SIDEBAR: DefaultTheme.SidebarItem[] = [
   {
     items: [
       {
+        link: "/examples",
+        text: "Examples",
+      },
+    ],
+    text: "Miscellaneous",
+  },
+  {
+    items: [
+      {
         link: "https://discord.gg/yWjeDA6ewJ",
         target: "_blank",
         text: "Discord Server",

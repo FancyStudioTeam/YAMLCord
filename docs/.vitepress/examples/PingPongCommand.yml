@@ -1,0 +1,4 @@
+sequences:
+  - if: "[message_content] eq '!ping'"
+    then:
+      - create_message: "Pong!"
