@@ -40,14 +40,13 @@
     "url": "https://github.com/FancyStudioTeam/YAMLCord"
   },
   "scripts": {
-    "biome": "sh -c 'if [ \"$IN_NIX_SHELL\" = \"1\" ]; then BIOME_BINARY=$BIOME_BIN_PATH pnpx @biomejs/biome check --write --config-path=\"./biome.json\"; else pnpx @biomejs/biome check --write --config-path=\"./biome.json\"; fi'",
-    "build": "tsc",
-    "dev": "tsx --env-file=\".env\" --watch src/index.ts",
-    "docs:build": "pnpm --filter=docs build",
-    "docs:dev": "pnpm --filter=docs dev",
-    "docs:preview": "pnpm --filter=docs preview",
+    "biome": "sh -c 'if [ \"$IN_NIX_SHELL\" = \"1\" ]; then BIOME_BINARY=$BIOME_BIN_PATH pnpx @biomejs/biome check --write --config-path biome.json; else pnpx @biomejs/biome check --write --config-path biome.json; fi'",
+    "build": "tsc --project tsconfig.temp.json",
+    "docs:build": "pnpm --filter docs build",
+    "docs:dev": "pnpm --filter docs dev",
+    "docs:preview": "pnpm --filter docs preview",
     "prepare": "husky",
-    "test": "vitest --config=\"./vitest.config.mts\""
+    "test": "vitest --config vitest.config.mts"
   },
   "types": "dist/types.d.ts",
   "version": "0.0.1-alpha"
