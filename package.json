@@ -47,7 +47,8 @@
     "docs:dev": "pnpm --filter docs dev",
     "docs:preview": "pnpm --filter docs preview",
     "prepare": "husky",
-    "test": "vitest --config vitest.config.mts"
+    "test": "vitest --config vitest.config.mts",
+    "tgz": "pnpm build && pnpm pack"
   },
   "types": "dist/types.d.ts",
   "version": "0.0.1-alpha"
