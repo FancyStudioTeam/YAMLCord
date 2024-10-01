@@ -25,12 +25,12 @@
     "noUnusedParameters": true,
     "outDir": "dist",
     "paths": {
-      "@/*": ["./src/*"],
       "@conditionals/*": ["./src/conditionals/*"],
+      "@errors": ["./src/util/errors/index.js"],
       "@functions/*": ["./src/functions/*"],
+      "@index": ["./src/index.js"],
       "@sequences/*": ["./src/sequences/*"],
       "@types": ["./src/types.js"],
-      "@errors": ["./src/util/errors/index.js"],
       "@utils/*": ["./src/util/util/*"],
       "@variables/*": ["./src/variables/*"]
     },
@@ -43,6 +43,6 @@
     "target": "ESNext",
     "useDefineForClassFields": true
   },
-  "include": ["src", "__tests__"],
-  "exclude": ["dist", "node_modules", "vitest.config.mts"]
+  "exclude": ["dist", "node_modules", "vitest.config.mts"],
+  "include": ["src", "__tests__"]
 }

@@ -1,6 +1,6 @@
-import { SequenceType } from "@/types";
 import { ErrorCodes, getErrorMessage } from "@errors";
 import { validateFunction } from "@functions/validateFunction.js";
+import { SequenceType } from "@types";
 import { describe, expect, it } from "vitest";
 import { baseLoader, fileName, loadYAMLData } from "../../utils.js";
 

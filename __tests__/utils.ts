@@ -1,6 +1,6 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { YAMLCord } from "@/index.js";
+import { YAMLCord } from "@index";
 
 const yamlCord = new YAMLCord();
 const REGEX = /\[(\d+)\]/;

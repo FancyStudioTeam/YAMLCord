@@ -1,5 +1,5 @@
-import { SequenceType } from "@/types.js";
 import { ErrorCodes, getErrorMessage } from "@errors";
+import { SequenceType } from "@types";
 import { describe, expect, it } from "vitest";
 import { baseLoader, createSequencesFromData, fileName } from "../../utils.js";
 
