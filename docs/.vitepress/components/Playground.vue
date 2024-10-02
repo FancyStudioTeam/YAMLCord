@@ -1,14 +1,7 @@
 <template>
-  <div v-if="errorReference" class="danger custom-block">
-    <p class="custom-block-title">Error</p>
-    <p>{{ errorReference }}</p>
-  </div>
   <VPButton :text="'Export YAML File'" style="margin-bottom: 16px; width: 100%;" @click="_exportYAML" />
   <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-height: 500px; height: 100%; gap: 16px;">
-    <div id="editor" style="height: 500px; width: 100%; border-radius: 8px; overflow: hidden; grid-column: span 2 / span 2;" />
-    <div>
-      <h1>Working on it...</h1>
-    </div>
+    <div id="editor" style="height: 500px; width: 100%; border-radius: 8px; overflow: hidden; grid-column: span 3 / span 3;" />
   </div>
 </template>
 
@@ -21,10 +14,8 @@ import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 import YAMLWorker from "monaco-yaml/yaml.worker?worker";
 // biome-ignore lint/correctness/noUnusedImports:
 import { VPButton } from "vitepress/theme";
-import { onMounted, ref } from "vue";
-import { YAMLCord } from "../../../src/index.js";
+import { onMounted } from "vue";
 
-const errorReference = ref<string | null>(null);
 let playground: monaco.editor.IStandaloneCodeEditor | null = null;
 
 onMounted(async () => {
@@ -41,7 +32,7 @@ onMounted(async () => {
     },
   };
 
-  const yamlCord = new YAMLCord();
+  // const yamlCord = new YAMLCord();
   const editorContainer = document.getElementById("editor");
 
   if (editorContainer) {
@@ -65,10 +56,10 @@ onMounted(async () => {
       theme: "vs-dark",
     });
 
-    playground.onDidChangeModelContent(async () => {
+    playground.onDidChangeModelContent(() => {
       monaco.editor.remeasureFonts();
 
-      if (playground) {
+      /*if (playground) {
         await yamlCord
           .createSequencesFromData(playground.getValue())
           .then(async () => (errorReference.value = null))
@@ -77,7 +68,7 @@ onMounted(async () => {
               errorReference.value = error.message;
             }
           });
-      }
+      }*/
     });
   }
 });
