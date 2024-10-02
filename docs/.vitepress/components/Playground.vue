@@ -1,7 +1,7 @@
 <template>
-  <div v-if="_errorReference" class="danger custom-block">
+  <div v-if="errorReference" class="danger custom-block">
     <p class="custom-block-title">Error</p>
-    <p>{{ _errorReference }}</p>
+    <p>{{ errorReference }}</p>
   </div>
   <VPButton :text="'Export YAML File'" style="margin-bottom: 16px; width: 100%;" @click="_exportYAML" />
   <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-height: 500px; height: 100%; gap: 16px;">
@@ -22,9 +22,9 @@ import YAMLWorker from "monaco-yaml/yaml.worker?worker";
 // biome-ignore lint/correctness/noUnusedImports:
 import { VPButton } from "vitepress/theme";
 import { onMounted, ref } from "vue";
-// import { YAMLCord } from "yamlcord";
+import { YAMLCord } from "../../../src/index.js";
 
-const _errorReference = ref<string | null>(null);
+const errorReference = ref<string | null>(null);
 let playground: monaco.editor.IStandaloneCodeEditor | null = null;
 
 onMounted(async () => {
@@ -41,7 +41,7 @@ onMounted(async () => {
     },
   };
 
-  // const yamlCord = new YAMLCord();
+  const yamlCord = new YAMLCord();
   const editorContainer = document.getElementById("editor");
 
   if (editorContainer) {
@@ -65,19 +65,20 @@ onMounted(async () => {
       theme: "vs-dark",
     });
 
-    /*playground.onDidChangeModelContent(async () => {
+    playground.onDidChangeModelContent(async () => {
       monaco.editor.remeasureFonts();
 
       if (playground) {
-        await yamlCord.createSequencesFromData(playground.getValue())
+        await yamlCord
+          .createSequencesFromData(playground.getValue())
           .then(async () => (errorReference.value = null))
-          .catch(async (error) => {
+          .catch((error) => {
             if (error.name === "YAMLException") {
               errorReference.value = error.message;
             }
           });
       }
-    });*/
+    });
   }
 });
 
