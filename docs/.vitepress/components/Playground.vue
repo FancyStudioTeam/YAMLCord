@@ -1,7 +1,10 @@
 <template>
   <VPButton :text="'Export YAML File'" style="margin-bottom: 16px; width: 100%;" @click="_exportYAML" />
   <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); max-height: 500px; height: 100%; gap: 16px;">
-    <div id="editor" style="height: 500px; width: 100%; border-radius: 8px; overflow: hidden; grid-column: span 3 / span 3;" />
+    <div id="editor" style="height: 500px; width: 100%; border-radius: 8px; overflow: hidden; grid-column: span 2 / span 2;" />
+    <div style="background-color: var(--vp-c-bg-alt); height: 100%; width: 100%; border-radius: 8px; overflow: hidden; padding: 16px;">
+      {{ errorReference }}
+    </div>
   </div>
 </template>
 
@@ -14,8 +17,11 @@ import EditorWorker from "monaco-editor/esm/vs/editor/editor.worker?worker";
 import YAMLWorker from "monaco-yaml/yaml.worker?worker";
 // biome-ignore lint/correctness/noUnusedImports:
 import { VPButton } from "vitepress/theme";
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+import { YAMLCord } from "yamlcord";
 
+const yamlCord = new YAMLCord();
+const errorReference = ref<MaybeNullish<string>>(null);
 let playground: monaco.editor.IStandaloneCodeEditor | null = null;
 
 onMounted(async () => {
@@ -32,7 +38,6 @@ onMounted(async () => {
     },
   };
 
-  // const yamlCord = new YAMLCord();
   const editorContainer = document.getElementById("editor");
 
   if (editorContainer) {
@@ -56,19 +61,15 @@ onMounted(async () => {
       theme: "vs-dark",
     });
 
-    playground.onDidChangeModelContent(() => {
+    playground.onDidChangeModelContent(async () => {
       monaco.editor.remeasureFonts();
 
-      /*if (playground) {
+      if (playground) {
         await yamlCord
           .createSequencesFromData(playground.getValue())
           .then(async () => (errorReference.value = null))
-          .catch((error) => {
-            if (error.name === "YAMLException") {
-              errorReference.value = error.message;
-            }
-          });
-      }*/
+          .catch((error) => (errorReference.value = error.message));
+      }
     });
   }
 });
@@ -88,4 +89,6 @@ const _exportYAML = () => {
     }
   }
 };
+
+type MaybeNullish<T> = T | null | undefined;
 </script>

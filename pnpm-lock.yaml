@@ -75,6 +75,9 @@ importers:
       vue:
         specifier: 3.5.10
         version: 3.5.10(typescript@5.6.2)
+      yamlcord:
+        specifier: file:..\yamlcord-0.0.1-alpha.tgz
+        version: file:yamlcord-0.0.1-alpha.tgz
 
 packages:
 
@@ -1725,6 +1728,10 @@ packages:
     engines: {node: '>= 14'}
     hasBin: true
 
+  yamlcord@file:yamlcord-0.0.1-alpha.tgz:
+    resolution: {integrity: sha512-9PkEKd68Nfh1SclhrdgLNXpxnzHr03XnGWjZFzFDUBXhwRoWl4zfJ5j35olMR1KvRRByfjGbQ5whfNyg4ldeIQ==, tarball: file:yamlcord-0.0.1-alpha.tgz}
+    version: 0.0.1-alpha
+
   zod@3.23.8:
     resolution: {integrity: sha512-XBx9AXhXktjUqnepgTiE5flcKIYWi/rme0Eaj+5Y0lftuGBq+jyRu/md4WnuxqgP1ubdpNCsYEYPxrzVHD8d6g==}
 
@@ -3285,6 +3292,13 @@ snapshots:
   yaml@2.5.0: {}
 
   yaml@2.5.1: {}
+
+  yamlcord@file:yamlcord-0.0.1-alpha.tgz:
+    dependencies:
+      emoji-regex: 10.4.0
+      js-yaml: 4.1.0
+      ts-pattern: 5.4.0
+      zod: 3.23.8
 
   zod@3.23.8: {}
 
