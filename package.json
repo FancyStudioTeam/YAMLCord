@@ -20,12 +20,6 @@
     "vite-tsconfig-paths": "5.0.1",
     "vitest": "2.1.1"
   },
-  "exports": {
-    ".": {
-      "require": "./dist/index.js",
-      "types": "./dist/types.d.ts"
-    }
-  },
   "files": ["dist"],
   "homepage": "https://yamlcord.pages.dev/",
   "keywords": [],
@@ -35,7 +29,7 @@
   },
   "main": "dist/index.js",
   "name": "yamlcord",
-  "packageManager": "pnpm@9.11.0",
+  "packageManager": "pnpm@9.12.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/FancyStudioTeam/YAMLCord"
