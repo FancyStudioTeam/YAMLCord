@@ -12,7 +12,11 @@ const AddReactionCustomEmojiSchema = z.string().regex(EMOJI_REGEX.CUSTOM);
 
 // Unions
 const AddReactionStringSchema = z.union([AddReactionUnicodeEmojiSchema, AddReactionCustomEmojiSchema]);
-const AddReactionArraySchema = z.array(AddReactionStringSchema).min(1).max(10);
+const AddReactionArraySchema = z
+  .array(AddReactionStringSchema)
+  .min(1)
+  .max(10)
+  .transform((value) => Array.from(new Set(value)));
 
 // Main
 export const AddReactionSchema = z.union([AddReactionStringSchema, AddReactionArraySchema]);

@@ -4,12 +4,8 @@ import { zod } from "@utils";
 import { AddReactionSchema } from "./schemas/AddReactionSchema.js";
 import type { AddReactionFunction } from "./types.js";
 
-export const validateAddReactionFunction = async (sequence: unknown): Promise<AddReactionFunction> => {
-  const data = await zod(AddReactionSchema, sequence).catch((error) => throwError(error));
-
-  return {
-    data: Array.isArray(data) ? Array.from(new Set(data)) : data,
-    name: "add_reaction",
-    type: SequenceType.FUNCTION,
-  };
-};
+export const validateAddReactionFunction = async (sequence: unknown): Promise<AddReactionFunction> => ({
+  data: await zod(AddReactionSchema, sequence).catch((error) => throwError(error)),
+  name: "add_reaction",
+  type: SequenceType.FUNCTION,
+});
