@@ -26,11 +26,11 @@
     "outDir": "dist",
     "paths": {
       "@conditionals/*": ["./src/conditionals/*"],
-      "@errors": ["./src/util/errors/index.js"],
+      "@errors": ["./src/util/errors/index.ts"],
       "@functions/*": ["./src/functions/*"],
-      "@index": ["./src/index.js"],
+      "@index": ["./src/index.ts"],
       "@sequences/*": ["./src/sequences/*"],
-      "@types": ["./src/types.js"],
+      "@types": ["./src/types.ts"],
       "@utils/*": ["./src/util/util/*"],
       "@variables/*": ["./src/variables/*"]
     },
