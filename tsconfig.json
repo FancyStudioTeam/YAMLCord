@@ -31,7 +31,7 @@
       "@index": ["./src/index.ts"],
       "@sequences/*": ["./src/sequences/*"],
       "@types": ["./src/types.ts"],
-      "@utils/*": ["./src/util/util/*"],
+      "@utils": ["./src/util/utils/index.ts"],
       "@variables/*": ["./src/variables/*"]
     },
     "preserveConstEnums": true,

@@ -16,7 +16,8 @@
       "all": true,
       "correctness": {
         "noNodejsModules": "off",
-        "noUndeclaredDependencies": "off"
+        "noUndeclaredDependencies": "off",
+        "useImportExtensions": "error"
       },
       "performance": {
         "noBarrelFile": "off",
