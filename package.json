@@ -22,7 +22,7 @@
   },
   "files": ["dist"],
   "homepage": "https://yamlcord.pages.dev/",
-  "keywords": [],
+  "keywords": ["bot", "discord bot", "discord", "typescript", "yaml"],
   "license": "CC BY-SA 4.0",
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["pnpm biome"]
