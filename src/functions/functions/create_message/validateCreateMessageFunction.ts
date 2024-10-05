@@ -1,6 +1,6 @@
 import { throwError } from "@errors";
 import { SequenceType } from "@types";
-import { zod } from "@utils/zod.js";
+import { zod } from "@utils";
 import { CreateMessageSchema } from "./schemas/CreateMessageSchema.js";
 import type { CreateMessageFunction } from "./types.js";
 
