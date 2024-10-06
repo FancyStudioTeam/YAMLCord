@@ -1,2 +1,2 @@
-export { YAMLCord } from "./classes/YAMLCord.js";
+export * from "./classes/YAMLCord.js";
 export * from "@types";
