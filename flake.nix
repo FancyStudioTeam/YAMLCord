@@ -18,9 +18,9 @@
           buildInputs = [
             pkgs.nodejs
             pkgs.pnpm
-            pkgs.biome 
+            pkgs.biome
           ];
-          
+
           shellHook = ''
             export NODE_ENV=development
             export IN_NIX_SHELL=1
