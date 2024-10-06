@@ -63,14 +63,10 @@ export const shared = defineConfig({
     },
   },
   themeConfig: {
-    logo: {
-      dark: "/logos/Dark.svg",
-      light: "/logos/Light.svg",
-    },
     search: {
       provider: "local",
     },
-    siteTitle: false,
+    siteTitle: "YAMLCord",
     socialLinks: [
       {
         icon: "discord",
@@ -82,7 +78,6 @@ export const shared = defineConfig({
       },
     ],
   },
-  title: "YAMLCord",
   vite: {
     ssr: {
       noExternal: ["monaco-editor"],
