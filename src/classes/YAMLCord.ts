@@ -17,7 +17,7 @@ export class YAMLCord {
       .catch(() => throwError([ErrorCodes.INVALID_YAML_DATA]));
   };
 
-  createSequencesFromData = async (
+  parseYAMLData = async (
     data: string,
   ): Promise<{
     custom: {
