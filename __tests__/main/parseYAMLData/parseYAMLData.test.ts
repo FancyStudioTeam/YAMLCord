@@ -1,14 +1,14 @@
 import { ErrorCodes, getErrorMessage } from "@errors";
 import { SequenceType } from "@types";
 import { describe, expect, it } from "vitest";
-import { baseLoader, createSequencesFromData, fileName } from "../../utils.js";
+import { baseLoader, fileName, parseYAMLData } from "../../utils.js";
 
 const loader = (path: string) => baseLoader(__dirname, path);
 
-describe("YAMLCord Class Function: createSequencesFromData", () => {
+describe("YAMLCord Class Function: parseYAMLData", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
-      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
+      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -43,7 +43,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
       }));
 
     it("[1002]", async ({ task }) =>
-      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
+      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -103,7 +103,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
       }));
 
     it("[1003]", async ({ task }) =>
-      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
+      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -164,7 +164,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
       }));
 
     it("[1004]", async ({ task }) =>
-      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
+      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -185,7 +185,7 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
       }));
 
     it("[1005]", async ({ task }) =>
-      await expect(createSequencesFromData(loader(fileName(task.name)))).resolves.toStrictEqual({
+      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -236,17 +236,17 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
 
   describe("Failure cases (2xxx)", () => {
     it("[2001]", async ({ task }) =>
-      await expect(createSequencesFromData(loader(fileName(task.name)))).rejects.toThrowError(
+      await expect(parseYAMLData(loader(fileName(task.name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "null"),
       ));
 
     it("[2002]", async ({ task }) =>
-      await expect(createSequencesFromData(loader(fileName(task.name)))).rejects.toThrowError(
+      await expect(parseYAMLData(loader(fileName(task.name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_PROPERTY, "unknown_global_property"),
       ));
 
     it("[2003]", async ({ task }) =>
-      await expect(createSequencesFromData(loader(fileName(task.name)))).rejects.toThrowError(
+      await expect(parseYAMLData(loader(fileName(task.name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_MIN_ARRAY_LENGTH, 1),
       ));
   });

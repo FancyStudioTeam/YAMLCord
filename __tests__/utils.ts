@@ -7,7 +7,7 @@ const REGEX = /\[(\d+)\]/;
 
 export const loadYAMLData = async (data: string) => await yamlCord.loadYAMLData(data);
 
-export const createSequencesFromData = async (data: string) => await yamlCord.createSequencesFromData(data);
+export const parseYAMLData = async (data: string) => await yamlCord.parseYAMLData(data);
 
 export const baseLoader = (dirname: string, path: string) =>
   readFileSync(join(dirname, "files", `${path}.yml`), "utf-8");
