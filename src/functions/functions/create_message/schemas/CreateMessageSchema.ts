@@ -18,4 +18,14 @@ const CreateMessagePayloadSchema = z.object({
 });
 
 // Main
-export const CreateMessageSchema = z.union([CreateMessagePayloadSchema, CreateMessageContentSchema]);
+export const CreateMessageSchema = z
+  .union([CreateMessagePayloadSchema, CreateMessageContentSchema])
+  .transform<CreateMessagePayloadSchemaType>((value) =>
+    typeof value === "object"
+      ? value
+      : {
+          content: value,
+        },
+  );
+
+type CreateMessagePayloadSchemaType = z.infer<typeof CreateMessagePayloadSchema>;

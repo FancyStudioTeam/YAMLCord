@@ -20,7 +20,15 @@ const CreateMessageEmbedColorSchema = z
 const CreateMessageEmbedAssetPayloadSchema = z.object({
   url: CreateMessageEmbedUrlSchema,
 });
-const CreateMessageEmbedAssetSchema = z.union([CreateMessageEmbedAssetPayloadSchema, CreateMessageEmbedUrlSchema]);
+const CreateMessageEmbedAssetSchema = z
+  .union([CreateMessageEmbedAssetPayloadSchema, CreateMessageEmbedUrlSchema])
+  .transform<CreateMessageEmbedAssetPayloadSchemaType>((value) =>
+    typeof value === "object"
+      ? value
+      : {
+          url: value,
+        },
+  );
 
 // Author
 const CreateMessageEmbedAuthorNameSchema = z.string().min(1).max(MAXIMUM_STRING_LENGTH);
@@ -29,10 +37,15 @@ const CreateMessageEmbedAuthorPayloadSchema = z.object({
   name: CreateMessageEmbedAuthorNameSchema,
   url: CreateMessageEmbedUrlSchema.optional(),
 });
-const CreateMessageEmbedAuthorSchema = z.union([
-  CreateMessageEmbedAuthorPayloadSchema,
-  CreateMessageEmbedAuthorNameSchema,
-]);
+const CreateMessageEmbedAuthorSchema = z
+  .union([CreateMessageEmbedAuthorPayloadSchema, CreateMessageEmbedAuthorNameSchema])
+  .transform<CreateMessageEmbedAuthorPayloadSchemaType>((value) =>
+    typeof value === "object"
+      ? value
+      : {
+          name: value,
+        },
+  );
 
 // Fields
 const CreateMessageEmbedFieldSchema = z.object({
@@ -54,10 +67,15 @@ const CreateMessageEmbedFooterPayloadSchema = z.object({
   icon_url: CreateMessageEmbedUrlSchema.optional(),
   text: CreateMessageEmbedFooterTextSchema,
 });
-const CreateMessageEmbedFooterSchema = z.union([
-  CreateMessageEmbedFooterPayloadSchema,
-  CreateMessageEmbedFooterTextSchema,
-]);
+const CreateMessageEmbedFooterSchema = z
+  .union([CreateMessageEmbedFooterPayloadSchema, CreateMessageEmbedFooterTextSchema])
+  .transform<CreateMessageEmbedFooterPayloadSchemaType>((value) =>
+    typeof value === "object"
+      ? value
+      : {
+          text: value,
+        },
+  );
 
 // Title
 const CreateMessageEmbedTitleSchema = z.string().min(1).max(MAXIMUM_STRING_LENGTH);
@@ -78,3 +96,7 @@ export const CreateMessageEmbedSchema = z.object({
   title: CreateMessageEmbedTitleSchema.optional(),
   url: CreateMessageEmbedUrlSchema.optional(),
 });
+
+type CreateMessageEmbedAssetPayloadSchemaType = z.infer<typeof CreateMessageEmbedAssetPayloadSchema>;
+type CreateMessageEmbedAuthorPayloadSchemaType = z.infer<typeof CreateMessageEmbedAuthorPayloadSchema>;
+type CreateMessageEmbedFooterPayloadSchemaType = z.infer<typeof CreateMessageEmbedFooterPayloadSchema>;

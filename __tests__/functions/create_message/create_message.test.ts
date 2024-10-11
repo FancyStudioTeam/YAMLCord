@@ -10,7 +10,9 @@ describe("YAMLCord Function: create_message", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: "Hello, world!",
+        data: {
+          content: "Hello, world!",
+        },
         name: "create_message",
         type: SequenceType.FUNCTION,
       }));
@@ -56,7 +58,9 @@ describe("YAMLCord Function: create_message", () => {
           embeds: [
             {
               color: 16711935,
-              author: "The Embed God",
+              author: {
+                name: "The Embed God",
+              },
               url: "https://helloworld.org/",
               description: "Wow! It's an embed!",
             },
@@ -101,7 +105,9 @@ describe("YAMLCord Function: create_message", () => {
                 url: "https://clearly.notaproxiedurl.com/assets/helloworld.png",
               },
               timestamp: "2024-09-22T02:54:19.015Z",
-              footer: "Made with love.",
+              footer: {
+                text: "Made with love.",
+              },
               description: "Wow! It's an embed!",
             },
           ],

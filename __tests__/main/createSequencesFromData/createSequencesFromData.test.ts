@@ -140,7 +140,9 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
                     ],
                     else: [
                       {
-                        data: "You are not an admin!",
+                        data: {
+                          content: "You are not an admin!",
+                        },
                         name: "create_message",
                         type: SequenceType.FUNCTION,
                       },
@@ -168,7 +170,9 @@ describe("YAMLCord Class Function: createSequencesFromData", () => {
         },
         sequences: [
           {
-            data: "Hello, world!",
+            data: {
+              content: "Hello, world!",
+            },
             name: "create_message",
             type: SequenceType.FUNCTION,
           },
