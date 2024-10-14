@@ -15,8 +15,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       ts-pattern:
-        specifier: 5.4.0
-        version: 5.4.0
+        specifier: 5.5.0
+        version: 5.5.0
       zod:
         specifier: 3.23.8
         version: 3.23.8
@@ -1358,6 +1358,9 @@ packages:
 
   ts-pattern@5.4.0:
     resolution: {integrity: sha512-hgfOMfjlrARCnYtGD/xEAkFHDXuSyuqjzFSltyQCbN689uNvoQL20TVN2XFcLMjfNuwSsQGU+xtH6MrjIwhwUg==}
+
+  ts-pattern@5.5.0:
+    resolution: {integrity: sha512-jqbIpTsa/KKTJYWgPNsFNbLVpwCgzXfFJ1ukNn4I8hMwyQzHMJnk/BqWzggB0xpkILuKzaO/aMYhS0SkaJyKXg==}
 
   tsc-alias@1.8.10:
     resolution: {integrity: sha512-Ibv4KAWfFkFdKJxnWfVtdOmB0Zi1RJVxcbPGiCDsFpCQSsmpWyuzHG3rQyI5YkobWwxFPEyQfu1hdo4qLG2zPw==}
@@ -2794,6 +2797,8 @@ snapshots:
   trim-lines@3.0.1: {}
 
   ts-pattern@5.4.0: {}
+
+  ts-pattern@5.5.0: {}
 
   tsc-alias@1.8.10:
     dependencies:
