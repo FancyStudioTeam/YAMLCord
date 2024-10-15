@@ -19,4 +19,6 @@ const AddReactionArraySchema = z
   .transform((value) => Array.from(new Set(value)));
 
 // Main
-export const AddReactionSchema = z.union([AddReactionStringSchema, AddReactionArraySchema]);
+export const AddReactionSchema = z
+  .union([AddReactionStringSchema, AddReactionArraySchema])
+  .transform((value) => (typeof value === "string" ? [value] : value));

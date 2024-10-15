@@ -10,7 +10,7 @@ describe("YAMLCord Function: add_reaction", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: "⚠️",
+        data: ["⚠️"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
@@ -24,14 +24,14 @@ describe("YAMLCord Function: add_reaction", () => {
 
     it("[1003]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: "<:emojiWithName:1055230048732450847>",
+        data: ["<:emojiWithName:1055230048732450847>"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
 
     it("[1004]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: "<:_:1055230048732450847>",
+        data: ["<:_:1055230048732450847>"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
@@ -45,7 +45,7 @@ describe("YAMLCord Function: add_reaction", () => {
 
     it("[1006]", async ({ task }) =>
       await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
-        data: "<a:_:489818863341535247>",
+        data: ["<a:_:489818863341535247>"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
