@@ -1,13 +1,13 @@
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
-import { YAMLCord } from "@index";
+import { YAMLCordParser } from "@index";
 
-const yamlCord = new YAMLCord();
+const yamlCord = new YAMLCordParser();
 const REGEX = /\[(\d+)\]/;
 
-export const loadYAMLData = async (data: string) => await yamlCord.loadYAMLData(data);
+export const loadYAMLData = async (data: string) => await yamlCord.load(data);
 
-export const parseYAMLData = async (data: string) => await yamlCord.parseYAMLData(data);
+export const parseYAMLData = async (data: string) => await yamlCord.parse(data);
 
 export const baseLoader = (dirname: string, path: string) =>
   readFileSync(join(dirname, "files", `${path}.yml`), "utf-8");
