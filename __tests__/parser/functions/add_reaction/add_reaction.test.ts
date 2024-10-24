@@ -1,50 +1,52 @@
 import { ErrorCodes, getErrorMessage } from "@errors";
 import { validateFunction } from "@functions/validateFunction.js";
+import { YAMLCordParser } from "@index";
 import { SequenceType } from "@types";
 import { describe, expect, it } from "vitest";
-import { baseLoader, fileName, loadYAMLData } from "../../utils.js";
+import { baseLoader, fileName } from "../../utils.js";
 
-const loader = (path: string) => baseLoader(__dirname, path);
+const fileLoader = (path: string) => baseLoader(__dirname, path);
+const loader = (data: string) => new YAMLCordParser().load(data);
 
 describe("YAMLCord Function: add_reaction", () => {
   describe("Success cases (1xxx)", () => {
     it("[1001]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).resolves.toStrictEqual({
         data: ["⚠️"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
 
     it("[1002]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).resolves.toStrictEqual({
         data: ["⚠️", "🚀"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
 
     it("[1003]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).resolves.toStrictEqual({
         data: ["<:emojiWithName:1055230048732450847>"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
 
     it("[1004]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).resolves.toStrictEqual({
         data: ["<:_:1055230048732450847>"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
 
     it("[1005]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).resolves.toStrictEqual({
         data: ["🫡", "<:_:1055230048732450847>", "🚀", "<:emojiWithName:1055230048732450847>", "🔗"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
       }));
 
     it("[1006]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).resolves.toStrictEqual({
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).resolves.toStrictEqual({
         data: ["<a:_:489818863341535247>"],
         name: "add_reaction",
         type: SequenceType.FUNCTION,
@@ -53,67 +55,67 @@ describe("YAMLCord Function: add_reaction", () => {
 
   describe("Failure cases (2xxx)", () => {
     it("[2001]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
 
     it("[2002]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_MIN_ARRAY_LENGTH, 1),
       ));
 
     it("[2003]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
 
     it("[2004]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
 
     it("[2005]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
 
     it("[2006]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
 
     it("[2007]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
 
     it("[2008]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
 
     it("[2009]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
 
     it("[2010]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_STRING_REGEX),
       ));
 
     it("[2011]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.UNDOCUMENTED_ERROR),
       ));
 
     it("[2012]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.UNDOCUMENTED_ERROR),
       ));
 
     it("[2013]", async ({ task }) =>
-      await expect(validateFunction(await loadYAMLData(loader(fileName(task.name))))).rejects.toThrowError(
+      await expect(validateFunction(await loader(fileLoader(fileName(task.name))))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_FUNCTION, "add_reaction"),
       ));
   });
