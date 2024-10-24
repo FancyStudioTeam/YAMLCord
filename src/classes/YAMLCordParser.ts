@@ -3,15 +3,8 @@ import { validateSequences } from "@sequences/validateSequences.js";
 import type { Sequence } from "@types";
 import { load } from "js-yaml";
 import { match } from "ts-pattern";
-import type { YAMLCordParserOptions } from "./types.js";
 
 export class YAMLCordParser {
-  options: YAMLCordParserOptions;
-
-  constructor(options: YAMLCordParserOptions = {}) {
-    this.options = options;
-  }
-
   load = async (data: string) => {
     const loadedData = new Promise((resolve) => {
       resolve(load(data));
@@ -38,7 +31,7 @@ export class YAMLCordParser {
 
     for (const [property, data] of Object.entries(loadedDataObject)) {
       await match(property)
-        .with("sequences", async () => sequences.push(...(await validateSequences(data, this.options))))
+        .with("sequences", async () => sequences.push(...(await validateSequences(data))))
         .otherwise((property) => throwError([ErrorCodes.UNKNOWN_GLOBAL_PROPERTY, property]));
     }
 
