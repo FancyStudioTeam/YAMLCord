@@ -1,6 +1,6 @@
 import { throwError } from "@errors";
 import { validateFunction } from "@functions/validateFunction.js";
-import { type Sequence, SequenceType, type YAMLCordConditional } from "@types";
+import { SequenceType, type YAMLCordConditional, type YAMLCordSequence } from "@types";
 import { zod } from "@utils";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas.js";
 import { validateConditionalOperator } from "./util/validateConditionalOperator.js";
@@ -18,8 +18,8 @@ export const validateConditional = async (conditional: unknown): Promise<YAMLCor
     validateConditionalOperator(rawOperator),
     validateConditionalValue(rawValue.join(" ")),
   ]);
-  const thenSequences: Sequence[] = [];
-  const elseSequences: Sequence[] = [];
+  const thenSequences: YAMLCordSequence[] = [];
+  const elseSequences: YAMLCordSequence[] = [];
 
   for (const sequence of data.then) {
     thenSequences.push(

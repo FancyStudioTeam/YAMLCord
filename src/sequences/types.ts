@@ -6,4 +6,4 @@ export enum SequenceType {
   FUNCTION,
 }
 
-export type Sequence = YAMLCordConditional | YAMLCordFunction;
+export type YAMLCordSequence = YAMLCordConditional | YAMLCordFunction;

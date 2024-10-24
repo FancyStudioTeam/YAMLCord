@@ -1,6 +1,6 @@
 import { ErrorCodes, throwError } from "@errors";
 import { validateSequences } from "@sequences/validateSequences.js";
-import type { Sequence } from "@types";
+import type { YAMLCordSequence } from "@types";
 import { load } from "js-yaml";
 import { match } from "ts-pattern";
 
@@ -23,11 +23,11 @@ export class YAMLCordParser {
     custom: {
       variables: null;
     };
-    sequences: Sequence[];
+    sequences: YAMLCordSequence[];
   }> => {
     const yamlData = await this.load(data);
     const loadedDataObject = new Object(yamlData);
-    const sequences: Sequence[] = [];
+    const sequences: YAMLCordSequence[] = [];
 
     for (const [property, data] of Object.entries(loadedDataObject)) {
       await match(property)

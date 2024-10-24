@@ -1,4 +1,4 @@
-import type { Sequence, SequenceType, YAMLCordVariables } from "@types";
+import type { SequenceType, YAMLCordSequence, YAMLCordVariables } from "@types";
 
 type YAMLCordConditionalOperators = "===" | "!==";
 
@@ -10,7 +10,7 @@ export interface YAMLCordConditional {
       value: string | YAMLCordVariables;
       variable: string | YAMLCordVariables;
     };
-    then: Sequence[];
-    else?: Sequence[];
+    then: YAMLCordSequence[];
+    else?: YAMLCordSequence[];
   };
 }
