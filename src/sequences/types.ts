@@ -1,9 +1,9 @@
-import type { Conditional } from "@conditionals/types.js";
-import type { Function } from "@functions/types.js";
+import type { YAMLCordConditional } from "@conditionals/types.js";
+import type { YAMLCordFunction } from "@functions/types.js";
 
 export enum SequenceType {
   CONDITIONAL,
   FUNCTION,
 }
 
-export type Sequence = Conditional | Function;
+export type Sequence = YAMLCordConditional | YAMLCordFunction;

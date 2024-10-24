@@ -1,14 +1,14 @@
-import type { ResolvedVariables, Sequence, SequenceType } from "@types";
+import type { Sequence, SequenceType, YAMLCordVariables } from "@types";
 
-export type ResolvedConditionalIfOperator = "===" | "!==";
+type YAMLCordConditionalOperators = "===" | "!==";
 
-export interface Conditional {
+export interface YAMLCordConditional {
   type: SequenceType.CONDITIONAL;
   data: {
     if: {
-      operator: ResolvedConditionalIfOperator;
-      value: string | ResolvedVariables;
-      variable: string | ResolvedVariables;
+      operator: YAMLCordConditionalOperators;
+      value: string | YAMLCordVariables;
+      variable: string | YAMLCordVariables;
     };
     then: Sequence[];
     else?: Sequence[];

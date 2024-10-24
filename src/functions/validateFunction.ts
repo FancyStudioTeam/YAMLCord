@@ -1,12 +1,12 @@
 import { ErrorCodes, throwError } from "@errors";
-import { type Function, SequenceType } from "@types";
+import { SequenceType, type YAMLCordFunction } from "@types";
 import { match } from "ts-pattern";
 
-const isValid = (sequence: unknown): sequence is Function =>
+const isValid = (sequence: unknown): sequence is YAMLCordFunction =>
   typeof sequence === "object" && sequence !== null && "type" in sequence && sequence.type === SequenceType.FUNCTION;
 
-export const validateFunction = async (sequence: unknown): Promise<Function> => {
-  let validFunction: Function | unknown;
+export const validateFunction = async (sequence: unknown): Promise<YAMLCordFunction> => {
+  let validFunction: YAMLCordFunction | unknown;
 
   for (const [key, value] of Object.entries(new Object(sequence))) {
     await match(key)

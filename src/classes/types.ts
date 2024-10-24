@@ -1,4 +1,4 @@
-import type { Function as YAMLCordFunction } from "@functions/types";
+/*import type { YAMLCordFunction } from "@types";
 
 export type YAMLCordParserOptions = Partial<{
   disabledFunctions: FunctionNames[];
@@ -7,4 +7,4 @@ export type YAMLCordParserOptions = Partial<{
   };
 }>;
 
-type FunctionNames = YAMLCordFunction["name"];
+type FunctionNames = YAMLCordFunction["name"];*/

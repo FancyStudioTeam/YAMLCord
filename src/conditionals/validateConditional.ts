@@ -1,6 +1,6 @@
 import { throwError } from "@errors";
 import { validateFunction } from "@functions/validateFunction.js";
-import { type Conditional, type Sequence, SequenceType } from "@types";
+import { type Sequence, SequenceType, type YAMLCordConditional } from "@types";
 import { zod } from "@utils";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas.js";
 import { validateConditionalOperator } from "./util/validateConditionalOperator.js";
@@ -10,7 +10,7 @@ import { validateConditionalVariable } from "./util/validateConditionalVariable.
 export const isRawConditionalObject = (sequence: unknown) =>
   typeof sequence === "object" && sequence !== null && "if" in sequence && "then" in sequence;
 
-export const validateConditional = async (conditional: unknown): Promise<Conditional> => {
+export const validateConditional = async (conditional: unknown): Promise<YAMLCordConditional> => {
   const data = await zod(ConditionalSchema, conditional).catch((error) => throwError(error));
   const [rawVariable, rawOperator, ...rawValue] = data.if.split(" ");
   const [variable, operator, value] = await Promise.all([

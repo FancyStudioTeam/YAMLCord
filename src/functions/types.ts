@@ -1,5 +1,5 @@
-import type { AddReactionFunction } from "@functions/functions/add_reaction/types.js";
-import type { CreateMessageFunction } from "@functions/functions/create_message/types.js";
-import type { WaitFunction } from "@functions/functions/wait/types.js";
+import type { YAMLCordAddReactionFunction } from "@functions/functions/add_reaction/types.js";
+import type { YAMLCordCreateMessageFunction } from "@functions/functions/create_message/types.js";
+import type { YAMLCordWaitFunction } from "@functions/functions/wait/types.js";
 
-export type Function = AddReactionFunction | CreateMessageFunction | WaitFunction;
+export type YAMLCordFunction = YAMLCordAddReactionFunction | YAMLCordCreateMessageFunction | YAMLCordWaitFunction;
