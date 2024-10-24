@@ -1,14 +1,15 @@
 import { ErrorCodes, getErrorMessage } from "@errors";
-import { SequenceType } from "@types";
+import { SequenceType, YAMLCordParser } from "@index";
 import { describe, expect, it } from "vitest";
-import { baseLoader, fileName, parseYAMLData } from "../../utils.js";
+import { baseLoader, fileName } from "../../utils.js";
 
-const loader = (path: string) => baseLoader(__dirname, path);
+const fileLoader = (path: string) => baseLoader(__dirname, path);
+const parser = (data: string) => new YAMLCordParser().parse(data);
 
-describe("YAMLCord Class Function: parseYAMLData", () => {
-  describe("Success cases (1xxx)", () => {
-    it("[1001]", async ({ task }) =>
-      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
+describe("YAMLCordParser Class: Parse Method Tests", () => {
+  describe("Success Cases (1xxx)", () => {
+    it("[1001]", async ({ task: { name } }) =>
+      await expect(parser(fileLoader(fileName(name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -42,8 +43,8 @@ describe("YAMLCord Class Function: parseYAMLData", () => {
         ],
       }));
 
-    it("[1002]", async ({ task }) =>
-      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
+    it("[1002]", async ({ task: { name } }) =>
+      await expect(parser(fileLoader(fileName(name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -102,8 +103,8 @@ describe("YAMLCord Class Function: parseYAMLData", () => {
         ],
       }));
 
-    it("[1003]", async ({ task }) =>
-      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
+    it("[1003]", async ({ task: { name } }) =>
+      await expect(parser(fileLoader(fileName(name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -163,8 +164,8 @@ describe("YAMLCord Class Function: parseYAMLData", () => {
         ],
       }));
 
-    it("[1004]", async ({ task }) =>
-      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
+    it("[1004]", async ({ task: { name } }) =>
+      await expect(parser(fileLoader(fileName(name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -184,8 +185,8 @@ describe("YAMLCord Class Function: parseYAMLData", () => {
         ],
       }));
 
-    it("[1005]", async ({ task }) =>
-      await expect(parseYAMLData(loader(fileName(task.name)))).resolves.toStrictEqual({
+    it("[1005]", async ({ task: { name } }) =>
+      await expect(parser(fileLoader(fileName(name)))).resolves.toStrictEqual({
         custom: {
           variables: null,
         },
@@ -235,18 +236,18 @@ describe("YAMLCord Class Function: parseYAMLData", () => {
   });
 
   describe("Failure cases (2xxx)", () => {
-    it("[2001]", async ({ task }) =>
-      await expect(parseYAMLData(loader(fileName(task.name)))).rejects.toThrowError(
+    it("[2001]", async ({ task: { name } }) =>
+      await expect(parser(fileLoader(fileName(name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_VALUE_TYPE, "null"),
       ));
 
-    it("[2002]", async ({ task }) =>
-      await expect(parseYAMLData(loader(fileName(task.name)))).rejects.toThrowError(
+    it("[2002]", async ({ task: { name } }) =>
+      await expect(parser(fileLoader(fileName(name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.UNKNOWN_GLOBAL_PROPERTY, "unknown_global_property"),
       ));
 
-    it("[2003]", async ({ task }) =>
-      await expect(parseYAMLData(loader(fileName(task.name)))).rejects.toThrowError(
+    it("[2003]", async ({ task: { name } }) =>
+      await expect(parser(fileLoader(fileName(name)))).rejects.toThrowError(
         getErrorMessage(ErrorCodes.INVALID_MIN_ARRAY_LENGTH, 1),
       ));
   });
