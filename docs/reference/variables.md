@@ -31,3 +31,7 @@ Variables in YAMLCord are wrapped in square brackets (`[]`).
 | `[guild_name]` | Returns the server name. |
 | `[owner_id]`   | Returns the owner ID.    |
 | `[owner_name]` | Returns the owner name.  |
+
+:::caution Owner Variables
+`[owner_id]` and `[owner_name]` may be undefined. Use at your own risk.
+:::
