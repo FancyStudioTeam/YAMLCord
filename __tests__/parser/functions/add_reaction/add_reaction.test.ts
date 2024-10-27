@@ -1,5 +1,5 @@
 import { ErrorCodes, getErrorMessage } from "@errors";
-import { validateFunction } from "@functions/validateFunction.js";
+import { validateFunction } from "@functions/validateFunction";
 import { YAMLCordParser } from "@index";
 import { SequenceType } from "@types";
 import { describe, expect, it } from "vitest";

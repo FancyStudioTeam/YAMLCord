@@ -1,4 +1,4 @@
-import { validateConditionalVariable } from "@conditionals/util/validateConditionalVariable.js";
+import { validateConditionalVariable } from "@conditionals/util/validateConditionalVariable";
 import { ErrorCodes, getErrorMessage } from "@errors";
 import { describe, expect, it } from "vitest";
 

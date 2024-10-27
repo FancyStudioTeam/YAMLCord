@@ -1,5 +1,5 @@
 import { ErrorCodes, throwError } from "@errors";
-import { validateSequences } from "@sequences/validateSequences.js";
+import { validateSequences } from "@sequences/validateSequences";
 import type { YAMLCordSequence } from "@types";
 import { load } from "js-yaml";
 import { match } from "ts-pattern";

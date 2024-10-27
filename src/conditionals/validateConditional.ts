@@ -1,5 +1,5 @@
 import { throwError } from "@errors";
-import { validateFunction } from "@functions/validateFunction.js";
+import { validateFunction } from "@functions/validateFunction";
 import { SequenceType, type YAMLCordConditional, type YAMLCordSequence } from "@types";
 import { zod } from "@utils";
 import { ConditionalSchema } from "./schemas/ConditionalSchemas.js";

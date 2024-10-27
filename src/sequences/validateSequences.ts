@@ -1,9 +1,9 @@
-import { validateConditional } from "@conditionals/validateConditional.js";
+import { validateConditional } from "@conditionals/validateConditional";
 import { throwError } from "@errors";
-import { validateFunction } from "@functions/validateFunction.js";
-import { SequencesSchema } from "@sequences/schemas/SequencesSchema.js";
-import type { YAMLCordSequence } from "@sequences/types.js";
+import { validateFunction } from "@functions/validateFunction";
+import type { YAMLCordSequence } from "@types";
 import { zod } from "@utils";
+import { SequencesSchema } from "./schemas/SequencesSchema.js";
 
 export const isRawConditionalObject = (sequence: unknown) =>
   typeof sequence === "object" && sequence !== null && "if" in sequence && "then" in sequence;

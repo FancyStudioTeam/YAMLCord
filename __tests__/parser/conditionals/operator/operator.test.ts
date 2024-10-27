@@ -1,4 +1,4 @@
-import { validateConditionalOperator } from "@conditionals/util/validateConditionalOperator.js";
+import { validateConditionalOperator } from "@conditionals/util/validateConditionalOperator";
 import { ErrorCodes, getErrorMessage } from "@errors";
 import { describe, expect, it } from "vitest";
 

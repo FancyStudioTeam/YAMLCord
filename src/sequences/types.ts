@@ -1,5 +1,5 @@
-import type { YAMLCordConditional } from "@conditionals/types.js";
-import type { YAMLCordFunction } from "@functions/types.js";
+import type { YAMLCordConditional } from "@conditionals/types";
+import type { YAMLCordFunction } from "@functions/types";
 
 export enum SequenceType {
   CONDITIONAL,
