@@ -32,6 +32,6 @@ Las variables en YAMLCord están envueltas dentro de corchetes (`[]`).
 | `[owner_id]`   | Devuelve el ID del propietario.     |
 | `[owner_name]` | Devuelve el nombre del propietario. |
 
-:::caution Variables de Propietario
+:::danger Variables de Propietario
 `[owner_id]` y `[owner_name]` pueden ser indefinidos. Úselos bajo su propio riesgo.
 :::
