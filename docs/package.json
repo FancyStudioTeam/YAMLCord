@@ -5,7 +5,7 @@
     "monaco-editor": "0.52.0",
     "monaco-yaml": "5.2.2",
     "shiki": "1.22.0",
-    "vitepress": "1.4.1",
+    "vitepress": "1.4.5",
     "vue": "3.5.12",
     "yamlcord": "0.0.1-alpha.1"
   },
