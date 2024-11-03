@@ -28,7 +28,7 @@
   },
   "main": "dist/index.js",
   "name": "yamlcord",
-  "packageManager": "pnpm@9.12.1",
+  "packageManager": "pnpm@9.12.3+sha256.24235772cc4ac82a62627cd47f834c72667a2ce87799a846ec4e8e555e2d4b8b",
   "repository": {
     "type": "git",
     "url": "https://github.com/FancyStudioTeam/YAMLCord"
@@ -44,5 +44,5 @@
     "tgz": "pnpm build && pnpm pack"
   },
   "types": "dist/types.d.ts",
-  "version": "0.0.1-alpha.1"
+  "version": "0.0.2-alpha.1"
 }

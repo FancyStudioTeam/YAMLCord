@@ -5,6 +5,3 @@ updates:
     schedule:
       interval: "weekly"
     versioning-strategy: "increase"
-    labels:
-      - "📦 Dependencies"
-      - "🤖 Dependabot"
