@@ -6,7 +6,7 @@
     "monaco-yaml": "5.2.3",
     "shiki": "1.22.2",
     "vitepress": "1.5.0",
-    "vue": "3.5.12",
+    "vue": "3.5.13",
     "yamlcord": "0.0.1-alpha.1"
   },
   "name": "docs",
