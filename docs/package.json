@@ -4,7 +4,7 @@
     "@fontsource-variable/plus-jakarta-sans": "5.1.0",
     "monaco-editor": "0.52.0",
     "monaco-yaml": "5.2.3",
-    "shiki": "1.23.1",
+    "shiki": "1.24.2",
     "vitepress": "1.5.0",
     "vue": "3.5.13",
     "yamlcord": "0.0.1-alpha.1"
