@@ -9,7 +9,7 @@
   "description": "An easy-to-use scripting language for Discord bots embedded in YAML",
   "devDependencies": {
     "@types/js-yaml": "4.0.9",
-    "@types/node": "22.9.3",
+    "@types/node": "22.10.2",
     "husky": "9.1.7",
     "js-yaml": "4.1.0",
     "lint-staged": "15.2.10",
